@@ -18,13 +18,13 @@ public class CharacterMove : MonoBehaviour
     {
         if(Input.GetKey("right") && !Input.GetKey("left"))
         {
-            transform.eulerAngles = new Vector2(0,0);
-            transform.Translate(new Vector2(Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime, 0f));
+            transform.eulerAngles = new Vector2(0,180);
+            transform.Translate(new Vector2(Input.GetAxis("Horizontal") * -moveSpeed * Time.deltaTime, 0f));
         }
         else if(Input.GetKey("left") && !Input.GetKey("right"))
         {
-            transform.eulerAngles = new Vector2(0,180);
-            transform.Translate(new Vector2(Input.GetAxis("Horizontal") * -moveSpeed * Time.deltaTime, 0f));
+            transform.eulerAngles = new Vector2(0,0);
+            transform.Translate(new Vector2(Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime, 0f));
         }
     }
 
