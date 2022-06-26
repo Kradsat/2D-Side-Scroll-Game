@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class CharacterMove : MonoBehaviour
 {
-    float moveSpeed = 5f;
-    
-    private Rigidbody2D rb;
-    // Start is called before the first frame update
-    void Awake()
-    {
-        rb = gameObject.AddComponent<Rigidbody2D>();
-    }
+    [SerializeField]
+    Sprite[] characterSprite;
 
+    bool isWalking;
+    bool stillWalking;
+
+    float moveSpeed = 5f;
+
+    private void Awake()
+    {
+        transform.eulerAngles = new Vector2(0,180);
+        bool isWalking = false;
+        bool stillWalking = false;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -25,6 +30,33 @@ public class CharacterMove : MonoBehaviour
         {
             transform.eulerAngles = new Vector2(0,0);
             transform.Translate(new Vector2(Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime, 0f));
+        }
+
+        if(Input.GetKey("right") || Input.GetKey("left"))
+        {
+            isWalking = true;
+            StopCoroutine(Animate());
+            StartCoroutine(Animate());
+        }
+        else
+        {
+            isWalking = false;
+            this.GetComponent<SpriteRenderer>().sprite = characterSprite[0];
+            StopCoroutine(Animate());
+        }
+    }
+
+    IEnumerator Animate()
+    {
+        while(isWalking == true && stillWalking == false)
+        {
+            stillWalking = true;
+            for( int i = 0; i < 4; i++)
+            {
+                this.GetComponent<SpriteRenderer>().sprite = characterSprite[i];
+                yield return new WaitForSeconds(0.3f); 
+            }
+            stillWalking = false;
         }
     }
 
