@@ -41,8 +41,8 @@ public class CharacterMove : MonoBehaviour
         else
         {
             isWalking = false;
-            this.GetComponent<SpriteRenderer>().sprite = characterSprite[0];
             StopCoroutine(Animate());
+            this.GetComponent<SpriteRenderer>().sprite = characterSprite[1];
         }
     }
 
