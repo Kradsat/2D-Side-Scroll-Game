@@ -18,20 +18,29 @@ public class CharacterMove : MonoBehaviour
         bool isWalking = false;
         bool stillWalking = false;
     }
+
     // Update is called once per frame
     void Update()
     {
+        //move right
         if(Input.GetKey("right") && !Input.GetKey("left"))
         {
-            transform.eulerAngles = new Vector2(0,180);
+            transform.eulerAngles = new Vector2(0,180);//rotate to the right
             transform.Translate(new Vector2(Input.GetAxis("Horizontal") * -moveSpeed * Time.deltaTime, 0f));
         }
+
+        //move left
         else if(Input.GetKey("left") && !Input.GetKey("right"))
         {
-            transform.eulerAngles = new Vector2(0,0);
-            transform.Translate(new Vector2(Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime, 0f));
+            transform.eulerAngles = new Vector2(0,0);//rotate to the left
+            if( this.transform.position.x > 0)
+            {
+                transform.Translate(new Vector2(Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime, 0f));
+            }
         }
 
+
+        //animation
         if(Input.GetKey("right") || Input.GetKey("left"))
         {
             isWalking = true;
@@ -46,6 +55,7 @@ public class CharacterMove : MonoBehaviour
         }
     }
 
+    //Coroutine for animation
     IEnumerator Animate()
     {
         while(isWalking == true && stillWalking == false)
@@ -57,26 +67,6 @@ public class CharacterMove : MonoBehaviour
                 yield return new WaitForSeconds(0.3f); 
             }
             stillWalking = false;
-        }
-    }
-
-    void OnTriggerEnter2D(Collider2D other) 
-    {
-        if(other.tag == "Dupe1")
-        {
-            Debug.Log("Crash");
-            Collider2D otherCollider = other.GetComponent<Collider2D>();
-            Physics2D.IgnoreCollision(otherCollider, GetComponent<Collider2D>());
-        }
-    }
-
-    void OnTriggerExit2D(Collider2D other) 
-    {
-        if(other.tag == "Dupe1")
-        {
-            Debug.Log("Out");
-            Collider2D otherCollider = other.GetComponent<Collider2D>();
-            Physics2D.IgnoreCollision(otherCollider, GetComponent<Collider2D>());
         }
     }
 }
