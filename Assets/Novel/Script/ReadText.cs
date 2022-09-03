@@ -4,8 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class TestScript : MonoBehaviour
+public class ReadText : MonoBehaviour
 {
+    public TextAsset textAsset;
+
     public TextMeshProUGUI dialogueText;
     public TextMeshProUGUI nameText;
 
