@@ -16,6 +16,9 @@ public class ReadText : MonoBehaviour
 
     public TextAsset textAsset;
 
+    [SerializeField]
+    LogButton logButton;
+
     string[] data;
     string[] row;
     Dialogue d;
@@ -82,6 +85,8 @@ public class ReadText : MonoBehaviour
         nameText.text = name;
         string sentence = sentences.Dequeue();
         dialogueText.text = sentence;
+
+        logButton.AddLog(sentence);
     }
 
     void EndDialogue()
