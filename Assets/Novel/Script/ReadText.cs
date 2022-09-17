@@ -13,17 +13,24 @@ public class ReadText : MonoBehaviour
 
     private Queue<string> names;
     private Queue<string> sentences;
+    private Queue<string> expression;
 
     public TextAsset textAsset;
 
     [SerializeField]
     LogButton logButton;
+    [SerializeField]
+    CharacterChangeScript characterChange;
 
     string[] data;
     string[] row;
     Dialogue d;
 
     int lineCount;
+    int charaCount;
+
+    string charaLeft;
+    string charaRight;
 
     public List<Dialogue> dialogue;
 
@@ -31,9 +38,13 @@ public class ReadText : MonoBehaviour
     void Start()
     {
         lineCount = 0;
+        charaCount = 0;
+        charaLeft = "";
+        charaRight = "";
 
         sentences = new Queue<string>();
         names = new Queue<string>();
+        expression = new Queue<string>();
         dialogue = new List<Dialogue>();
         nextDialogueButton.onClick.AddListener(DisplayNextSentence);
 
@@ -67,10 +78,12 @@ public class ReadText : MonoBehaviour
     {
         sentences.Clear();
         names.Clear();
+        expression.Clear();
         foreach (Dialogue d in dialogue.ToArray())
         {
             names.Enqueue(d.name);
             sentences.Enqueue(d.sentences);
+            expression.Enqueue(d.ui);
         }
         DisplayNextSentence();
     }
@@ -86,11 +99,30 @@ public class ReadText : MonoBehaviour
             return;
         }
         string name = names.Dequeue();
-        nameText.text = name;
         string sentence = sentences.Dequeue();
+        string express = expression.Dequeue();
+
+        nameText.text = name;
         dialogueText.text = sentence;
 
         logButton.AddLog(sentence, lineCount);
+
+        if(express != "")
+        {
+            if(charaLeft != express.Substring(0,1) && charaRight != express.Substring(0,1))
+            {
+                if(charaCount % 2 == 0)
+                {
+                    charaLeft = express.Substring(0,1);
+                }
+                else
+                {
+                    charaRight = express.Substring(0,1);
+                }
+                characterChange.CharacterChange(express, charaCount);
+                charaCount++;
+            }
+        }
         lineCount++;
     }
 

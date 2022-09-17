@@ -1,0 +1,48 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class CharacterChangeScript : MonoBehaviour
+{
+    [SerializeField]
+    Image leftCharacter;
+    [SerializeField]
+    Image rightCharacter;
+
+    [SerializeField]
+    Sprite[] characterUI;
+
+    int count;
+
+    public void CharacterChange(string character, int num)
+    {
+        //character main UI
+        if(character.Contains("M"))
+        {
+            count = 3;
+        }
+        else if(character.Contains("K"))
+        {
+            count = 2;
+        }
+        else if(character.Contains("A"))
+        {
+            count = 0;
+        }
+        else if(character.Contains("S"))
+        {
+            count = 1;
+        }
+        
+        //left or right character change
+        if(num % 2 == 0)
+        {
+            leftCharacter.sprite = characterUI[count];
+        }
+        else
+        {
+            rightCharacter.sprite = characterUI[count];
+        }
+    }
+}
