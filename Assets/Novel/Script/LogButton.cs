@@ -32,13 +32,26 @@ public class LogButton : MonoBehaviour
         log.SetActive(true);
     }
 
-    public void AddLog(string sentence)
+    public void AddLog(string sentence, int lineCount)
     {
-        //textBoxComponent = new TextBoxComponent();
-        GameObject box = Instantiate(RedDialogue, new Vector3(960, 0, 0), Quaternion.identity);
-        box.transform.parent = parentObject.transform;
+        GameObject box;
+
+        parentObject.GetComponent<VerticalLayoutGroup>();
+
+        if(lineCount >= 3)
+        {
+        }
+
+        if(lineCount % 2 == 0)
+        {
+            box = Instantiate(RedDialogue, new Vector3(960, 500 - (lineCount * 200), 0), Quaternion.identity);
+        }
+        else
+        {
+            box = Instantiate(BlackDialogue, new Vector3(960, 500 - (lineCount * 200), 0), Quaternion.identity);
+        }
+        box.transform.SetParent(parentObject.transform, true);
         textBoxComponent = box.GetComponentInChildren<TextBoxComponent>();
-        //textBoxComponent = box.GetComponent<TextBoxComponent>();
         Debug.Log(sentence);
         textBoxComponent.GetText(sentence);
     }

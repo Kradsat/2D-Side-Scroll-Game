@@ -23,11 +23,15 @@ public class ReadText : MonoBehaviour
     string[] row;
     Dialogue d;
 
+    int lineCount;
+
     public List<Dialogue> dialogue;
 
     // Start is called before the first frame update
     void Start()
     {
+        lineCount = 0;
+
         sentences = new Queue<string>();
         names = new Queue<string>();
         dialogue = new List<Dialogue>();
@@ -86,7 +90,8 @@ public class ReadText : MonoBehaviour
         string sentence = sentences.Dequeue();
         dialogueText.text = sentence;
 
-        logButton.AddLog(sentence);
+        logButton.AddLog(sentence, lineCount);
+        lineCount++;
     }
 
     void EndDialogue()
