@@ -36,10 +36,15 @@ public class LogButton : MonoBehaviour
     {
         GameObject box;
 
-        parentObject.GetComponent<VerticalLayoutGroup>();
+        var rectTransform = parentObject.GetComponent<RectTransform>();
+        var width = rectTransform.sizeDelta.x;
+        var height = rectTransform.sizeDelta.y;
 
         if(lineCount >= 3)
         {
+            height += 200;
+            parentObject.GetComponent<VerticalLayoutGroup>().enabled = true;
+            parentObject.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical,height);
         }
 
         if(lineCount % 2 == 0)
