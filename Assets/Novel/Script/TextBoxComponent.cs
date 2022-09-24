@@ -8,7 +8,7 @@ public class TextBoxComponent : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI boxText;
 
-    public void GetText(string txt)
+    public void SetText(string txt)
     {
         boxText.text = txt;
     }
