@@ -19,6 +19,8 @@ public class LogButton : MonoBehaviour
     GameObject parentObject;
 
     TextBoxComponent textBoxComponent;
+
+    int count;
     
     // Start is called before the first frame update
     void Start()
@@ -32,7 +34,7 @@ public class LogButton : MonoBehaviour
         log.SetActive(true);
     }
 
-    public void AddLog(string sentence, int lineCount)
+    public void AddLog(string sentence, int lineCount, string character)
     {
         GameObject box;
 
@@ -59,5 +61,28 @@ public class LogButton : MonoBehaviour
         textBoxComponent = box.GetComponentInChildren<TextBoxComponent>();
         Debug.Log(sentence);
         textBoxComponent.SetText(sentence);
+
+        //character UI
+        if(character.Contains("K"))
+        {
+            count = 0;
+        }
+        else if(character.Contains("S"))
+        {
+            count = 1;
+        }
+        else if(character.Contains("A"))
+        {
+            count = 2;
+        }
+        else if(character.Contains("M"))
+        {
+            count = 3;
+        }
+        else
+        {
+            count = 4;
+        }
+        textBoxComponent.SetImage(count);
     }
 }

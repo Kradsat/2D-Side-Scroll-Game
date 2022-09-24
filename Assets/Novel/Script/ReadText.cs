@@ -105,7 +105,7 @@ public class ReadText : MonoBehaviour
         nameText.text = name;
         dialogueText.text = sentence;
 
-        logButton.AddLog(sentence, lineCount);
+        logButton.AddLog(sentence, lineCount, express);
 
         if(express != "")
         {
