@@ -59,7 +59,6 @@ public class LogButton : MonoBehaviour
         }
         box.transform.SetParent(parentObject.transform, true);
         textBoxComponent = box.GetComponentInChildren<TextBoxComponent>();
-        Debug.Log(sentence);
         textBoxComponent.SetText(sentence);
 
         //character UI

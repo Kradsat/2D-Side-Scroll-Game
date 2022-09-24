@@ -22,5 +22,6 @@ public class TextBoxComponent : MonoBehaviour
     public void SetImage(int num)
     {
         circleImage.sprite = characterSprite[num];
+        var rectTransform = circleImage.sprite.pivot;
     }
 }
