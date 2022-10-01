@@ -15,7 +15,7 @@ public class SceneSwitchTrigger : MonoBehaviour
         sceneSwitch = FindObjectOfType<SceneSwitch>();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)// trigger for switching room 
     {
         if(collision.tag == "Player")
         {

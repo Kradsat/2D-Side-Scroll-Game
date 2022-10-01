@@ -10,7 +10,7 @@ public class World : SceneSwitch
     public FrameSwitch frameSwitch;
 
     public string previous;
-    public override void Start()
+    public override void Start()// get to the positin after entering a room
     {
         base.Start();
 

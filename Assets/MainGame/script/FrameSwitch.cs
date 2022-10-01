@@ -7,6 +7,13 @@ public class FrameSwitch : MonoBehaviour
     public GameObject frame1;
     public GameObject frame2;
 
+    [SerializeField]protected Count count;
+
+    private void Start()
+    {
+       // count = GetComponent<Count>();
+    }
+
     //public bool exit;
 
     //private void Start()
@@ -18,9 +25,10 @@ public class FrameSwitch : MonoBehaviour
     //{
     //    exit = true;
 
-        
+
 
     //}
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(frame1.activeInHierarchy == true )
@@ -28,6 +36,8 @@ public class FrameSwitch : MonoBehaviour
             //exit = false;
             frame1.SetActive(false);
             frame2.SetActive(true);
+            count.keepCount++;
+            
         }
         else if(frame1.activeInHierarchy == false)
         {

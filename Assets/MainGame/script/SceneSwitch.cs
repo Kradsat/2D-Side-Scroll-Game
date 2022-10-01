@@ -8,6 +8,7 @@ public class SceneSwitch : MonoBehaviour
 
     public static string prevScene;
     public static string currentScene;
+    
 
     public virtual void Start()
     {
@@ -18,6 +19,7 @@ public class SceneSwitch : MonoBehaviour
     {
         prevScene = currentScene;
         SceneManager.LoadScene(sceneName);
+        
     }
 
 }

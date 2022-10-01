@@ -13,9 +13,17 @@ public class TakeStairs : MonoBehaviour
     public float yPos;
     public GameObject currentScene;
     public GameObject newScene;
+    public Count count;
 
     public LayerMask WhatIsPlayer;
 
+
+    private void Start()
+    {
+      //
+      //
+      //count = GetComponent<Count>();
+    }
     private void Update()
     {
         playerDetected = Physics2D.OverlapBox(stairPos.position, new Vector2(width, height), 0, WhatIsPlayer);
@@ -26,9 +34,10 @@ public class TakeStairs : MonoBehaviour
             
              if (Input.GetKeyDown(KeyCode.Z))
                 {
-                    player.position = new Vector2(xPos, yPos);
+                 player.position = new Vector2(xPos, yPos);
                 currentScene.SetActive(false);
                 newScene.SetActive(true);
+                count.keepCount++;
                 }
 
             

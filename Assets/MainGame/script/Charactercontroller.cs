@@ -5,6 +5,7 @@ using UnityEngine;
 public class Charactercontroller : MonoBehaviour
 {
 
+   // public Vector3 startingPosition;
     [SerializeField]
     Sprite[] characterSprite;
     SpriteRenderer _spriteRenderer;
@@ -32,6 +33,7 @@ public class Charactercontroller : MonoBehaviour
 
     private void Start()
     {
+       // startingPosition = transform.position;
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _spriteRenderer.sprite = characterSprite[1];
 

@@ -10,6 +10,7 @@ public class OpenDoor : MonoBehaviour
     public float height;
 
     SceneSwitch sceneSwitch;
+    Count count;
 
     [SerializeField]
     private string sceneName;
@@ -23,20 +24,27 @@ public class OpenDoor : MonoBehaviour
     }
     private void Update()
         {
-        playerDetected = Physics2D.OverlapBox(doorPos.position, new Vector2(width, height), 0, WhatIsPlayer);
-
-        if(playerDetected == true)
-        {
-            if(Input.GetKeyDown(KeyCode.Z))
-            {
-                sceneSwitch.switchScene(sceneName);
-            }
-        }
+        OpenTheDoor();
     }
 
-    private void OnDrawGizmosSelected()
+    private void OnDrawGizmosSelected()// draw the box of the door
     {
         Gizmos.color = Color.blue;
         Gizmos.DrawCube(doorPos.position, new Vector3(width, height, 1));
+    }
+    public void OpenTheDoor() // function for open the door
+    {
+        playerDetected = Physics2D.OverlapBox(doorPos.position, new Vector2(width, height), 0, WhatIsPlayer);// check the player 
+
+        if (playerDetected == true)
+        {
+            if (Input.GetKeyDown(KeyCode.Z))
+            {
+                sceneSwitch.switchScene(sceneName);
+
+                //if(count != null)
+                //count.counts++;
+            }
+        }
     }
 }
