@@ -6,6 +6,7 @@ public class FrameSwitch : MonoBehaviour
 {
     public GameObject frame1;
     public GameObject frame2;
+    
 
     [SerializeField]protected Count count;
 
@@ -36,6 +37,7 @@ public class FrameSwitch : MonoBehaviour
             //exit = false;
             frame1.SetActive(false);
             frame2.SetActive(true);
+            count.doAction = true;
             count.keepCount++;
             
         }
@@ -44,6 +46,8 @@ public class FrameSwitch : MonoBehaviour
             //exit = false;
             frame1.SetActive(true);
             frame2.SetActive(false);
+            count.doAction = true;
+            count.keepCount++;
         }
     }
 

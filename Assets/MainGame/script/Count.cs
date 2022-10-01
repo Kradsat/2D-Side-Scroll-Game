@@ -6,7 +6,7 @@ using UnityEngine;
 public class Count : MonoBehaviour
 {
     public int keepCount;
-    
+    public bool doAction;
 
 
 

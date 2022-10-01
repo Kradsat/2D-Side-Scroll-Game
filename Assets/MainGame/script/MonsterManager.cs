@@ -13,42 +13,88 @@ public class MonsterManager : MonoBehaviour
     public float distance = 85f;
     public float distance2 = -85f;
     public Vector3 startingPosition;
+
+
     public Count count;
-    
-  
+    public float maximumChanceOfApparition = 100f;
+    public float minimumChanceOfApparition = 10f;
+    public float currentChance = 0;
+
+    public bool spawnGhost;
+    public float spawn;
+    public bool StopRangeUpdate;
+
+
+    private void Awake()
+    {
+        if(newInstance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
-        Apparition();
+        spawn = Random.Range(1, maximumChanceOfApparition);
+        spawnGhost = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        disapear();
-        disapearBgm();
+        ApparitionRate();
     }
 
-    public void Apparition() // instantiate prefab + bgm
+    public void ApparitionRate() // instantiate prefab + bgm
     {
-        //if (count == 7)
-        //{
+        if (count.keepCount == 7)
+        {
+            currentChance = minimumChanceOfApparition;
+        }
+        else if(count.keepCount > 7 && count.doAction == true)
+        {
+            count.doAction = false;
+            currentChance += 5f;
+        }
+       
 
-        //}
+        if(spawn <= currentChance && spawnGhost == true)
+        {
+            spawnGhost = false;
+            EnemySpawn();
+            disapear();
+            disapearBgm();
+        }
 
-        Debug.Log("ghost is here! run bitch!");
-        newInstance = Instantiate(prefabMonster, new Vector3( player.transform.position.x - distance, player.transform.position.y, 0), Quaternion.identity);
-        newBgm =Instantiate(ghostBGM, new Vector3(0,0,0),Quaternion.identity);
-        SoundSystem.instance.PlayGhostBGM();
 
 
       //  newInstance = Instantiate(prefabMonster2, new Vector3(player.transform.position.x - distance2, player.transform.position.y, 0), Quaternion.identity);
        
     }
+
+    public void EnemySpawn()
+    {
+        
+       
+        Debug.Log("ghost is here! run bitch!");
+        newInstance = Instantiate(prefabMonster, new Vector3(player.transform.position.x - distance, player.transform.position.y, 0), Quaternion.identity);
+        newBgm = Instantiate(ghostBGM, new Vector3(0, 0, 0), Quaternion.identity);
+        currentChance = 0;
+        SoundSystem.instance.PlayGhostBGM();
+    }
     
     public void disapear() // destroy prefab ghost
     {
-        var destroyTime = 10;
+        float destroyTime = 0;
+        destroyTime += Time.time;
+        if(destroyTime == 10)
+        {
+            spawnGhost = true;
+            count.keepCount = 0;
+        }
+        spawn = Random.Range(1, maximumChanceOfApparition);
+
         Destroy(newInstance, destroyTime);
     }
     public void disapearBgm() // destroy the bgm

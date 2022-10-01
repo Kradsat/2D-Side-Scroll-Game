@@ -266,7 +266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 1797725504}
   frame2: {fileID: 330310334}
-  count: {fileID: 0}
+  count: {fileID: 772346580}
 --- !u!61 &9792670
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -552,7 +552,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -685,7 +685,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -863,7 +863,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1562,7 +1562,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1709,7 +1709,7 @@ MonoBehaviour:
   yPos: 43.3
   currentScene: {fileID: 304925771}
   newScene: {fileID: 996339617}
-  count: {fileID: 0}
+  count: {fileID: 772346580}
   WhatIsPlayer:
     serializedVersion: 2
     m_Bits: 64
@@ -1824,7 +1824,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2102,7 +2102,7 @@ MonoBehaviour:
   yPos: 43.3
   currentScene: {fileID: 336537386}
   newScene: {fileID: 996339617}
-  count: {fileID: 0}
+  count: {fileID: 772346580}
   WhatIsPlayer:
     serializedVersion: 2
     m_Bits: 64
@@ -2186,7 +2186,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2525,7 +2525,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -3231,7 +3231,7 @@ MonoBehaviour:
   yPos: 43.3
   currentScene: {fileID: 524762865}
   newScene: {fileID: 1858099934}
-  count: {fileID: 0}
+  count: {fileID: 772346580}
   WhatIsPlayer:
     serializedVersion: 2
     m_Bits: 64
@@ -3467,7 +3467,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 330310334}
   frame2: {fileID: 567001852}
-  count: {fileID: 0}
+  count: {fileID: 772346580}
 --- !u!61 &539093959
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4003,7 +4003,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -4775,7 +4775,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &772346580
 MonoBehaviour:
@@ -4789,6 +4789,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8aad2b310e1bde4fb8aded9a90e1cc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  keepCount: 0
+  doAction: 0
 --- !u!1 &776416314
 GameObject:
   m_ObjectHideFlags: 0
@@ -5200,7 +5202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 524762865}
   frame2: {fileID: 1571364089}
-  count: {fileID: 0}
+  count: {fileID: 772346580}
 --- !u!61 &866250850
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5880,7 +5882,7 @@ MonoBehaviour:
   yPos: -6.7
   currentScene: {fileID: 996339617}
   newScene: {fileID: 336537386}
-  count: {fileID: 0}
+  count: {fileID: 772346580}
   WhatIsPlayer:
     serializedVersion: 2
     m_Bits: 64
@@ -5904,7 +5906,7 @@ MonoBehaviour:
   yPos: 93.4
   currentScene: {fileID: 996339617}
   newScene: {fileID: 304925771}
-  count: {fileID: 0}
+  count: {fileID: 772346580}
   WhatIsPlayer:
     serializedVersion: 2
     m_Bits: 64
@@ -6891,7 +6893,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1190620560}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93f1a53fe36463346968a809cd8d6cb7, type: 3}
+  m_Script: {fileID: 11500000, guid: 4449d4fd0995d24488123a85a2b76963, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ApparitionGhostBgm: {fileID: 5956970117756654399, guid: 29eaf7b11aad58d4d8f386467a5b593e, type: 3}
@@ -7075,7 +7077,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 2031856846}
   frame2: {fileID: 1806488705}
-  count: {fileID: 0}
+  count: {fileID: 772346580}
 --- !u!61 &1230842675
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8392,7 +8394,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 1806488705}
   frame2: {fileID: 336537386}
-  count: {fileID: 0}
+  count: {fileID: 772346580}
 --- !u!61 &1552345206
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8445,21 +8447,6 @@ GameObject:
   - component: {fileID: 1552599273}
   - component: {fileID: 1552599272}
   - component: {fileID: 1552599289}
-  - component: {fileID: 1552599274}
-  - component: {fileID: 1552599276}
-  - component: {fileID: 1552599275}
-  - component: {fileID: 1552599277}
-  - component: {fileID: 1552599278}
-  - component: {fileID: 1552599283}
-  - component: {fileID: 1552599282}
-  - component: {fileID: 1552599281}
-  - component: {fileID: 1552599280}
-  - component: {fileID: 1552599279}
-  - component: {fileID: 1552599288}
-  - component: {fileID: 1552599287}
-  - component: {fileID: 1552599286}
-  - component: {fileID: 1552599285}
-  - component: {fileID: 1552599284}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -8494,261 +8481,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1552599274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1552599271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77aaeba29bc26ba4993d027be678145b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1700669383}
-  xPos: 418.2
-  yPos: -6.7
-  frameSwitch: {fileID: 9792669}
-  previous: room1
---- !u!114 &1552599275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1552599271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77aaeba29bc26ba4993d027be678145b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1700669383}
-  xPos: 263.1962
-  yPos: -6.7
-  frameSwitch: {fileID: 1616222471}
-  previous: room3
---- !u!114 &1552599276
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1552599271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77aaeba29bc26ba4993d027be678145b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1700669383}
-  xPos: 341.4728
-  yPos: -6.7
-  frameSwitch: {fileID: 539093958}
-  previous: room2
---- !u!114 &1552599277
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1552599271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77aaeba29bc26ba4993d027be678145b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1700669383}
-  xPos: 185.3612
-  yPos: -6.7
-  frameSwitch: {fileID: 1577688808}
-  previous: room4
---- !u!114 &1552599278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1552599271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77aaeba29bc26ba4993d027be678145b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1700669383}
-  xPos: 105.3635
-  yPos: -6.7
-  frameSwitch: {fileID: 1230842674}
-  previous: room5
---- !u!114 &1552599279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1552599271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77aaeba29bc26ba4993d027be678145b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1700669383}
-  xPos: 105.3635
-  yPos: 43.3
-  frameSwitch: {fileID: 865175507}
-  previous: room10
---- !u!114 &1552599280
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1552599271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77aaeba29bc26ba4993d027be678145b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1700669383}
-  xPos: 185.3612
-  yPos: 43.3
-  frameSwitch: {fileID: 1819239396}
-  previous: room9
---- !u!114 &1552599281
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1552599271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77aaeba29bc26ba4993d027be678145b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1700669383}
-  xPos: 263.1962
-  yPos: 43.3
-  frameSwitch: {fileID: 1893982196}
-  previous: room8
---- !u!114 &1552599282
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1552599271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77aaeba29bc26ba4993d027be678145b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1700669383}
-  xPos: 341.4728
-  yPos: 43.3
-  frameSwitch: {fileID: 1716682352}
-  previous: room7
---- !u!114 &1552599283
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1552599271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77aaeba29bc26ba4993d027be678145b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1700669383}
-  xPos: 418.2
-  yPos: 43.3
-  frameSwitch: {fileID: 462743246}
-  previous: room6
---- !u!114 &1552599284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1552599271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77aaeba29bc26ba4993d027be678145b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1700669383}
-  xPos: 105.3635
-  yPos: 93.4
-  frameSwitch: {fileID: 723978278}
-  previous: room15
---- !u!114 &1552599285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1552599271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77aaeba29bc26ba4993d027be678145b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1700669383}
-  xPos: 185.3612
-  yPos: 93.4
-  frameSwitch: {fileID: 857150212}
-  previous: room14
---- !u!114 &1552599286
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1552599271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77aaeba29bc26ba4993d027be678145b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1700669383}
-  xPos: 263.1962
-  yPos: 93.4
-  frameSwitch: {fileID: 1957488973}
-  previous: room13
---- !u!114 &1552599287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1552599271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77aaeba29bc26ba4993d027be678145b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1700669383}
-  xPos: 341.4728
-  yPos: 93.4
-  frameSwitch: {fileID: 1314673354}
-  previous: room12
---- !u!114 &1552599288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1552599271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77aaeba29bc26ba4993d027be678145b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1700669383}
-  xPos: 418.2
-  yPos: 93.4
-  frameSwitch: {fileID: 866250849}
-  previous: room11
 --- !u!114 &1552599289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8768,7 +8500,13 @@ MonoBehaviour:
   distance: 85
   distance2: -85
   startingPosition: {x: 0, y: 0, z: 0}
-  count: {fileID: 0}
+  count: {fileID: 772346580}
+  maximumChanceOfApparition: 100
+  minimumChanceOfApparition: 10
+  currentChance: 0
+  spawnGhost: 0
+  spawn: 0
+  StopRangeUpdate: 0
 --- !u!1 &1554071401
 GameObject:
   m_ObjectHideFlags: 3
@@ -9093,7 +8831,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 704997843}
   frame2: {fileID: 2031856846}
-  count: {fileID: 0}
+  count: {fileID: 772346580}
 --- !u!61 &1577688809
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9348,7 +9086,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 567001852}
   frame2: {fileID: 704997843}
-  count: {fileID: 0}
+  count: {fileID: 772346580}
 --- !u!61 &1616222472
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10640,7 +10378,7 @@ MonoBehaviour:
   yPos: 43.3
   currentScene: {fileID: 1797725504}
   newScene: {fileID: 1858099934}
-  count: {fileID: 0}
+  count: {fileID: 772346580}
   WhatIsPlayer:
     serializedVersion: 2
     m_Bits: 64
@@ -11499,7 +11237,7 @@ MonoBehaviour:
   yPos: -6.7
   currentScene: {fileID: 1858099934}
   newScene: {fileID: 1797725504}
-  count: {fileID: 0}
+  count: {fileID: 772346580}
   WhatIsPlayer:
     serializedVersion: 2
     m_Bits: 64
@@ -11523,7 +11261,7 @@ MonoBehaviour:
   yPos: 93.4
   currentScene: {fileID: 1858099934}
   newScene: {fileID: 524762865}
-  count: {fileID: 0}
+  count: {fileID: 772346580}
   WhatIsPlayer:
     serializedVersion: 2
     m_Bits: 64
@@ -12828,7 +12566,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3711365700126168635, guid: 92d2ef642f04eed4b9bbfbec11f3fad0, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3711365700126168635, guid: 92d2ef642f04eed4b9bbfbec11f3fad0, type: 3}
       propertyPath: m_LocalPosition.x

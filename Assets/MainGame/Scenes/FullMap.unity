@@ -8768,31 +8768,11 @@ MonoBehaviour:
   ghostBGM: {fileID: 5956970117756654392, guid: 29eaf7b11aad58d4d8f386467a5b593e, type: 3}
   distance: 85
   distance2: -85
-  chanceOfSpawn: 0
-  walkBeetweenFrame: 0
   startingPosition: {x: 0, y: 0, z: 0}
-  count:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  count: {fileID: 772346580}
+  maximumChanceOfApparition: 100
+  minimumChanceOfApparition: 10
+  currentChance: 0
 --- !u!1 &1554071401
 GameObject:
   m_ObjectHideFlags: 3

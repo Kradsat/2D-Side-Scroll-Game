@@ -37,6 +37,7 @@ public class TakeStairs : MonoBehaviour
                  player.position = new Vector2(xPos, yPos);
                 currentScene.SetActive(false);
                 newScene.SetActive(true);
+                count.doAction = true;
                 count.keepCount++;
                 }
 

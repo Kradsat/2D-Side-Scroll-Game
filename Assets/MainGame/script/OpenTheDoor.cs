@@ -51,6 +51,7 @@ public class OpenTheDoor : MonoBehaviour
                     currentRoom.SetActive(false);
                     nextRoom.SetActive(true);
                     NextRoom();
+                    count.doAction = true;
                     count.keepCount++;
                 }
                 else if (currentRoom.activeInHierarchy == false)
@@ -58,6 +59,8 @@ public class OpenTheDoor : MonoBehaviour
                     //exit = false;
                     currentRoom.SetActive(true);
                     nextRoom.SetActive(false);
+                    count.doAction = true;
+                    count.keepCount++;
                 }
             }
         }
