@@ -38,10 +38,12 @@ public class CharacterChangeScript : MonoBehaviour
         //left or right character change
         if(num % 2 == 0)
         {
+            leftCharacter.color = new Color(255,255,255,255);
             leftCharacter.sprite = characterUI[count];
         }
         else
         {
+            rightCharacter.color = new Color(255,255,255,255);
             rightCharacter.sprite = characterUI[count];
         }
     }

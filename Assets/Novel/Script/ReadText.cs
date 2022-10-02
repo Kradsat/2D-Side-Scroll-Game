@@ -14,13 +14,17 @@ public class ReadText : MonoBehaviour
     private Queue<string> names;
     private Queue<string> sentences;
     private Queue<string> expression;
+    private Queue<string> back;
 
     public TextAsset textAsset;
 
     [SerializeField]
     LogButton logButton;
+
     [SerializeField]
     CharacterChangeScript characterChange;
+    [SerializeField]
+    BackgroundChangeScript backgroundChange;
 
     string[] data;
     string[] row;
@@ -45,6 +49,7 @@ public class ReadText : MonoBehaviour
         sentences = new Queue<string>();
         names = new Queue<string>();
         expression = new Queue<string>();
+        back = new Queue<string>();
         dialogue = new List<Dialogue>();
         nextDialogueButton.onClick.AddListener(DisplayNextSentence);
 
@@ -79,11 +84,13 @@ public class ReadText : MonoBehaviour
         sentences.Clear();
         names.Clear();
         expression.Clear();
+        back.Clear();
         foreach (Dialogue d in dialogue.ToArray())
         {
             names.Enqueue(d.name);
             sentences.Enqueue(d.sentences);
             expression.Enqueue(d.ui);
+            back.Enqueue(d.background);
         }
         DisplayNextSentence();
     }
@@ -101,11 +108,14 @@ public class ReadText : MonoBehaviour
         string name = names.Dequeue();
         string sentence = sentences.Dequeue();
         string express = expression.Dequeue();
+        string bg = back.Dequeue();
 
         nameText.text = name;
         dialogueText.text = sentence;
 
         logButton.AddLog(sentence, lineCount, express);
+
+        backgroundChange.BackgroundChange(bg);
 
         if(express != "")
         {
