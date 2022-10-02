@@ -22,8 +22,8 @@ public class MonsterManager : MonoBehaviour
 
     public bool spawnGhost;
     public float spawn;
-    public bool StopRangeUpdate;
-
+    public bool spawnRateReset;
+    float resetTime;
 
     private void Awake()
     {
@@ -38,12 +38,15 @@ public class MonsterManager : MonoBehaviour
     {
         spawn = Random.Range(1, maximumChanceOfApparition);
         spawnGhost = true;
+        spawnRateReset = false;
+        resetTime = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
         ApparitionRate();
+        SpawnTimeReset();
     }
 
     public void ApparitionRate() // instantiate prefab + bgm
@@ -61,10 +64,10 @@ public class MonsterManager : MonoBehaviour
 
         if(spawn <= currentChance && spawnGhost == true)
         {
-            spawnGhost = false;
             EnemySpawn();
             disapear();
             disapearBgm();
+            spawnGhost = false;
         }
 
 
@@ -86,13 +89,10 @@ public class MonsterManager : MonoBehaviour
     
     public void disapear() // destroy prefab ghost
     {
-        float destroyTime = 0;
-        destroyTime += Time.time;
-        if(destroyTime == 10)
-        {
-            spawnGhost = true;
-            count.keepCount = 0;
-        }
+        float destroyTime = 10;
+        resetTime = 0;
+        spawnRateReset = true;
+
         spawn = Random.Range(1, maximumChanceOfApparition);
 
         Destroy(newInstance, destroyTime);
@@ -101,6 +101,22 @@ public class MonsterManager : MonoBehaviour
     {
         var destroyTimeBgm = 13;
         Destroy(newBgm, destroyTimeBgm);
+    }
+
+    public void SpawnTimeReset()
+    {
+        if(spawnRateReset == true)
+        {
+            resetTime += Time.deltaTime;
+            if( resetTime >= 10)
+            {
+                spawnGhost = true;
+                count.keepCount = 0;
+                currentChance = 0;
+
+                spawnRateReset = false;
+            }
+        }
     }
 
     public void checkForEncounter()
