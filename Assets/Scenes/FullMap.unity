@@ -933,13 +933,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fba842501304eb640b0f73eb3ddd07d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPos: {fileID: 1232510281}
-  width: 12.1
-  height: 27.1
-  sceneName: room6
-  WhatIsPlayer:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!212 &136323355
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1964,13 +1957,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fba842501304eb640b0f73eb3ddd07d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPos: {fileID: 376031542}
-  width: 12.1
-  height: 27.1
-  sceneName: room1
-  WhatIsPlayer:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!114 &330310338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3024,13 +3010,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fba842501304eb640b0f73eb3ddd07d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPos: {fileID: 434558598}
-  width: 12.1
-  height: 27.1
-  sceneName: room9
-  WhatIsPlayer:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!212 &522353127
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3539,13 +3518,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fba842501304eb640b0f73eb3ddd07d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPos: {fileID: 301093329}
-  width: 12.1
-  height: 27.1
-  sceneName: room13
-  WhatIsPlayer:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!212 &551701358
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3715,13 +3687,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fba842501304eb640b0f73eb3ddd07d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPos: {fileID: 157891072}
-  width: 12.1
-  height: 27.1
-  sceneName: room2
-  WhatIsPlayer:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!114 &567001856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4447,13 +4412,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fba842501304eb640b0f73eb3ddd07d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPos: {fileID: 1442278850}
-  width: 12.1
-  height: 27.1
-  sceneName: room3
-  WhatIsPlayer:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!114 &704997847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4583,13 +4541,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fba842501304eb640b0f73eb3ddd07d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPos: {fileID: 392974850}
-  width: 12.1
-  height: 27.1
-  sceneName: room10
-  WhatIsPlayer:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!212 &733327100
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7734,13 +7685,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fba842501304eb640b0f73eb3ddd07d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPos: {fileID: 1595828331}
-  width: 12.1
-  height: 27.1
-  sceneName: room8
-  WhatIsPlayer:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!212 &1400889011
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8447,6 +8391,7 @@ GameObject:
   - component: {fileID: 1552599273}
   - component: {fileID: 1552599272}
   - component: {fileID: 1552599289}
+  - component: {fileID: 1552599290}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -8506,7 +8451,33 @@ MonoBehaviour:
   currentChance: 0
   spawnGhost: 0
   spawn: 0
-  StopRangeUpdate: 0
+  spawnRateReset: 0
+--- !u!61 &1552599290
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552599271}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1554071401
 GameObject:
   m_ObjectHideFlags: 3
@@ -8581,13 +8552,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fba842501304eb640b0f73eb3ddd07d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPos: {fileID: 1642324481}
-  width: 12.1
-  height: 27.1
-  sceneName: room11
-  WhatIsPlayer:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!212 &1571364091
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8903,13 +8867,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fba842501304eb640b0f73eb3ddd07d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPos: {fileID: 1882366245}
-  width: 12.1
-  height: 27.1
-  sceneName: room14
-  WhatIsPlayer:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!212 &1595787169
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9411,13 +9368,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fba842501304eb640b0f73eb3ddd07d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPos: {fileID: 1337039595}
-  width: 12.1
-  height: 27.1
-  sceneName: room15
-  WhatIsPlayer:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!212 &1705596199
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9746,13 +9696,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fba842501304eb640b0f73eb3ddd07d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPos: {fileID: 1243812473}
-  width: 12.1
-  height: 27.1
-  sceneName: room7
-  WhatIsPlayer:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!212 &1728369281
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10526,13 +10469,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fba842501304eb640b0f73eb3ddd07d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPos: {fileID: 140820129}
-  width: 12.1
-  height: 27.1
-  sceneName: room5
-  WhatIsPlayer:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!114 &1806488709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12434,13 +12370,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fba842501304eb640b0f73eb3ddd07d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPos: {fileID: 1629749029}
-  width: 12.1
-  height: 27.1
-  sceneName: room4
-  WhatIsPlayer:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!114 &2031856850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12640,13 +12569,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fba842501304eb640b0f73eb3ddd07d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPos: {fileID: 1302591102}
-  width: 12.1
-  height: 27.1
-  sceneName: room12
-  WhatIsPlayer:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!212 &2133355489
 SpriteRenderer:
   m_ObjectHideFlags: 0

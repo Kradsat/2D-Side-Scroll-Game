@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Charactercontroller : MonoBehaviour
 {
@@ -36,7 +38,6 @@ public class Charactercontroller : MonoBehaviour
        // startingPosition = transform.position;
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _spriteRenderer.sprite = characterSprite[1];
-
     }
 
     private void FixedUpdate()

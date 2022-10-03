@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MonsterManager : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class MonsterManager : MonoBehaviour
     public float distance = 85f;
     public float distance2 = -85f;
     public Vector3 startingPosition;
+    Collider2D ghostCollider;
+    Collider2D characterCollider;
 
 
     public Count count;
@@ -24,6 +27,7 @@ public class MonsterManager : MonoBehaviour
     public float spawn;
     public bool spawnRateReset;
     float resetTime;
+    bool isGameOverPossible = false;
 
     private void Awake()
     {
@@ -68,9 +72,12 @@ public class MonsterManager : MonoBehaviour
             disapear();
             disapearBgm();
             spawnGhost = false;
+            isGameOverPossible = true;
         }
 
-
+        if( isGameOverPossible ) {
+            GameOver( );
+        }
 
       //  newInstance = Instantiate(prefabMonster2, new Vector3(player.transform.position.x - distance2, player.transform.position.y, 0), Quaternion.identity);
        
@@ -85,6 +92,9 @@ public class MonsterManager : MonoBehaviour
         newBgm = Instantiate(ghostBGM, new Vector3(0, 0, 0), Quaternion.identity);
         currentChance = 0;
         SoundSystem.instance.PlayGhostBGM();
+
+        ghostCollider = GameObject.FindGameObjectWithTag( "Enemy" ).GetComponent<Collider2D>( );
+        characterCollider = GameObject.FindGameObjectWithTag( "Player" ).GetComponent<Collider2D>( );
     }
     
     public void disapear() // destroy prefab ghost
@@ -123,5 +133,12 @@ public class MonsterManager : MonoBehaviour
     {
         
 
+    }
+
+    public void GameOver( ) {
+        if( ghostCollider.IsTouching( characterCollider ) ) {
+            SceneManager.LoadScene( "Game Over" );
+            Debug.Log( "Funciona" );
+        }
     }
 }
