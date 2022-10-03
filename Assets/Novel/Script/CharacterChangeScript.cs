@@ -11,12 +11,18 @@ public class CharacterChangeScript : MonoBehaviour
     Image rightCharacter;
 
     [SerializeField]
+    Image leftExpression;
+    [SerializeField]
+    Image rightExpression;
+
+    [SerializeField]
     Sprite[] characterUI;
 
     int count;
 
     public void CharacterChange(string character, int num)
     {
+        Debug.Log(character);
         //character main UI
         if(character.Contains("K"))
         {
