@@ -17,11 +17,7 @@ public class OpenTheDoor : MonoBehaviour
     public Count count;
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        //count = GetComponent<Count>()
-;    }
+ 
 
     // Update is called once per frame
     private void Update()

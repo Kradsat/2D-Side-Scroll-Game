@@ -552,7 +552,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -685,7 +685,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -863,7 +863,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -913,26 +913,14 @@ GameObject:
   m_Component:
   - component: {fileID: 136323356}
   - component: {fileID: 136323355}
-  - component: {fileID: 136323354}
+  - component: {fileID: 136323357}
   m_Layer: 0
   m_Name: 1
-  m_TagString: Untagged
+  m_TagString: Loft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &136323354
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 136323353}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fba842501304eb640b0f73eb3ddd07d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &136323355
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1002,6 +990,30 @@ Transform:
   m_Father: {fileID: 1899822964}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &136323357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136323353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af6ae9b541d98b54f8bb274f58b7e44a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 12.1
+  height: 27.1
+  doorPos: {fileID: 1232510281}
+  WhatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 64
+  currentRoom: {fileID: 136323353}
+  nextRoom: {fileID: 925758238}
+  player: {fileID: 1700669383}
+  xPos: 1088.9
+  yPos: -6.7
+  count: {fileID: 772346580}
 --- !u!1 &140820128
 GameObject:
   m_ObjectHideFlags: 0
@@ -1306,6 +1318,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &231329395
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 231329396}
+  m_Layer: 0
+  m_Name: EdgeMapRight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &231329396
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231329395}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -39.1, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 823929892}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &251949279
 GameObject:
   m_ObjectHideFlags: 3
@@ -1409,7 +1452,7 @@ GameObject:
   - component: {fileID: 272991234}
   m_Layer: 0
   m_Name: thirdFloor
-  m_TagString: Untagged
+  m_TagString: Loft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1555,7 +1598,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1608,7 +1651,7 @@ GameObject:
   - component: {fileID: 304925774}
   m_Layer: 0
   m_Name: stair_right
-  m_TagString: Untagged
+  m_TagString: Loft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1697,7 +1740,7 @@ MonoBehaviour:
   stairPos: {fileID: 1231979694}
   width: 18.76
   height: 32.9
-  player: {fileID: 0}
+  player: {fileID: 1700669383}
   xPos: -30.19615
   yPos: 43.3
   currentScene: {fileID: 304925771}
@@ -1817,7 +1860,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1867,11 +1910,10 @@ GameObject:
   m_Component:
   - component: {fileID: 330310335}
   - component: {fileID: 330310336}
-  - component: {fileID: 330310337}
   - component: {fileID: 330310338}
   m_Layer: 0
   m_Name: 1
-  m_TagString: Untagged
+  m_TagString: Loft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1945,18 +1987,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &330310337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 330310334}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fba842501304eb640b0f73eb3ddd07d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &330310338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1994,7 +2024,7 @@ GameObject:
   - component: {fileID: 336537389}
   m_Layer: 0
   m_Name: stair_right
-  m_TagString: Untagged
+  m_TagString: Loft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2172,7 +2202,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2334,7 +2364,7 @@ GameObject:
   - component: {fileID: 365272970}
   m_Layer: 0
   m_Name: firstFloor
-  m_TagString: Untagged
+  m_TagString: Loft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2511,7 +2541,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2744,7 +2774,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 1858099934}
   frame2: {fileID: 136323353}
-  count: {fileID: 0}
+  count: {fileID: 772346580}
 --- !u!61 &462743247
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2989,27 +3019,14 @@ GameObject:
   m_Component:
   - component: {fileID: 522353128}
   - component: {fileID: 522353127}
-  - component: {fileID: 522353126}
   - component: {fileID: 522353129}
   m_Layer: 0
   m_Name: 4
-  m_TagString: Untagged
+  m_TagString: Loft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &522353126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 522353125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fba842501304eb640b0f73eb3ddd07d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &522353127
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3091,17 +3108,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6ae9b541d98b54f8bb274f58b7e44a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 0
-  height: 0
-  doorPos: {fileID: 0}
+  width: 12.1
+  height: 27.1
+  doorPos: {fileID: 434558598}
   WhatIsPlayer:
     serializedVersion: 2
-    m_Bits: 0
-  currentRoom: {fileID: 0}
-  nextRoom: {fileID: 0}
-  player: {fileID: 0}
-  xPos: 0
-  yPos: 0
+    m_Bits: 64
+  currentRoom: {fileID: 522353125}
+  nextRoom: {fileID: 1853891230}
+  player: {fileID: 1700669383}
+  xPos: 1373
+  yPos: -6.7
   count: {fileID: 772346580}
 --- !u!1 &524762865
 GameObject:
@@ -3116,7 +3133,7 @@ GameObject:
   - component: {fileID: 524762868}
   m_Layer: 0
   m_Name: stair_left
-  m_TagString: Untagged
+  m_TagString: Loft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3205,7 +3222,7 @@ MonoBehaviour:
   stairPos: {fileID: 1806583478}
   width: 18.2
   height: 32.9
-  player: {fileID: 0}
+  player: {fileID: 1700669383}
   xPos: 501
   yPos: 43.3
   currentScene: {fileID: 524762865}
@@ -3498,26 +3515,14 @@ GameObject:
   m_Component:
   - component: {fileID: 551701359}
   - component: {fileID: 551701358}
-  - component: {fileID: 551701357}
+  - component: {fileID: 551701360}
   m_Layer: 0
   m_Name: 3
-  m_TagString: Untagged
+  m_TagString: Loft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &551701357
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 551701356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fba842501304eb640b0f73eb3ddd07d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &551701358
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3587,6 +3592,30 @@ Transform:
   m_Father: {fileID: 272991234}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &551701360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551701356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af6ae9b541d98b54f8bb274f58b7e44a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 12.1
+  height: 27.1
+  doorPos: {fileID: 301093329}
+  WhatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 64
+  currentRoom: {fileID: 551701356}
+  nextRoom: {fileID: 1720875374}
+  player: {fileID: 1700669383}
+  xPos: 1740
+  yPos: -6.7
+  count: {fileID: 772346580}
 --- !u!1 &567001852
 GameObject:
   m_ObjectHideFlags: 0
@@ -3597,11 +3626,10 @@ GameObject:
   m_Component:
   - component: {fileID: 567001853}
   - component: {fileID: 567001854}
-  - component: {fileID: 567001855}
   - component: {fileID: 567001856}
   m_Layer: 0
   m_Name: 2
-  m_TagString: Untagged
+  m_TagString: Loft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3675,18 +3703,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &567001855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 567001852}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fba842501304eb640b0f73eb3ddd07d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &567001856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3968,7 +3984,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -4223,7 +4239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 1705596197}
   frame2: {fileID: 304925771}
-  count: {fileID: 0}
+  count: {fileID: 772346580}
 --- !u!61 &662204740
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4322,11 +4338,10 @@ GameObject:
   m_Component:
   - component: {fileID: 704997844}
   - component: {fileID: 704997845}
-  - component: {fileID: 704997846}
   - component: {fileID: 704997847}
   m_Layer: 0
   m_Name: 3
-  m_TagString: Untagged
+  m_TagString: Loft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4400,18 +4415,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &704997846
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 704997843}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fba842501304eb640b0f73eb3ddd07d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &704997847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4433,7 +4436,7 @@ MonoBehaviour:
   currentRoom: {fileID: 704997843}
   nextRoom: {fileID: 1777442283}
   player: {fileID: 1700669383}
-  xPos: 634
+  xPos: 815.2
   yPos: -6.7
   count: {fileID: 772346580}
 --- !u!1 &723978276
@@ -4483,7 +4486,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 1595787167}
   frame2: {fileID: 1705596197}
-  count: {fileID: 0}
+  count: {fileID: 772346580}
 --- !u!61 &723978279
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4520,27 +4523,14 @@ GameObject:
   m_Component:
   - component: {fileID: 733327101}
   - component: {fileID: 733327100}
-  - component: {fileID: 733327099}
   - component: {fileID: 733327102}
   m_Layer: 0
   m_Name: 5
-  m_TagString: Untagged
+  m_TagString: Loft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &733327099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 733327098}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fba842501304eb640b0f73eb3ddd07d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &733327100
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4622,17 +4612,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6ae9b541d98b54f8bb274f58b7e44a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 0
-  height: 0
-  doorPos: {fileID: 0}
+  width: 12.1
+  height: 27.1
+  doorPos: {fileID: 392974850}
   WhatIsPlayer:
     serializedVersion: 2
-    m_Bits: 0
-  currentRoom: {fileID: 0}
-  nextRoom: {fileID: 0}
-  player: {fileID: 0}
-  xPos: 0
-  yPos: 0
+    m_Bits: 64
+  currentRoom: {fileID: 733327098}
+  nextRoom: {fileID: 2006481396}
+  player: {fileID: 1700669383}
+  xPos: 1464
+  yPos: -6.7
   count: {fileID: 772346580}
 --- !u!1 &742178221
 GameObject:
@@ -4880,6 +4870,8 @@ Transform:
   - {fileID: 1899822964}
   - {fileID: 272991234}
   - {fileID: 263043783}
+  - {fileID: 2035624055}
+  - {fileID: 231329396}
   m_Father: {fileID: 950214677}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5005,7 +4997,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 551701356}
   frame2: {fileID: 1595787167}
-  count: {fileID: 0}
+  count: {fileID: 772346580}
 --- !u!61 &857150213
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5079,7 +5071,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 522353125}
   frame2: {fileID: 733327098}
-  count: {fileID: 0}
+  count: {fileID: 772346580}
 --- !u!61 &865175508
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5738,7 +5730,7 @@ GameObject:
   - component: {fileID: 996339620}
   m_Layer: 0
   m_Name: stair_right
-  m_TagString: Untagged
+  m_TagString: Loft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6707,7 +6699,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -7243,7 +7235,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -7463,7 +7455,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 1571364089}
   frame2: {fileID: 2133355487}
-  count: {fileID: 0}
+  count: {fileID: 772346580}
 --- !u!61 &1314673355
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7664,27 +7656,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1400889012}
   - component: {fileID: 1400889011}
-  - component: {fileID: 1400889010}
   - component: {fileID: 1400889013}
   m_Layer: 0
   m_Name: 3
-  m_TagString: Untagged
+  m_TagString: Loft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &1400889010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1400889009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fba842501304eb640b0f73eb3ddd07d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1400889011
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7766,17 +7745,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6ae9b541d98b54f8bb274f58b7e44a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 0
-  height: 0
-  doorPos: {fileID: 0}
+  width: 12.1
+  height: 27.1
+  doorPos: {fileID: 1595828331}
   WhatIsPlayer:
     serializedVersion: 2
-    m_Bits: 0
-  currentRoom: {fileID: 0}
-  nextRoom: {fileID: 0}
-  player: {fileID: 0}
-  xPos: 0
-  yPos: 0
+    m_Bits: 64
+  currentRoom: {fileID: 1400889009}
+  nextRoom: {fileID: 525976797}
+  player: {fileID: 1700669383}
+  xPos: 1281
+  yPos: -6.7
   count: {fileID: 772346580}
 --- !u!1 &1442278849
 GameObject:
@@ -8389,7 +8368,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1552599273}
-  - component: {fileID: 1552599272}
   - component: {fileID: 1552599289}
   - component: {fileID: 1552599290}
   m_Layer: 0
@@ -8399,18 +8377,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1552599272
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1552599271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11578d98bef25774ea134851920456a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1552599273
 Transform:
   m_ObjectHideFlags: 0
@@ -8445,6 +8411,8 @@ MonoBehaviour:
   distance: 85
   distance2: -85
   startingPosition: {x: 0, y: 0, z: 0}
+  ghostCollider: {fileID: 9040236794425128758, guid: 2efce90f67dc02d44a3d2c027175346b, type: 3}
+  characterCollider: {fileID: 1700669385}
   count: {fileID: 772346580}
   maximumChanceOfApparition: 100
   minimumChanceOfApparition: 10
@@ -8452,6 +8420,8 @@ MonoBehaviour:
   spawnGhost: 0
   spawn: 0
   spawnRateReset: 0
+  stopRandomNumber: 0
+  canSpawnHere: 0
 --- !u!61 &1552599290
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8532,26 +8502,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1571364092}
   - component: {fileID: 1571364091}
-  - component: {fileID: 1571364090}
+  - component: {fileID: 1571364093}
   m_Layer: 0
   m_Name: 1
-  m_TagString: Untagged
+  m_TagString: Loft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &1571364090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1571364089}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fba842501304eb640b0f73eb3ddd07d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1571364091
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8621,6 +8579,30 @@ Transform:
   m_Father: {fileID: 272991234}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1571364093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571364089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af6ae9b541d98b54f8bb274f58b7e44a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 12.1
+  height: 27.1
+  doorPos: {fileID: 1642324481}
+  WhatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 64
+  currentRoom: {fileID: 1571364089}
+  nextRoom: {fileID: 4647744}
+  player: {fileID: 1700669383}
+  xPos: 1556
+  yPos: -6.7
+  count: {fileID: 772346580}
 --- !u!1 &1575793712
 GameObject:
   m_ObjectHideFlags: 0
@@ -8847,26 +8829,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1595787170}
   - component: {fileID: 1595787169}
-  - component: {fileID: 1595787168}
+  - component: {fileID: 1595787171}
   m_Layer: 0
   m_Name: 4
-  m_TagString: Untagged
+  m_TagString: Loft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &1595787168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1595787167}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fba842501304eb640b0f73eb3ddd07d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1595787169
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8936,6 +8906,30 @@ Transform:
   m_Father: {fileID: 272991234}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1595787171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595787167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af6ae9b541d98b54f8bb274f58b7e44a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 12.1
+  height: 27.1
+  doorPos: {fileID: 1882366245}
+  WhatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 64
+  currentRoom: {fileID: 1595787167}
+  nextRoom: {fileID: 361055434}
+  player: {fileID: 1700669383}
+  xPos: 1828
+  yPos: -6.7
+  count: {fileID: 772346580}
 --- !u!1 &1595828330
 GameObject:
   m_ObjectHideFlags: 0
@@ -9132,7 +9126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 733327098}
   frame2: {fileID: 996339617}
-  count: {fileID: 0}
+  count: {fileID: 772346580}
 --- !u!61 &1617466934
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9159,6 +9153,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 45}
   m_EdgeRadius: 0
+--- !u!1 &1622393999
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1622394000}
+  m_Layer: 0
+  m_Name: EdgeRoomRight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1622394000
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622393999}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 38.68, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1788341111}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1629749028
 GameObject:
   m_ObjectHideFlags: 0
@@ -9338,6 +9363,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3711365700126168635, guid: 92d2ef642f04eed4b9bbfbec11f3fad0, type: 3}
   m_PrefabInstance: {fileID: 2112289937}
   m_PrefabAsset: {fileID: 0}
+--- !u!61 &1700669385 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 3711365700126168634, guid: 92d2ef642f04eed4b9bbfbec11f3fad0, type: 3}
+  m_PrefabInstance: {fileID: 2112289937}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1705596197
 GameObject:
   m_ObjectHideFlags: 0
@@ -9348,26 +9378,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1705596200}
   - component: {fileID: 1705596199}
-  - component: {fileID: 1705596198}
+  - component: {fileID: 1705596201}
   m_Layer: 0
   m_Name: 5
-  m_TagString: Untagged
+  m_TagString: Loft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &1705596198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1705596197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fba842501304eb640b0f73eb3ddd07d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1705596199
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9437,6 +9455,30 @@ Transform:
   m_Father: {fileID: 272991234}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1705596201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705596197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af6ae9b541d98b54f8bb274f58b7e44a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 12.1
+  height: 27.1
+  doorPos: {fileID: 1337039595}
+  WhatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 64
+  currentRoom: {fileID: 1705596197}
+  nextRoom: {fileID: 1577128447}
+  player: {fileID: 1700669383}
+  xPos: 1912
+  yPos: -6.7
+  count: {fileID: 772346580}
 --- !u!1 &1716682350
 GameObject:
   m_ObjectHideFlags: 0
@@ -9484,7 +9526,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 136323353}
   frame2: {fileID: 1728369279}
-  count: {fileID: 0}
+  count: {fileID: 772346580}
 --- !u!61 &1716682353
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9676,26 +9718,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1728369282}
   - component: {fileID: 1728369281}
-  - component: {fileID: 1728369280}
+  - component: {fileID: 1728369283}
   m_Layer: 0
   m_Name: 2
-  m_TagString: Untagged
+  m_TagString: Loft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &1728369280
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1728369279}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fba842501304eb640b0f73eb3ddd07d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1728369281
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9765,6 +9795,30 @@ Transform:
   m_Father: {fileID: 1899822964}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1728369283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728369279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af6ae9b541d98b54f8bb274f58b7e44a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 12.1
+  height: 27.1
+  doorPos: {fileID: 1243812473}
+  WhatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 64
+  currentRoom: {fileID: 1728369279}
+  nextRoom: {fileID: 205712508}
+  player: {fileID: 1700669383}
+  xPos: 1183.5
+  yPos: -6.7
+  count: {fileID: 772346580}
 --- !u!1 &1742837494
 GameObject:
   m_ObjectHideFlags: 0
@@ -10114,13 +10168,14 @@ GameObject:
   - component: {fileID: 1788341111}
   - component: {fileID: 1788341110}
   - component: {fileID: 1788341112}
+  - component: {fileID: 1788341113}
   m_Layer: 0
   m_Name: Room1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1788341110
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10187,6 +10242,8 @@ Transform:
   m_Children:
   - {fileID: 327155262}
   - {fileID: 311858100}
+  - {fileID: 1622394000}
+  - {fileID: 2132935217}
   m_Father: {fileID: 263043783}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10214,6 +10271,28 @@ MonoBehaviour:
   xPos: 427
   yPos: -6.7
   count: {fileID: 772346580}
+--- !u!114 &1788341113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788341109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 490d8338a60a54f43a90dd3821628d29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EdgePosLeft: {fileID: 2132935217}
+  EdgePosRight: {fileID: 1622394000}
+  width: 0.9
+  height: 44.27
+  xPosLeft: 562.82
+  xposRight: 638.6
+  WhatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 64
+  player: {fileID: 1700669383}
 --- !u!1 &1797725504
 GameObject:
   m_ObjectHideFlags: 0
@@ -10227,7 +10306,7 @@ GameObject:
   - component: {fileID: 1797725507}
   m_Layer: 0
   m_Name: stair_left
-  m_TagString: Untagged
+  m_TagString: Loft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10379,11 +10458,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1806488706}
   - component: {fileID: 1806488707}
-  - component: {fileID: 1806488708}
   - component: {fileID: 1806488709}
   m_Layer: 0
   m_Name: 5
-  m_TagString: Untagged
+  m_TagString: Loft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10457,18 +10535,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1806488708
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1806488705}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fba842501304eb640b0f73eb3ddd07d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1806488709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10490,7 +10556,7 @@ MonoBehaviour:
   currentRoom: {fileID: 2031856846}
   nextRoom: {fileID: 1137115873}
   player: {fileID: 1700669383}
-  xPos: 634
+  xPos: 994
   yPos: -6.7
   count: {fileID: 772346580}
 --- !u!1 &1806583477
@@ -10571,7 +10637,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 1400889009}
   frame2: {fileID: 522353125}
-  count: {fileID: 0}
+  count: {fileID: 772346580}
 --- !u!61 &1819239397
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10766,7 +10832,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -11078,7 +11144,7 @@ GameObject:
   - component: {fileID: 1858099937}
   m_Layer: 0
   m_Name: stair_left
-  m_TagString: Untagged
+  m_TagString: Loft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11399,7 +11465,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 1728369279}
   frame2: {fileID: 1400889009}
-  count: {fileID: 0}
+  count: {fileID: 772346580}
 --- !u!61 &1893982197
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11437,7 +11503,7 @@ GameObject:
   - component: {fileID: 1899822964}
   m_Layer: 0
   m_Name: secondFloor
-  m_TagString: Untagged
+  m_TagString: Loft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11755,7 +11821,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 2133355487}
   frame2: {fileID: 551701356}
-  count: {fileID: 0}
+  count: {fileID: 772346580}
 --- !u!61 &1957488974
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12280,11 +12346,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2031856847}
   - component: {fileID: 2031856848}
-  - component: {fileID: 2031856849}
   - component: {fileID: 2031856850}
   m_Layer: 0
   m_Name: 4
-  m_TagString: Untagged
+  m_TagString: Loft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12358,18 +12423,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2031856849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2031856846}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fba842501304eb640b0f73eb3ddd07d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2031856850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12391,9 +12444,40 @@ MonoBehaviour:
   currentRoom: {fileID: 2031856846}
   nextRoom: {fileID: 1137115873}
   player: {fileID: 1700669383}
-  xPos: 634
+  xPos: 901.8
   yPos: -6.7
   count: {fileID: 772346580}
+--- !u!1 &2035624054
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2035624055}
+  m_Layer: 0
+  m_Name: EdgeMapLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2035624055
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2035624054}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 511.42, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 823929892}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2049197216
 GameObject:
   m_ObjectHideFlags: 3
@@ -12499,7 +12583,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3711365700126168635, guid: 92d2ef642f04eed4b9bbfbec11f3fad0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 505.52
+      value: 504.6
       objectReference: {fileID: 0}
     - target: {fileID: 3711365700126168635, guid: 92d2ef642f04eed4b9bbfbec11f3fad0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12537,8 +12621,79 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3711365700126168639, guid: 92d2ef642f04eed4b9bbfbec11f3fad0, type: 3}
+      propertyPath: width
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3711365700126168639, guid: 92d2ef642f04eed4b9bbfbec11f3fad0, type: 3}
+      propertyPath: height
+      value: 273.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 3711365700126168639, guid: 92d2ef642f04eed4b9bbfbec11f3fad0, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1700669383}
+    - target: {fileID: 3711365700126168639, guid: 92d2ef642f04eed4b9bbfbec11f3fad0, type: 3}
+      propertyPath: xPosLeft
+      value: 508.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 3711365700126168639, guid: 92d2ef642f04eed4b9bbfbec11f3fad0, type: 3}
+      propertyPath: yPosLeft
+      value: -6.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3711365700126168639, guid: 92d2ef642f04eed4b9bbfbec11f3fad0, type: 3}
+      propertyPath: xposRight
+      value: -36
+      objectReference: {fileID: 0}
+    - target: {fileID: 3711365700126168639, guid: 92d2ef642f04eed4b9bbfbec11f3fad0, type: 3}
+      propertyPath: yPosRight
+      value: -6.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3711365700126168639, guid: 92d2ef642f04eed4b9bbfbec11f3fad0, type: 3}
+      propertyPath: EdgePosLeft
+      value: 
+      objectReference: {fileID: 2035624055}
+    - target: {fileID: 3711365700126168639, guid: 92d2ef642f04eed4b9bbfbec11f3fad0, type: 3}
+      propertyPath: EdgePosRight
+      value: 
+      objectReference: {fileID: 231329396}
+    - target: {fileID: 3711365700126168639, guid: 92d2ef642f04eed4b9bbfbec11f3fad0, type: 3}
+      propertyPath: WhatIsPlayer.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92d2ef642f04eed4b9bbfbec11f3fad0, type: 3}
+--- !u!1 &2132935216
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2132935217}
+  m_Layer: 0
+  m_Name: EdgeRoomLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2132935217
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2132935216}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -38.8, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1788341111}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2133355487
 GameObject:
   m_ObjectHideFlags: 0
@@ -12549,26 +12704,14 @@ GameObject:
   m_Component:
   - component: {fileID: 2133355490}
   - component: {fileID: 2133355489}
-  - component: {fileID: 2133355488}
+  - component: {fileID: 2133355491}
   m_Layer: 0
   m_Name: 2
-  m_TagString: Untagged
+  m_TagString: Loft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &2133355488
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2133355487}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fba842501304eb640b0f73eb3ddd07d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &2133355489
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12638,3 +12781,27 @@ Transform:
   m_Father: {fileID: 272991234}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2133355491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2133355487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af6ae9b541d98b54f8bb274f58b7e44a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 12.1
+  height: 27.1
+  doorPos: {fileID: 1302591102}
+  WhatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 64
+  currentRoom: {fileID: 2133355487}
+  nextRoom: {fileID: 1533770133}
+  player: {fileID: 1700669383}
+  xPos: 1645
+  yPos: -6.7
+  count: {fileID: 772346580}

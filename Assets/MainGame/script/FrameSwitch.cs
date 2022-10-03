@@ -12,25 +12,11 @@ public class FrameSwitch : MonoBehaviour
 
     private void Start()
     {
-       // count = GetComponent<Count>();
+       
     }
 
-    //public bool exit;
 
-    //private void Start()
-    //{
-    //    exit = true;
-    //}
-
-    //private void OnTriggerExit2D(Collider2D collision)
-    //{
-    //    exit = true;
-
-
-
-    //}
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)// function to change beetween frame/map
     {
         if(frame1.activeInHierarchy == true )
         {
@@ -47,7 +33,7 @@ public class FrameSwitch : MonoBehaviour
             frame1.SetActive(true);
             frame2.SetActive(false);
             count.doAction = true;
-            count.keepCount++;
+            count.keepCount++; // add one action
         }
     }
 

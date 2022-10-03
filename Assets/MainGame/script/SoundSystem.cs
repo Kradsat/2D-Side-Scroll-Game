@@ -20,9 +20,5 @@ public class SoundSystem : MonoBehaviour
         ApparitionGhostBgm.Play();
 
     }
-    public void StopBGM() // not used
-    {
-        
-        ApparitionGhostBgm.Stop();
-    }
+  
 }

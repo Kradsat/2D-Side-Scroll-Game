@@ -14,7 +14,10 @@ public class MonsterManager : MonoBehaviour
     public float distance = 85f;
     public float distance2 = -85f;
     public Vector3 startingPosition;
+
+    [SerializeField]
     Collider2D ghostCollider;
+    [SerializeField]
     Collider2D characterCollider;
 
 
@@ -27,16 +30,11 @@ public class MonsterManager : MonoBehaviour
     public float spawn;
     public bool spawnRateReset;
     float resetTime;
+    public bool stopRandomNumber;
+    public bool canSpawnHere;
     bool isGameOverPossible = false;
 
-    private void Awake()
-    {
-        if(newInstance != null)
-        {
-            Destroy(gameObject);
-            return;
-        }
-    }
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +42,7 @@ public class MonsterManager : MonoBehaviour
         spawnGhost = true;
         spawnRateReset = false;
         resetTime = 0;
+        canSpawnHere = gameObject.tag.Contains(("Loft"));
     }
 
     // Update is called once per frame
@@ -53,22 +52,27 @@ public class MonsterManager : MonoBehaviour
         SpawnTimeReset();
     }
 
-    public void ApparitionRate() // instantiate prefab + bgm
+    public void ApparitionRate() // function for the apparition rate of the ghost
     {
-        if (count.keepCount == 7)
+        if (count.keepCount == 7 && stopRandomNumber == true)
         {
+            stopRandomNumber = false;
             currentChance = minimumChanceOfApparition;
+            spawn = Random.Range(1, maximumChanceOfApparition);
         }
         else if(count.keepCount > 7 && count.doAction == true)
         {
             count.doAction = false;
             currentChance += 5f;
+            spawn = Random.Range(1, maximumChanceOfApparition);
         }
        
 
         if(spawn <= currentChance && spawnGhost == true)
         {
+            
             EnemySpawn();
+          
             disapear();
             disapearBgm();
             spawnGhost = false;
@@ -83,18 +87,27 @@ public class MonsterManager : MonoBehaviour
        
     }
 
-    public void EnemySpawn()
+    public void EnemySpawn() // instanciate ghost + bgm
     {
         
-       
+
+       if(player.transform.position == GameObject.FindGameObjectWithTag("Loft").transform.position)
+        {
+            canSpawnHere = true;
         Debug.Log("ghost is here! run bitch!");
         newInstance = Instantiate(prefabMonster, new Vector3(player.transform.position.x - distance, player.transform.position.y, 0), Quaternion.identity);
         newBgm = Instantiate(ghostBGM, new Vector3(0, 0, 0), Quaternion.identity);
         currentChance = 0;
         SoundSystem.instance.PlayGhostBGM();
+      
+        }
+       else
+        {
+            canSpawnHere = false;
+            return;
+        }
+           
 
-        ghostCollider = GameObject.FindGameObjectWithTag( "Enemy" ).GetComponent<Collider2D>( );
-        characterCollider = GameObject.FindGameObjectWithTag( "Player" ).GetComponent<Collider2D>( );
     }
     
     public void disapear() // destroy prefab ghost
@@ -104,8 +117,10 @@ public class MonsterManager : MonoBehaviour
         spawnRateReset = true;
 
         spawn = Random.Range(1, maximumChanceOfApparition);
+        
 
         Destroy(newInstance, destroyTime);
+        
     }
     public void disapearBgm() // destroy the bgm
     {
@@ -113,7 +128,7 @@ public class MonsterManager : MonoBehaviour
         Destroy(newBgm, destroyTimeBgm);
     }
 
-    public void SpawnTimeReset()
+    public void SpawnTimeReset() // reset the spawn time 
     {
         if(spawnRateReset == true)
         {
@@ -129,13 +144,10 @@ public class MonsterManager : MonoBehaviour
         }
     }
 
-    public void checkForEncounter()
+
+
+    public void GameOver( ) // game over function
     {
-        
-
-    }
-
-    public void GameOver( ) {
         if( ghostCollider.IsTouching( characterCollider ) ) {
             SceneManager.LoadScene( "Game Over" );
             Debug.Log( "Funciona" );

@@ -26,10 +26,8 @@ public class Monster : MonoBehaviour
 
     public Monster[] enemieToBeMoved;
     void Start()
-    {
-
+    { 
         startingPosition = transform.position;
-      //  moving = false;
       
     }
 
@@ -37,43 +35,16 @@ public class Monster : MonoBehaviour
     void Update()
     {
         MovementEnemy();
-
-
-        //    if (moving) // moving in x 
-        //    {
-        //    }
-        //    else
-        //    {
-        //        Collider2D[] colliders = Physics2D.OverlapCircleAll(new Vector2(transform.position.z, transform.position.x), 25); // check range of player and move if in range
-        //        foreach (Collider2D collider in colliders)
-        //        {
-        //            if(collider.gameObject.tag =="Player")
-        //            {
-        //                moving = true;
-        //            }
-        //        }
-
-        //    }
-        //}
-
-        //public void Move()
-        //{
-        //    moving = true;
-
-        //    foreach (Monster monster in enemieToBeMoved)
-        //    {
-        //        monster.Move();
-        //    }
     }
-        private void OnDrawGizmosSelected()
+        private void OnDrawGizmosSelected() // draw the distance beetween the monster and player 
         {
             Gizmos.color = Color.red;
             Gizmos.DrawCube(MonsterPos.position, new Vector3(width, height, 1));
         }
 
-    public void MovementEnemy()
+    public void MovementEnemy()// function to move the monster
     {
-        playerDetected = Physics2D.OverlapBox(MonsterPos.position, new Vector2(width, height), 0, WhatIsPlayer);
+        playerDetected = Physics2D.OverlapBox(MonsterPos.position, new Vector2(width, height), 0, WhatIsPlayer);// check if the player is in range
 
         if (playerDetected == true)
         {

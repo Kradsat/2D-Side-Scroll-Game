@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Dupe1
+  - Count
+  - Enemy
+  - Loft
   layers:
   - Default
   - TransparentFX

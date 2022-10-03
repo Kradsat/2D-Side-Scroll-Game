@@ -14,16 +14,31 @@ public class Charactercontroller : MonoBehaviour
 
     bool isWalking;
     bool stillWalking;
-   
+    private bool playerDetected;
+
     [SerializeField]
     Sprite faceCamera;
     [SerializeField]
     Sprite faceOtherSide;
 
+    public Transform EdgePosLeft;
+    public Transform EdgePosRight;
+    public float width;
+    public float height;
+    public float xPosLeft;
+    public float xposRight;
+
+    
+
+    public LayerMask WhatIsPlayer;
+    public Transform player;
+
     float moveSpeed = 20f;
 
     int animationCount = 0;
     int animationSpeed = 9;
+
+   
 
     int frame = 0;
     private void Awake()
@@ -40,7 +55,7 @@ public class Charactercontroller : MonoBehaviour
         _spriteRenderer.sprite = characterSprite[1];
     }
 
-    private void FixedUpdate()
+    private void FixedUpdate() // animation fixed Update
     {
         animationCount += 1;
 
@@ -56,6 +71,36 @@ public class Charactercontroller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Movement();
+        StopMovementOnEdgeLeft();
+        StopMovementOnEdgeRight();
+    }
+
+    public void StopMovementOnEdgeLeft()// block the character by reseting is transform position
+    {
+        playerDetected = Physics2D.OverlapBox(EdgePosLeft.position, new Vector2(width, height), 0, WhatIsPlayer);
+        if (playerDetected == true)
+        {
+            player.position = new Vector2(xPosLeft,transform.position.y);
+
+        }
+        
+       
+    }
+    public void StopMovementOnEdgeRight() // block the character by reseting is transform position
+    {
+        playerDetected = Physics2D.OverlapBox(EdgePosRight.position, new Vector2(width, height), 0, WhatIsPlayer);
+        if (playerDetected == true)
+        {
+            player.position = new Vector2(xposRight,transform.position.y );
+        }
+        
+    }
+
+
+    public void Movement()
+    {
+
         //move right
         if (Input.GetKey(KeyCode.RightArrow) && !Input.GetKey(KeyCode.LeftArrow))
         {
@@ -64,25 +109,23 @@ public class Charactercontroller : MonoBehaviour
 
             //animation
             isWalking = true;
-            //StopCoroutine(Animate());
-            //StartCoroutine(Animate());
+          
         }
 
         //move left
         else if (Input.GetKey(KeyCode.LeftArrow) && !Input.GetKey(KeyCode.RightArrow))
         {
             transform.eulerAngles = new Vector2(0, 0);//rotate to the left
-            
+
             {
                 transform.Translate(new Vector2(Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime, 0f));
 
                 //animation
                 isWalking = true;
-                //StopCoroutine(Animate());
-                //StartCoroutine(Animate());
+             
             }
         }
-      
+
         //stop animation
         else
         {
@@ -98,18 +141,11 @@ public class Charactercontroller : MonoBehaviour
         }
     }
 
-    //Coroutine for animation
-    //IEnumerator Animate()
-    //{
-    //    while(isWalking == true && stillWalking == false)
-    //    {
-    //        stillWalking = true;
-    //        for( int i = 0; i < 4; i++)
-    //        {
-    //            this.GetComponent<SpriteRenderer>().sprite = characterSprite[i];
-    //            yield return new WaitForSeconds(0.3f); 
-    //        }
-    //        stillWalking = false;
-    //    }
-    //}
+    private void OnDrawGizmosSelected() // draw the edge of the map
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawCube(EdgePosLeft.position, new Vector3(width, height, 1));
+        Gizmos.DrawCube(EdgePosRight.position, new Vector3(width, height, 1));
+    }
+   
 }
