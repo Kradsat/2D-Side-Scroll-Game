@@ -54,13 +54,13 @@ public class MonsterManager : MonoBehaviour
 
     public void ApparitionRate() // function for the apparition rate of the ghost
     {
-        if (count.keepCount == 7 && stopRandomNumber == true)
+        if (count.keepCount == 7 && stopRandomNumber == true) //  give a random spawn  rate with a minimum chance of 10
         {
             stopRandomNumber = false;
             currentChance = minimumChanceOfApparition;
             spawn = Random.Range(1, maximumChanceOfApparition);
         }
-        else if (count.keepCount > 7 && count.doAction == true && stopRandomNumber == false)
+        else if (count.keepCount > 7 && count.doAction == true && stopRandomNumber == false) // give a new spawn rate at each action and add 5 of the current chance
         {
             count.doAction = false;
             currentChance += 5f;
@@ -68,9 +68,9 @@ public class MonsterManager : MonoBehaviour
         }
 
 
-        if (spawn <= currentChance && spawnGhost == true )
+        if (spawn <= currentChance && spawnGhost == true )// spawn the ghost 
         {
-            if(count.canSpawnhere == true)
+            if(count.canSpawnhere == true) // check inside or oustide of the room
             {
                 Debug.Log("Outside Room");
                 EnemySpawn();
@@ -79,17 +79,18 @@ public class MonsterManager : MonoBehaviour
                 disapearBgm();
                 spawnGhost = false;
                 isGameOverPossible = true;
-            } else
+            } else // oustide of room = stop the random number of the spawn
             {
                 Debug.Log("inside Room");
                 stopRandomNumber = true;
             }
         }
 
-        if (isGameOverPossible)
+        if (isGameOverPossible && ghostCollider != null)// check if game over is possible
         {
             GameOver( );
         }
+        
 
         //  newInstance = Instantiate(prefabMonster2, new Vector3(player.transform.position.x - distance2, player.transform.position.y, 0), Quaternion.identity);
 
@@ -107,7 +108,7 @@ public class MonsterManager : MonoBehaviour
         characterCollider = GameObject.FindGameObjectWithTag( "Player" ).GetComponent<Collider2D>( );
     }
 
-    public void disapear() // destroy prefab ghost
+    public void disapear() // destroy prefab ghost after 10 sec
     {
         float destroyTime = 10;
         resetTime = 0;
@@ -117,9 +118,10 @@ public class MonsterManager : MonoBehaviour
 
 
         Destroy(newInstance, destroyTime);
-
+        isGameOverPossible = false;
+        
     }
-    public void disapearBgm() // destroy the bgm
+    public void disapearBgm() // destroy the bgm after 13 sec
     {
         var destroyTimeBgm = 13;
         Destroy(newBgm, destroyTimeBgm);

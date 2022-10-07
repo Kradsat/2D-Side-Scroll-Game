@@ -139,6 +139,6 @@ public class ReadText : MonoBehaviour
 
     void EndDialogue()
     {
-        SceneManager.LoadScene(+1);
+        SceneManager.LoadScene(2);
     }
 }
