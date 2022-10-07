@@ -14,6 +14,8 @@ public class Charactercontroller : MonoBehaviour
 
     bool isWalking;
     bool stillWalking;
+    bool isFront;
+    bool isBack;
     private bool playerDetected;
 
     [SerializeField]
@@ -28,7 +30,6 @@ public class Charactercontroller : MonoBehaviour
     public float xPosLeft;
     public float xposRight;
 
-    
 
     public LayerMask WhatIsPlayer;
     public Transform player;
@@ -46,6 +47,8 @@ public class Charactercontroller : MonoBehaviour
         transform.eulerAngles = new Vector2(0, 180);
         isWalking = false;
         stillWalking = false;
+        isFront = false;
+        isBack = false;
     }
 
     private void Start()
@@ -109,7 +112,8 @@ public class Charactercontroller : MonoBehaviour
 
             //animation
             isWalking = true;
-          
+            isFront = false;
+            isBack = false;
         }
 
         //move left
@@ -122,21 +126,35 @@ public class Charactercontroller : MonoBehaviour
 
                 //animation
                 isWalking = true;
-             
+                isFront = false;
+                isBack = false;
+
             }
         }
 
         //stop animation
         else
         {
-            isWalking = false;
-            //StopCoroutine(Animate());
-            _spriteRenderer.sprite = characterSprite[1];
+            if( Input.GetKey( KeyCode.UpArrow ) ) {
+                _spriteRenderer.sprite = faceOtherSide;
+                isFront = true;
+                isBack = false;
+                isWalking = false;
 
-        }
-        if (Input.GetKey(KeyCode.UpArrow))
-        {
-            _spriteRenderer.sprite = faceOtherSide;
+            } else if( Input.GetKey( KeyCode.DownArrow ) ) {
+                _spriteRenderer.sprite = faceCamera;
+                isBack = true;
+                isFront = false;
+                isWalking = false;
+
+            }
+            if ( !isFront && !isBack ) {
+                isWalking = false;
+                isFront = false;
+                isBack = false;
+                //StopCoroutine(Animate());
+                _spriteRenderer.sprite = characterSprite[ 1 ];
+            }
 
         }
     }
