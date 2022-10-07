@@ -10,11 +10,13 @@ public class Count : MonoBehaviour
     // starting 7 action the ghost may appear
     public int keepCount;
     public bool doAction;
+    public bool canSpawnhere;
 
 
 
     private void Start()
     {
+        canSpawnhere = true;
         keepCount = 0;
     }
 

@@ -31,10 +31,10 @@ public class MonsterManager : MonoBehaviour
     public bool spawnRateReset;
     float resetTime;
     public bool stopRandomNumber;
-    public bool canSpawnHere;
-    bool isGameOverPossible = false;
+    public OpenTheDoor open;
+    public bool isGameOverPossible = false;
 
-   
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +42,7 @@ public class MonsterManager : MonoBehaviour
         spawnGhost = true;
         spawnRateReset = false;
         resetTime = 0;
-        canSpawnHere = gameObject.tag.Contains(("Loft"));
+
     }
 
     // Update is called once per frame
@@ -60,56 +60,52 @@ public class MonsterManager : MonoBehaviour
             currentChance = minimumChanceOfApparition;
             spawn = Random.Range(1, maximumChanceOfApparition);
         }
-        else if(count.keepCount > 7 && count.doAction == true)
+        else if (count.keepCount > 7 && count.doAction == true && stopRandomNumber == false)
         {
             count.doAction = false;
             currentChance += 5f;
             spawn = Random.Range(1, maximumChanceOfApparition);
         }
-       
 
-        if(spawn <= currentChance && spawnGhost == true)
+
+        if (spawn <= currentChance && spawnGhost == true )
         {
-            
-            EnemySpawn();
-          
-            disapear();
-            disapearBgm();
-            spawnGhost = false;
-            isGameOverPossible = true;
+            if(count.canSpawnhere == true)
+            {
+                Debug.Log("Outside Room");
+                EnemySpawn();
+
+                disapear();
+                disapearBgm();
+                spawnGhost = false;
+                isGameOverPossible = true;
+            }
+            else
+            {
+                Debug.Log("inside Room");
+                stopRandomNumber = true;
+            }
         }
 
-        if( isGameOverPossible ) {
-            GameOver( );
+        if (isGameOverPossible)
+        {
+            GameOver();
         }
 
-      //  newInstance = Instantiate(prefabMonster2, new Vector3(player.transform.position.x - distance2, player.transform.position.y, 0), Quaternion.identity);
-       
+        //  newInstance = Instantiate(prefabMonster2, new Vector3(player.transform.position.x - distance2, player.transform.position.y, 0), Quaternion.identity);
+
     }
 
     public void EnemySpawn() // instanciate ghost + bgm
     {
-        
-
-       if(player.transform.position == GameObject.FindGameObjectWithTag("Loft").transform.position)
-        {
-            canSpawnHere = true;
         Debug.Log("ghost is here! run bitch!");
         newInstance = Instantiate(prefabMonster, new Vector3(player.transform.position.x - distance, player.transform.position.y, 0), Quaternion.identity);
         newBgm = Instantiate(ghostBGM, new Vector3(0, 0, 0), Quaternion.identity);
         currentChance = 0;
         SoundSystem.instance.PlayGhostBGM();
-      
-        }
-       else
-        {
-            canSpawnHere = false;
-            return;
-        }
-           
 
     }
-    
+
     public void disapear() // destroy prefab ghost
     {
         float destroyTime = 10;
@@ -117,10 +113,10 @@ public class MonsterManager : MonoBehaviour
         spawnRateReset = true;
 
         spawn = Random.Range(1, maximumChanceOfApparition);
-        
+
 
         Destroy(newInstance, destroyTime);
-        
+
     }
     public void disapearBgm() // destroy the bgm
     {
@@ -130,14 +126,15 @@ public class MonsterManager : MonoBehaviour
 
     public void SpawnTimeReset() // reset the spawn time 
     {
-        if(spawnRateReset == true)
+        if (spawnRateReset == true)
         {
             resetTime += Time.deltaTime;
-            if( resetTime >= 10)
+            if (resetTime >= 10)
             {
                 spawnGhost = true;
                 count.keepCount = 0;
                 currentChance = 0;
+                stopRandomNumber = false;
 
                 spawnRateReset = false;
             }
@@ -146,11 +143,12 @@ public class MonsterManager : MonoBehaviour
 
 
 
-    public void GameOver( ) // game over function
+    public void GameOver() // game over function
     {
-        if( ghostCollider.IsTouching( characterCollider ) ) {
-            SceneManager.LoadScene( "Game Over" );
-            Debug.Log( "Funciona" );
+        if (ghostCollider.IsTouching(characterCollider))
+        {
+            SceneManager.LoadScene("Game Over");
+            Debug.Log("Funciona");
         }
     }
 }

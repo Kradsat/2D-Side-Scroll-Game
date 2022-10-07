@@ -16,9 +16,6 @@ public class OpenTheDoor : MonoBehaviour
     public float yPos;
     public Count count;
 
-
- 
-
     // Update is called once per frame
     private void Update()
     {
@@ -57,6 +54,16 @@ public class OpenTheDoor : MonoBehaviour
                     nextRoom.SetActive(false);
                     count.doAction = true;
                     count.keepCount++;
+                    count.canSpawnhere = true;
+                }
+
+                if(currentRoom.tag == "Loft")
+                {
+                    count.canSpawnhere = false;
+                }
+                else
+                {
+                    count.canSpawnhere = true;
                 }
             }
         }
