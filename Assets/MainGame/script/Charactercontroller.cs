@@ -42,6 +42,11 @@ public class Charactercontroller : MonoBehaviour
    
 
     int frame = 0;
+
+   
+    
+ 
+
     private void Awake()
     {
         transform.eulerAngles = new Vector2(0, 180);
@@ -56,6 +61,9 @@ public class Charactercontroller : MonoBehaviour
        // startingPosition = transform.position;
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _spriteRenderer.sprite = characterSprite[1];
+       
+      
+        
     }
 
     private void FixedUpdate() // animation fixed Update
@@ -69,6 +77,8 @@ public class Charactercontroller : MonoBehaviour
         {
             _spriteRenderer.sprite = characterSprite[frame % 4];
         }
+
+      
     }
 
     // Update is called once per frame
@@ -77,6 +87,7 @@ public class Charactercontroller : MonoBehaviour
         Movement();
         StopMovementOnEdgeLeft();
         StopMovementOnEdgeRight();
+       
     }
 
     public void StopMovementOnEdgeLeft()// block the character by reseting is transform position
@@ -114,6 +125,16 @@ public class Charactercontroller : MonoBehaviour
             isWalking = true;
             isFront = false;
             isBack = false;
+
+
+            //BGM
+
+
+          
+               
+               
+            
+            
         }
 
         //move left
@@ -128,6 +149,11 @@ public class Charactercontroller : MonoBehaviour
                 isWalking = true;
                 isFront = false;
                 isBack = false;
+
+                //BGM
+
+             
+               
 
             }
         }
@@ -165,5 +191,7 @@ public class Charactercontroller : MonoBehaviour
         Gizmos.DrawCube(EdgePosLeft.position, new Vector3(width, height, 1));
         Gizmos.DrawCube(EdgePosRight.position, new Vector3(width, height, 1));
     }
+
    
+
 }

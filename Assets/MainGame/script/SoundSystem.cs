@@ -8,6 +8,16 @@ public class SoundSystem : MonoBehaviour
 
     public AudioSource ApparitionGhostBgm; //bgm monster
 
+    public AudioSource walkingCorridorSE;
+
+    public AudioSource stairDownSE;
+
+    public AudioSource stairUpSE;
+
+    public AudioSource doorOpenSE;
+
+    public AudioSource doorCloseSE;
+
     public void Start()
     {
         instance = this;
@@ -20,5 +30,30 @@ public class SoundSystem : MonoBehaviour
         ApparitionGhostBgm.Play();
 
     }
-  
+
+    public void PlayWalkSE()
+    {
+        walkingCorridorSE.Play();
+    }
+    public void PlayStairDownSE()
+    {
+        stairDownSE.Play();
+    }
+    public void PlayStairUpSE()
+    {
+        stairUpSE.Play();
+    }
+    public void PPlayDoorOpenSE()
+    {
+        doorOpenSE.Play();
+    }
+    public void PlayDoorCloseSE()
+    {
+        doorCloseSE.Play();
+    }
+
+    public void StopWalkingSE()
+    {
+        walkingCorridorSE.Stop();
+    }
 }
