@@ -79,8 +79,7 @@ public class MonsterManager : MonoBehaviour
                 disapearBgm();
                 spawnGhost = false;
                 isGameOverPossible = true;
-            }
-            else
+            } else
             {
                 Debug.Log("inside Room");
                 stopRandomNumber = true;
@@ -89,7 +88,7 @@ public class MonsterManager : MonoBehaviour
 
         if (isGameOverPossible)
         {
-            GameOver();
+            GameOver( );
         }
 
         //  newInstance = Instantiate(prefabMonster2, new Vector3(player.transform.position.x - distance2, player.transform.position.y, 0), Quaternion.identity);
@@ -104,6 +103,8 @@ public class MonsterManager : MonoBehaviour
         currentChance = 0;
         SoundSystem.instance.PlayGhostBGM();
 
+        ghostCollider = GameObject.FindGameObjectWithTag( "Enemy" ).GetComponent<Collider2D>( );
+        characterCollider = GameObject.FindGameObjectWithTag( "Player" ).GetComponent<Collider2D>( );
     }
 
     public void disapear() // destroy prefab ghost
