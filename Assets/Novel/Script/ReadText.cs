@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class ReadText : MonoBehaviour
 {
@@ -138,6 +139,6 @@ public class ReadText : MonoBehaviour
 
     void EndDialogue()
     {
-
+        SceneManager.LoadScene(+1);
     }
 }
