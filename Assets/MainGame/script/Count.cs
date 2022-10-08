@@ -11,11 +11,13 @@ public class Count : MonoBehaviour
     public int keepCount;
     public bool doAction;
     public bool canSpawnhere;
+    public bool audioStop;
 
 
 
     private void Start()
     {
+        audioStop = false;
         canSpawnhere = true;
         keepCount = 0;
     }

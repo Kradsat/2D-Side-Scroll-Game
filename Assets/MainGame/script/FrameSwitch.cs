@@ -25,6 +25,7 @@ public class FrameSwitch : MonoBehaviour
             frame2.SetActive(true);
             count.doAction = true;
             count.keepCount++;
+            count.audioStop = false;
             
         }
         else if(frame1.activeInHierarchy == false)
@@ -34,6 +35,7 @@ public class FrameSwitch : MonoBehaviour
             frame2.SetActive(false);
             count.doAction = true;
             count.keepCount++; // add one action
+            count.audioStop = false;
         }
     }
 

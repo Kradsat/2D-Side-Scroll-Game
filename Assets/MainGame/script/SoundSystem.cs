@@ -18,6 +18,8 @@ public class SoundSystem : MonoBehaviour
 
     public AudioSource doorCloseSE;
 
+
+
     public void Start()
     {
         instance = this;
@@ -25,16 +27,12 @@ public class SoundSystem : MonoBehaviour
 
     }
 
+   
     public void PlayGhostBGM()
     {
         ApparitionGhostBgm.Play();
-
     }
-
-    public void PlayWalkSE()
-    {
-        walkingCorridorSE.Play();
-    }
+    
     public void PlayStairDownSE()
     {
         stairDownSE.Play();
@@ -52,8 +50,5 @@ public class SoundSystem : MonoBehaviour
         doorCloseSE.Play();
     }
 
-    public void StopWalkingSE()
-    {
-        walkingCorridorSE.Stop();
-    }
+    
 }

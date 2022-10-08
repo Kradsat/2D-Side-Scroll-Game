@@ -43,7 +43,7 @@ public class Charactercontroller : MonoBehaviour
 
     int frame = 0;
 
-   
+    AudioSource audioSource;
     
  
 
@@ -61,6 +61,7 @@ public class Charactercontroller : MonoBehaviour
        // startingPosition = transform.position;
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _spriteRenderer.sprite = characterSprite[1];
+        audioSource = GetComponent<AudioSource>();
        
       
         
@@ -129,7 +130,14 @@ public class Charactercontroller : MonoBehaviour
 
             //BGM
 
-
+            if(isWalking)
+            {
+                if(!audioSource.isPlaying)
+                {
+                    audioSource.Play();
+                }
+               
+            }
           
                
                
@@ -152,8 +160,15 @@ public class Charactercontroller : MonoBehaviour
 
                 //BGM
 
-             
-               
+                if (isWalking)
+                {
+                    if (!audioSource.isPlaying)
+                    {
+                        audioSource.Play();
+                    }
+                   
+                }
+
 
             }
         }
@@ -180,6 +195,11 @@ public class Charactercontroller : MonoBehaviour
                 isBack = false;
                 //StopCoroutine(Animate());
                 _spriteRenderer.sprite = characterSprite[ 1 ];
+
+                if(isWalking == false)
+                {
+                    audioSource.Stop();
+                }
             }
 
         }

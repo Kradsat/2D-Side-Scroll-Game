@@ -15,11 +15,24 @@ public class OpenTheDoor : MonoBehaviour
     public float xPos;
     public float yPos;
     public Count count;
+   AudioSource audioSource;
+  
 
+
+
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+       
+
+    }
     // Update is called once per frame
     private void Update()
     {
+        
         OpenTheDooor();
+        
 
 
     }
@@ -33,11 +46,20 @@ public class OpenTheDoor : MonoBehaviour
     public void OpenTheDooor() // function for open the door
     {
         playerDetected = Physics2D.OverlapBox(doorPos.position, new Vector2(width, height), 0, WhatIsPlayer);// check the player 
+        Debug.Log(audioSource);
+        
 
-        if (playerDetected == true)
+        if (count.audioStop == false)
         {
-            if (Input.GetKeyDown(KeyCode.Z))
+            audioSource.Stop();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+
+            if (playerDetected == true && Input.GetKeyDown(KeyCode.Z))
             {
+                count.audioStop = true;
                 if(currentRoom.activeInHierarchy == true)
                 {
                     //exit = false;
@@ -46,6 +68,10 @@ public class OpenTheDoor : MonoBehaviour
                     NextRoom();
                     count.doAction = true;
                     count.keepCount++;
+                    if (!audioSource.isPlaying)
+                    {
+                        audioSource.Play();
+                    }
                 }
                 else if (currentRoom.activeInHierarchy == false)
                 {
@@ -55,22 +81,33 @@ public class OpenTheDoor : MonoBehaviour
                     count.doAction = true;
                     count.keepCount++;
                     count.canSpawnhere = true;
+                    if (!audioSource.isPlaying)
+                    {
+                        audioSource.Play();
+                    }
                 }
 
-                if(currentRoom.tag == "Loft")
+                if(currentRoom.tag == "Loft") // check tag
                 {
                     count.canSpawnhere = false;
+                    
+
                 }
                 else
                 {
                     count.canSpawnhere = true;
+                    
+                
                 }
             }
+
         }
+       
     }
 
-    public void NextRoom()
+    public void NextRoom() // move to next room 
     {
         player.position = new Vector2(xPos, yPos);
     }
+  
 }
