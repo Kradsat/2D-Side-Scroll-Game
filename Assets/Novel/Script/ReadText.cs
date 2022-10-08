@@ -137,7 +137,7 @@ public class ReadText : MonoBehaviour
         lineCount++;
     }
 
-    void EndDialogue()
+    public void EndDialogue()
     {
         SceneManager.LoadScene(2);
     }
