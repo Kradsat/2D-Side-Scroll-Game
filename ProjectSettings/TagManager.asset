@@ -8,6 +8,7 @@ TagManager:
   - Count
   - Enemy
   - Loft
+  - Item
   layers:
   - Default
   - TransparentFX

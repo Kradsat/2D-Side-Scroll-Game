@@ -86,7 +86,9 @@ public class MonsterManager : MonoBehaviour
             }
         }
 
+
         if (isGameOverPossible && ghostCollider != null)// check if game over is possible
+
         {
             GameOver( );
         }
