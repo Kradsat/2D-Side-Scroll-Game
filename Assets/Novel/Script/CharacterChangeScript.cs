@@ -11,11 +11,6 @@ public class CharacterChangeScript : MonoBehaviour
     Image rightCharacter;
 
     [SerializeField]
-    Image leftExpression;
-    [SerializeField]
-    Image rightExpression;
-
-    [SerializeField]
     Sprite[] characterUI;
 
     int count;

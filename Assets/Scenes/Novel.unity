@@ -2085,8 +2085,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftCharacter: {fileID: 1866644589}
   rightCharacter: {fileID: 797129429}
-  leftExpression: {fileID: 0}
-  rightExpression: {fileID: 0}
   characterUI:
   - {fileID: 21300000, guid: c4f1f416d482f38478cbbef67891ffcb, type: 3}
   - {fileID: 21300000, guid: fdee90ed227e991468d63c5545d917e9, type: 3}
