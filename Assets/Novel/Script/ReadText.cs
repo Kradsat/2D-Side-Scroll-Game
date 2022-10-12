@@ -26,6 +26,8 @@ public class ReadText : MonoBehaviour
     CharacterChangeScript characterChange;
     [SerializeField]
     BackgroundChangeScript backgroundChange;
+    [SerializeField]
+    WriteDialogue writeDialogue;
 
     string[] data;
     string[] row;
@@ -112,7 +114,8 @@ public class ReadText : MonoBehaviour
         string bg = back.Dequeue();
 
         nameText.text = name;
-        dialogueText.text = sentence;
+
+        StartCoroutine(writeDialogue.WriteText(sentence));
 
         logButton.AddLog(sentence, lineCount, express);
 
