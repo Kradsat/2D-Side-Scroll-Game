@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TakeStairs : MonoBehaviour
+public class TakeStairsDown : MonoBehaviour
 {
     private bool playerDetected;
     public Transform stairPos;
@@ -24,10 +24,10 @@ public class TakeStairs : MonoBehaviour
 
     private void Update()
     {
-        TakeStair();
+        TakeStairD();
     }
 
-    private void TakeStair()
+    private void TakeStairD()
     {
         playerDetected = Physics2D.OverlapBox(stairPos.position, new Vector2(width, height), 0, WhatIsPlayer);
 
