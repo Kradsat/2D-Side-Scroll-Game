@@ -75,7 +75,7 @@ public class Charactercontroller : MonoBehaviour
 
         if (isWalking)
         {
-            _spriteRenderer.sprite = characterSprite[frame % 4];
+            _spriteRenderer.sprite = characterSprite[frame % 8];
         }
 
       
