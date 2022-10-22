@@ -1755,7 +1755,7 @@ MonoBehaviour:
   dialogueText: {fileID: 904940306}
   nameText: {fileID: 1495326097}
   nextDialogueButton: {fileID: 1061676749}
-  textAsset: {fileID: 4900000, guid: b2e220c046c521e478f55dad91263030, type: 3}
+  textAsset: {fileID: 4900000, guid: 6cd991cf400f28649964c4fdf498cba6, type: 3}
   logButton: {fileID: 245387817}
   characterChange: {fileID: 1416579566}
   backgroundChange: {fileID: 408322}
@@ -1790,6 +1790,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   readText: {fileID: 1123220028}
   autoScript: {fileID: 673274508}
+  sentenceComplete: 0
 --- !u!1 &1217741741
 GameObject:
   m_ObjectHideFlags: 0
