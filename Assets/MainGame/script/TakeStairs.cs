@@ -53,6 +53,7 @@ public class TakeStairs : MonoBehaviour
                 newScene.SetActive(true); // activate new scene
                 count.doAction = true; // check the action
                 count.keepCount++; // add 1 action to the count
+                count.keepCountOnlyMovement++;
                 if (!audioSource.isPlaying)
                 {
                     audioSource.Play();

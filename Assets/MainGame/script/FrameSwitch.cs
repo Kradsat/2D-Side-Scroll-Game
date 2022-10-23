@@ -6,7 +6,7 @@ public class FrameSwitch : MonoBehaviour
 {
     public GameObject frame1;
     public GameObject frame2;
-    
+    public MonsterManager monsterManager;
 
     [SerializeField]protected Count count;
 
@@ -26,6 +26,10 @@ public class FrameSwitch : MonoBehaviour
             count.doAction = true;
             count.keepCount++;
             count.audioStop = false;
+           if(monsterManager.canDisepear == true)
+            {
+            count.keepCountOnlyMovement++;
+            }
             
         }
         else if(frame1.activeInHierarchy == false)
@@ -36,6 +40,10 @@ public class FrameSwitch : MonoBehaviour
             count.doAction = true;
             count.keepCount++; // add one action
             count.audioStop = false;
+            if(monsterManager.canDisepear == true)
+            {
+            count.keepCountOnlyMovement++;
+            }
         }
     }
 

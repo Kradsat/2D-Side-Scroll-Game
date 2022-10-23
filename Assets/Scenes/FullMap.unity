@@ -155,6 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 567001852}
   frame2: {fileID: 704997843}
+  monsterManager: {fileID: 1552599289}
   count: {fileID: 772346580}
 --- !u!61 &9792670
 BoxCollider2D:
@@ -2530,6 +2531,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 1797725504}
   frame2: {fileID: 330310334}
+  monsterManager: {fileID: 1552599289}
   count: {fileID: 772346580}
 --- !u!61 &341333760
 BoxCollider2D:
@@ -2877,6 +2879,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 1972623484}
   frame2: {fileID: 524762865}
+  monsterManager: {fileID: 0}
   count: {fileID: 772346580}
 --- !u!61 &401999751
 BoxCollider2D:
@@ -3397,6 +3400,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 1858099934}
   frame2: {fileID: 73444391}
+  monsterManager: {fileID: 0}
   count: {fileID: 772346580}
 --- !u!61 &462743247
 BoxCollider2D:
@@ -4451,6 +4455,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 704997843}
   frame2: {fileID: 2031856846}
+  monsterManager: {fileID: 1552599289}
   count: {fileID: 772346580}
 --- !u!61 &539093959
 BoxCollider2D:
@@ -5589,6 +5594,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 1908060211}
   frame2: {fileID: 1797725504}
+  monsterManager: {fileID: 1552599289}
   count: {fileID: 772346580}
 --- !u!61 &648966630
 BoxCollider2D:
@@ -5663,6 +5669,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 551701356}
   frame2: {fileID: 1595787167}
+  monsterManager: {fileID: 0}
   count: {fileID: 772346580}
 --- !u!61 &662204740
 BoxCollider2D:
@@ -6412,6 +6419,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 2133355487}
   frame2: {fileID: 551701356}
+  monsterManager: {fileID: 0}
   count: {fileID: 772346580}
 --- !u!61 &723978279
 BoxCollider2D:
@@ -6833,6 +6841,7 @@ MonoBehaviour:
   doAction: 0
   canSpawnhere: 0
   audioStop: 0
+  keepCountOnlyMovement: 0
 --- !u!1 &797039889
 GameObject:
   m_ObjectHideFlags: 0
@@ -7213,6 +7222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 1571364089}
   frame2: {fileID: 2133355487}
+  monsterManager: {fileID: 0}
   count: {fileID: 772346580}
 --- !u!61 &857150213
 BoxCollider2D:
@@ -7287,6 +7297,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 1728369279}
   frame2: {fileID: 1400889009}
+  monsterManager: {fileID: 0}
   count: {fileID: 772346580}
 --- !u!61 &865175508
 BoxCollider2D:
@@ -7361,6 +7372,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 524762865}
   frame2: {fileID: 430118789}
+  monsterManager: {fileID: 0}
   count: {fileID: 772346580}
 --- !u!61 &866250850
 BoxCollider2D:
@@ -7524,6 +7536,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 1705596197}
   frame2: {fileID: 304925771}
+  monsterManager: {fileID: 0}
   count: {fileID: 772346580}
 --- !u!61 &907778225
 BoxCollider2D:
@@ -9062,6 +9075,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 1746360762}
   frame2: {fileID: 1806488705}
+  monsterManager: {fileID: 1552599289}
   count: {fileID: 772346580}
 --- !u!61 &1230842675
 BoxCollider2D:
@@ -9333,6 +9347,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 522353125}
   frame2: {fileID: 733327098}
+  monsterManager: {fileID: 0}
   count: {fileID: 772346580}
 --- !u!61 &1283630574
 BoxCollider2D:
@@ -9657,6 +9672,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 430118789}
   frame2: {fileID: 797039889}
+  monsterManager: {fileID: 0}
   count: {fileID: 772346580}
 --- !u!61 &1314673355
 BoxCollider2D:
@@ -10125,6 +10141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 1595787167}
   frame2: {fileID: 1705596197}
+  monsterManager: {fileID: 0}
   count: {fileID: 772346580}
 --- !u!61 &1353708480
 BoxCollider2D:
@@ -10675,6 +10692,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 733327098}
   frame2: {fileID: 996339617}
+  monsterManager: {fileID: 0}
   count: {fileID: 772346580}
 --- !u!61 &1472921472
 BoxCollider2D:
@@ -11165,6 +11183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 1806488705}
   frame2: {fileID: 336537386}
+  monsterManager: {fileID: 1552599289}
   count: {fileID: 772346580}
 --- !u!61 &1552345206
 BoxCollider2D:
@@ -11270,6 +11289,7 @@ MonoBehaviour:
   stopRandomNumber: 0
   open: {fileID: 330310338}
   isGameOverPossible: 0
+  canDisepear: 0
 --- !u!1 &1554071401
 GameObject:
   m_ObjectHideFlags: 3
@@ -11718,6 +11738,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 1719428600}
   frame2: {fileID: 1746360762}
+  monsterManager: {fileID: 1552599289}
   count: {fileID: 772346580}
 --- !u!61 &1577688809
 BoxCollider2D:
@@ -11807,6 +11828,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 330310334}
   frame2: {fileID: 567001852}
+  monsterManager: {fileID: 1552599289}
   count: {fileID: 772346580}
 --- !u!61 &1582089039
 BoxCollider2D:
@@ -12105,6 +12127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 2031856846}
   frame2: {fileID: 1719428600}
+  monsterManager: {fileID: 1552599289}
   count: {fileID: 772346580}
 --- !u!61 &1616222472
 BoxCollider2D:
@@ -12194,6 +12217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 1400889009}
   frame2: {fileID: 522353125}
+  monsterManager: {fileID: 0}
   count: {fileID: 772346580}
 --- !u!61 &1617466934
 BoxCollider2D:
@@ -12874,6 +12898,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 73444391}
   frame2: {fileID: 517090719}
+  monsterManager: {fileID: 0}
   count: {fileID: 772346580}
 --- !u!61 &1716682353
 BoxCollider2D:
@@ -14417,6 +14442,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 136323353}
   frame2: {fileID: 1728369279}
+  monsterManager: {fileID: 0}
   count: {fileID: 772346580}
 --- !u!61 &1819239397
 BoxCollider2D:
@@ -15341,6 +15367,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 517090719}
   frame2: {fileID: 136323353}
+  monsterManager: {fileID: 0}
   count: {fileID: 772346580}
 --- !u!61 &1893982197
 BoxCollider2D:
@@ -15959,6 +15986,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 797039889}
   frame2: {fileID: 1571364089}
+  monsterManager: {fileID: 0}
   count: {fileID: 772346580}
 --- !u!61 &1957488974
 BoxCollider2D:

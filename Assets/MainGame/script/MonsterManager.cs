@@ -33,6 +33,7 @@ public class MonsterManager : MonoBehaviour
     public bool stopRandomNumber;
     public OpenTheDoor open;
     public bool isGameOverPossible = false;
+    public bool canDisepear = false;
 
 
     // Start is called before the first frame update
@@ -68,15 +69,13 @@ public class MonsterManager : MonoBehaviour
         }
 
 
-        if (spawn <= currentChance && spawnGhost == true )// spawn the ghost 
+        if (spawn <= currentChance && spawnGhost == true)// spawn the ghost 
         {
-            if(count.canSpawnhere == true) // check inside or oustide of the room
+            if (count.canSpawnhere == true) // check inside or oustide of the room
             {
                 Debug.Log("Outside Room");
                 EnemySpawn();
 
-                disapear();
-                disapearBgm();
                 spawnGhost = false;
                 isGameOverPossible = true;
             } else // oustide of room = stop the random number of the spawn
@@ -85,7 +84,10 @@ public class MonsterManager : MonoBehaviour
                 stopRandomNumber = true;
             }
         }
-
+        if (canDisepear == true)
+        {
+            disapear();
+        }
 
         if (isGameOverPossible && ghostCollider != null)// check if game over is possible
 
@@ -108,24 +110,29 @@ public class MonsterManager : MonoBehaviour
 
         ghostCollider = GameObject.FindGameObjectWithTag( "Enemy" ).GetComponent<Collider2D>( );
         characterCollider = GameObject.FindGameObjectWithTag( "Player" ).GetComponent<Collider2D>( );
+        canDisepear = true;
     }
 
     public void disapear() // destroy prefab ghost after 10 sec
     {
-        float destroyTime = 10;
-        resetTime = 0;
-        spawnRateReset = true;
+        if(count.keepCountOnlyMovement >= 5 )
+        {
+            resetTime = 0;
+            spawnRateReset = true;
+            count.keepCountOnlyMovement = 0;
 
-        spawn = Random.Range(1, maximumChanceOfApparition);
-
-
-        Destroy(newInstance, destroyTime);
-        isGameOverPossible = false;
-        
+            spawn = Random.Range(1, maximumChanceOfApparition);
+            Destroy(newInstance);//destroyTime);
+            isGameOverPossible = false;
+            canDisepear = false;
+            disapearBgm();
+        }
+        //float destroyTime = 10;\
+        //
     }
     public void disapearBgm() // destroy the bgm after 13 sec
     {
-        var destroyTimeBgm = 13;
+        var destroyTimeBgm = 3;
         Destroy(newBgm, destroyTimeBgm);
     }
 
@@ -138,6 +145,7 @@ public class MonsterManager : MonoBehaviour
             {
                 spawnGhost = true;
                 count.keepCount = 0;
+                count.keepCountOnlyMovement = 0;
                 currentChance = 0;
                 stopRandomNumber = false;
 
