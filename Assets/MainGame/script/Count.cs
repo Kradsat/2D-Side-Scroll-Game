@@ -12,7 +12,7 @@ public class Count : MonoBehaviour
     public bool doAction;
     public bool canSpawnhere;
     public bool audioStop;
-    
+    public int keepCountOnlyMovement;
 
 
 
@@ -22,6 +22,7 @@ public class Count : MonoBehaviour
         audioStop = false;
         canSpawnhere = true;
         keepCount = 0;
+        keepCountOnlyMovement = 0;
     }
 
 }

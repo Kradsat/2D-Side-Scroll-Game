@@ -59,7 +59,7 @@ public class Charactercontroller : MonoBehaviour
     {
        // startingPosition = transform.position;
         _spriteRenderer = GetComponent<SpriteRenderer>();
-        _spriteRenderer.sprite = characterSprite[1];
+        _spriteRenderer.sprite = characterSprite[0];
         audioSource = GetComponent<AudioSource>();
        
       
@@ -85,22 +85,22 @@ public class Charactercontroller : MonoBehaviour
     void Update()
     {
         Movement();
-        StopMovementOnEdgeLeft();
+       // StopMovementOnEdgeLeft();
         StopMovementOnEdgeRight();
        
     }
 
-    public void StopMovementOnEdgeLeft()// block the character by reseting is transform position
-    {
-        playerDetected = Physics2D.OverlapBox(EdgePosLeft.position, new Vector2(width, height), 0, WhatIsPlayer);
-        if (playerDetected == true)
-        {
-            player.position = new Vector2(xPosLeft,transform.position.y);
+    //public void StopMovementOnEdgeLeft()// block the character by reseting is transform position
+    //{
+    //    playerDetected = Physics2D.OverlapBox(EdgePosLeft.position, new Vector2(width, height), 0, WhatIsPlayer);
+    //    if (playerDetected == true)
+    //    {
+    //        player.position = new Vector2(xPosLeft,transform.position.y);
 
-        }
+    //    }
         
        
-    }
+    //}
     public void StopMovementOnEdgeRight() // block the character by reseting is transform position
     {
         playerDetected = Physics2D.OverlapBox(EdgePosRight.position, new Vector2(width, height), 0, WhatIsPlayer);
@@ -193,7 +193,7 @@ public class Charactercontroller : MonoBehaviour
                 isFront = false;
                 isBack = false;
                 //StopCoroutine(Animate());
-                _spriteRenderer.sprite = characterSprite[ 1 ];
+                _spriteRenderer.sprite = characterSprite[ 0];
 
                 if(isWalking == false)
                 {

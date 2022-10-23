@@ -10,13 +10,12 @@ public class Monster : MonoBehaviour
 
 
     public float horizontalSpeed;
-    public float angularSpeed;
-    public float amplitude;
+    
 
     private Vector3 startingPosition;
     private bool moving;
 
-    private float angle;
+   
 
     private bool playerDetected;
     public Transform MonsterPos;
@@ -48,8 +47,7 @@ public class Monster : MonoBehaviour
 
         if (playerDetected == true)
         {
-            angle += angularSpeed * Time.deltaTime;
-            transform.position = new Vector3(transform.position.x + horizontalSpeed * Time.deltaTime, startingPosition.y + Mathf.Sin(angle) * amplitude, startingPosition.z);
+            transform.position = new Vector3(transform.position.x + horizontalSpeed * Time.deltaTime, startingPosition.y - 6, startingPosition.z);
         }
     }
 }

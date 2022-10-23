@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/FullMap.unity
     guid: a184579c87878814b9e03b03da5c7f50
   - enabled: 1
-    path: Assets/MainGame/Scenes/Game Over.unity
+    path: Assets/Scenes/Game Over.unity
     guid: 705d892c742ab2847bd061b69d0e6a82
   - enabled: 0
     path: 

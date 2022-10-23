@@ -15,6 +15,7 @@ public class OpenTheDoor : MonoBehaviour
     public float xPos;
     public float yPos;
     public Count count;
+    SceneFader sceneFader;
    AudioSource audioSource;
   
 
@@ -71,7 +72,9 @@ public class OpenTheDoor : MonoBehaviour
                     if (!audioSource.isPlaying)
                     {
                         audioSource.Play();
+                        
                     }
+                    
                 }
                 else if (currentRoom.activeInHierarchy == false)
                 {
