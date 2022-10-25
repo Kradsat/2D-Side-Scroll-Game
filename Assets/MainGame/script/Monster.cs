@@ -9,9 +9,7 @@ public class Monster : MonoBehaviour
     public GameObject prefab;
 
     public GameObject[] doorObject;
-    Transform[] doors;
-
-
+    public Transform[] doors;
 
     public float horizontalSpeed;
     
@@ -35,12 +33,6 @@ public class Monster : MonoBehaviour
     void Start()
     { 
         startingPosition = transform.position;
-
-
-        for(int i = 0; i < 2; i++)
-        {
-            doors[i] = doorObject[i].transform;
-        }
     }
 
     // Update is called once per frame
@@ -48,11 +40,14 @@ public class Monster : MonoBehaviour
     {
         MovementEnemy();
     }
-        private void OnDrawGizmosSelected() // draw the distance beetween the monster and player 
-        {
-            Gizmos.color = Color.red;
-            Gizmos.DrawCube(MonsterPos.position, new Vector3(width, height, 1));
-        }
+
+
+    private void OnDrawGizmosSelected() // draw the distance beetween the monster and player 
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawCube(MonsterPos.position, new Vector3(width, height, 1));
+    }
+
 
     public void MovementEnemy()// function to move the monster
     {
@@ -64,36 +59,39 @@ public class Monster : MonoBehaviour
 
         player = playerCollider2D.transform;
         var speed = horizontalSpeed * Time.deltaTime; // monster speed
-        var targetPos = new Vector3(player.position.x, transform.position.y, transform.position.z);// player transform target
-        transform.position = Vector3.MoveTowards(transform.position, targetPos, speed);// moving toward player
+        var targetPos = new Vector3(player.position.x, player.position.y, transform.position.z);// player transform target
+    
        
         if(targetPos.x < transform.position.x) // flip the monster sprite
         {
             sprite.flipX = true;
         }
 
-        if(targetPos.y != transform.position.y)
+        if(targetPos.y == transform.position.y)
         {
-            foreach(Transform door in doors)
+            transform.position = Vector3.MoveTowards(transform.position, targetPos, speed);// moving toward player
+        }
+        else if(targetPos.y != transform.position.y)
+        {
+            float dis1 = Vector3.Distance(doors[0].position, transform.position);
+            float dis2 = Vector3.Distance(doors[1].position, transform.position);
+
+            if(dis1 > dis2)
             {
-                shortestDistance = Mathf.Min(shortestDistance, Vector3.Distance(targetPos, door.position));
+                transform.position = Vector3.MoveTowards(transform.position, doors[1].transform.position, speed);// moving toward player
             }
-            
-           
+            else
+            {
+                transform.position = Vector3.MoveTowards(transform.position, doors[0].transform.position, speed);// moving toward player
+            }
+        }
+    }
 
-
-        if(targetPos.y > transform.position.y)
+    public void GetDoorPosition(int num)
+    {
+        for(int i = 0; i < num; i++)
         {
-            takeStair = true;
-            
+            doors[i] = doorObject[i].transform;
         }
-        if (targetPos.y < transform.position.y)
-        {
-            takeStairD = true;
-        }
-
-        }
-
-
     }
 }

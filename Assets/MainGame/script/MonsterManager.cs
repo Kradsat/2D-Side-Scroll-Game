@@ -20,6 +20,10 @@ public class MonsterManager : MonoBehaviour
     [SerializeField]
     Collider2D characterCollider;
 
+    [SerializeField]
+    Monster monsterScript;
+    [SerializeField]
+    GameObject[] doorGameObject;
 
     public Count count;
     public float maximumChanceOfApparition = 100f;
@@ -84,29 +88,35 @@ public class MonsterManager : MonoBehaviour
                 stopRandomNumber = true;
             }
         }
+        
         if (canDisepear == true)
         {
             disapear();
         }
 
         if (isGameOverPossible && ghostCollider != null)// check if game over is possible
-
         {
             GameOver( );
-        }
-        
-
+        }    
         //  newInstance = Instantiate(prefabMonster2, new Vector3(player.transform.position.x - distance2, player.transform.position.y, 0), Quaternion.identity);
-
     }
 
     public void EnemySpawn() // instanciate ghost + bgm
     {
         Debug.Log("ghost is here! run bitch!");
+
         newInstance = Instantiate(prefabMonster, new Vector3(player.transform.position.x - distance, player.transform.position.y, 0), Quaternion.identity);
+        monsterScript = newInstance.GetComponentInChildren<Monster>();
+        for( int i = 0; i < doorGameObject.Length; i++)
+        {
+            monsterScript.doorObject[i] = doorGameObject[i];
+        }
+        monsterScript.GetDoorPosition(doorGameObject.Length);
+
         newBgm = Instantiate(ghostBGM, new Vector3(0, 0, 0), Quaternion.identity);
-        currentChance = 0;
         SoundSystem.instance.PlayGhostBGM();
+
+        currentChance = 0;
 
         ghostCollider = GameObject.FindGameObjectWithTag( "Enemy" ).GetComponent<Collider2D>( );
         characterCollider = GameObject.FindGameObjectWithTag( "Player" ).GetComponent<Collider2D>( );
@@ -130,6 +140,7 @@ public class MonsterManager : MonoBehaviour
         //float destroyTime = 10;\
         //
     }
+    
     public void disapearBgm() // destroy the bgm after 13 sec
     {
         var destroyTimeBgm = 3;

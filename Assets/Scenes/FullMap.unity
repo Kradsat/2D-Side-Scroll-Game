@@ -11327,6 +11327,10 @@ MonoBehaviour:
   startingPosition: {x: 0, y: 0, z: 0}
   ghostCollider: {fileID: 9040236794425128758, guid: 2efce90f67dc02d44a3d2c027175346b, type: 3}
   characterCollider: {fileID: 1700669385}
+  monsterScript: {fileID: 0}
+  doorGameObject:
+  - {fileID: 688627761}
+  - {fileID: 685636931}
   count: {fileID: 772346580}
   maximumChanceOfApparition: 100
   minimumChanceOfApparition: 10
