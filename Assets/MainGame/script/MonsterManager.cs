@@ -8,7 +8,7 @@ public class MonsterManager : MonoBehaviour
     public GameObject prefabMonster;
     public GameObject prefabMonster2;
     public GameObject player;
-    private GameObject newInstance;
+    public GameObject newInstance;
     public GameObject ghostBGM;
     private GameObject newBgm;
     public float distance = 85f;

@@ -17,21 +17,23 @@ public class TakeStairs : MonoBehaviour
 
     public LayerMask WhatIsPlayer;
 
+
     public AudioSource audioSource;
-    
+
+  
 
 
 
     private void Update()
     {
         TakeStair();
+      
     }
 
     private void TakeStair()
     {
         playerDetected = Physics2D.OverlapBox(stairPos.position, new Vector2(width, height), 0, WhatIsPlayer);
-
-        Debug.Log(audioSource);
+      
 
 
         if (count.audioStop == false)
@@ -62,7 +64,9 @@ public class TakeStairs : MonoBehaviour
             }
 
         }
+       
     }
+    
     private void OnDrawGizmosSelected()// draw the collider for the stair
     {
         Gizmos.color = Color.blue;

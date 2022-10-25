@@ -196,7 +196,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 365272970}
-  m_RootOrder: 13
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &21495787
 GameObject:
@@ -2402,7 +2402,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1176552084}
-  - {fileID: 688627762}
   - {fileID: 378356890}
   m_Father: {fileID: 365272970}
   m_RootOrder: 0
@@ -2515,7 +2514,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 365272970}
-  m_RootOrder: 11
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &341333759
 MonoBehaviour:
@@ -2626,6 +2625,8 @@ Transform:
   - {fileID: 704997844}
   - {fileID: 567001853}
   - {fileID: 330310335}
+  - {fileID: 685636932}
+  - {fileID: 688627762}
   - {fileID: 1797725505}
   - {fileID: 1908060213}
   - {fileID: 648966628}
@@ -2799,7 +2800,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 336537387}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &392974849
 GameObject:
@@ -2879,7 +2880,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 1972623484}
   frame2: {fileID: 524762865}
-  monsterManager: {fileID: 0}
+  monsterManager: {fileID: 1552599289}
   count: {fileID: 772346580}
 --- !u!61 &401999751
 BoxCollider2D:
@@ -3400,7 +3401,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 1858099934}
   frame2: {fileID: 73444391}
-  monsterManager: {fileID: 0}
+  monsterManager: {fileID: 1552599289}
   count: {fileID: 772346580}
 --- !u!61 &462743247
 BoxCollider2D:
@@ -4496,7 +4497,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 365272970}
-  m_RootOrder: 14
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &551701356
 GameObject:
@@ -5578,7 +5579,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 365272970}
-  m_RootOrder: 10
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &648966629
 MonoBehaviour:
@@ -5669,7 +5670,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 551701356}
   frame2: {fileID: 1595787167}
-  monsterManager: {fileID: 0}
+  monsterManager: {fileID: 1552599289}
   count: {fileID: 772346580}
 --- !u!61 &662204740
 BoxCollider2D:
@@ -5834,8 +5835,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 685636932}
+  - component: {fileID: 685636933}
   m_Layer: 0
-  m_Name: stairPosUp
+  m_Name: stairPosUpLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5848,14 +5850,36 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 685636931}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 637.44, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1797725505}
-  m_RootOrder: 1
+  m_Father: {fileID: 365272970}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &685636933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685636931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 743bb8755c9dbaf4d943083fd43e218d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stairPos: {fileID: 685636932}
+  width: 18.76
+  height: 32.9
+  monster: {fileID: 688776678397148015, guid: 2efce90f67dc02d44a3d2c027175346b, type: 3}
+  xPos: 659.0746
+  yPos: 43.3
+  WhatIsMonster:
+    serializedVersion: 2
+    m_Bits: 128
+  manager: {fileID: 1552599289}
 --- !u!1 &688627761
 GameObject:
   m_ObjectHideFlags: 0
@@ -5865,8 +5889,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 688627762}
+  - component: {fileID: 688627763}
   m_Layer: 0
-  m_Name: stairPosUp
+  m_Name: stairPosUpRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5880,13 +5905,35 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 688627761}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.9, y: 0, z: 0}
+  m_LocalPosition: {x: -7.9000244, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 336537387}
-  m_RootOrder: 1
+  m_Father: {fileID: 365272970}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &688627763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688627761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 743bb8755c9dbaf4d943083fd43e218d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stairPos: {fileID: 688627762}
+  width: 18.76
+  height: 32.9
+  monster: {fileID: 688776678397148015, guid: 2efce90f67dc02d44a3d2c027175346b, type: 3}
+  xPos: -30.29445
+  yPos: 43.3
+  WhatIsMonster:
+    serializedVersion: 2
+    m_Bits: 128
+  manager: {fileID: 1552599289}
 --- !u!1 &688691967
 GameObject:
   m_ObjectHideFlags: 0
@@ -6419,7 +6466,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 2133355487}
   frame2: {fileID: 551701356}
-  monsterManager: {fileID: 0}
+  monsterManager: {fileID: 1552599289}
   count: {fileID: 772346580}
 --- !u!61 &723978279
 BoxCollider2D:
@@ -7222,7 +7269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 1571364089}
   frame2: {fileID: 2133355487}
-  monsterManager: {fileID: 0}
+  monsterManager: {fileID: 1552599289}
   count: {fileID: 772346580}
 --- !u!61 &857150213
 BoxCollider2D:
@@ -7297,7 +7344,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 1728369279}
   frame2: {fileID: 1400889009}
-  monsterManager: {fileID: 0}
+  monsterManager: {fileID: 1552599289}
   count: {fileID: 772346580}
 --- !u!61 &865175508
 BoxCollider2D:
@@ -7372,7 +7419,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 524762865}
   frame2: {fileID: 430118789}
-  monsterManager: {fileID: 0}
+  monsterManager: {fileID: 1552599289}
   count: {fileID: 772346580}
 --- !u!61 &866250850
 BoxCollider2D:
@@ -7536,7 +7583,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 1705596197}
   frame2: {fileID: 304925771}
-  monsterManager: {fileID: 0}
+  monsterManager: {fileID: 1552599289}
   count: {fileID: 772346580}
 --- !u!61 &907778225
 BoxCollider2D:
@@ -9116,7 +9163,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 365272970}
-  m_RootOrder: 17
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1231979693
 GameObject:
@@ -9347,7 +9394,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 522353125}
   frame2: {fileID: 733327098}
-  monsterManager: {fileID: 0}
+  monsterManager: {fileID: 1552599289}
   count: {fileID: 772346580}
 --- !u!61 &1283630574
 BoxCollider2D:
@@ -9672,7 +9719,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 430118789}
   frame2: {fileID: 797039889}
-  monsterManager: {fileID: 0}
+  monsterManager: {fileID: 1552599289}
   count: {fileID: 772346580}
 --- !u!61 &1314673355
 BoxCollider2D:
@@ -10054,7 +10101,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1797725505}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1348859066
 GameObject:
@@ -10141,7 +10188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 1595787167}
   frame2: {fileID: 1705596197}
-  monsterManager: {fileID: 0}
+  monsterManager: {fileID: 1552599289}
   count: {fileID: 772346580}
 --- !u!61 &1353708480
 BoxCollider2D:
@@ -10617,7 +10664,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 365272970}
-  m_RootOrder: 20
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1464659883
 BoxCollider2D:
@@ -10692,7 +10739,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 733327098}
   frame2: {fileID: 996339617}
-  monsterManager: {fileID: 0}
+  monsterManager: {fileID: 1552599289}
   count: {fileID: 772346580}
 --- !u!61 &1472921472
 BoxCollider2D:
@@ -11224,7 +11271,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 365272970}
-  m_RootOrder: 18
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1552599271
 GameObject:
@@ -11273,6 +11320,7 @@ MonoBehaviour:
   prefabMonster: {fileID: 2573284932148554492, guid: 2efce90f67dc02d44a3d2c027175346b, type: 3}
   prefabMonster2: {fileID: 2573284932148554492, guid: 2efce90f67dc02d44a3d2c027175346b, type: 3}
   player: {fileID: 1700669382}
+  newInstance: {fileID: 0}
   ghostBGM: {fileID: 5956970117756654392, guid: 29eaf7b11aad58d4d8f386467a5b593e, type: 3}
   distance: 85
   distance2: -85
@@ -11779,7 +11827,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 365272970}
-  m_RootOrder: 16
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1582089036
 GameObject:
@@ -11812,7 +11860,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 365272970}
-  m_RootOrder: 12
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1582089038
 MonoBehaviour:
@@ -12168,7 +12216,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 365272970}
-  m_RootOrder: 15
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1617466931
 GameObject:
@@ -12217,7 +12265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 1400889009}
   frame2: {fileID: 522353125}
-  monsterManager: {fileID: 0}
+  monsterManager: {fileID: 1552599289}
   count: {fileID: 772346580}
 --- !u!61 &1617466934
 BoxCollider2D:
@@ -12368,7 +12416,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 365272970}
-  m_RootOrder: 19
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1658419303 stripped
 GameObject:
@@ -12898,7 +12946,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 73444391}
   frame2: {fileID: 517090719}
-  monsterManager: {fileID: 0}
+  monsterManager: {fileID: 1552599289}
   count: {fileID: 772346580}
 --- !u!61 &1716682353
 BoxCollider2D:
@@ -13908,10 +13956,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1875316894}
-  - {fileID: 685636932}
   - {fileID: 1346952722}
   m_Father: {fileID: 365272970}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1797725506
 SpriteRenderer:
@@ -14442,7 +14489,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 136323353}
   frame2: {fileID: 1728369279}
-  monsterManager: {fileID: 0}
+  monsterManager: {fileID: 1552599289}
   count: {fileID: 772346580}
 --- !u!61 &1819239397
 BoxCollider2D:
@@ -15367,7 +15414,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 517090719}
   frame2: {fileID: 136323353}
-  monsterManager: {fileID: 0}
+  monsterManager: {fileID: 1552599289}
   count: {fileID: 772346580}
 --- !u!61 &1893982197
 BoxCollider2D:
@@ -15739,7 +15786,7 @@ Transform:
   m_Children:
   - {fileID: 1046272542}
   m_Father: {fileID: 365272970}
-  m_RootOrder: 9
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1938975362
 GameObject:
@@ -15986,7 +16033,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame1: {fileID: 797039889}
   frame2: {fileID: 1571364089}
-  monsterManager: {fileID: 0}
+  monsterManager: {fileID: 1552599289}
   count: {fileID: 772346580}
 --- !u!61 &1957488974
 BoxCollider2D:

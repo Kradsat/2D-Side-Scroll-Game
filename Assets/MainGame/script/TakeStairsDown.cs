@@ -14,10 +14,13 @@ public class TakeStairsDown : MonoBehaviour
     public GameObject currentScene;
     public GameObject newScene;
     public Count count;
+ 
 
     public LayerMask WhatIsPlayer;
+   
 
     public AudioSource audioSource;
+
     
 
 
@@ -62,6 +65,7 @@ public class TakeStairsDown : MonoBehaviour
             }
 
         }
+       
     }
     private void OnDrawGizmosSelected()// draw the collider for the stair
     {
