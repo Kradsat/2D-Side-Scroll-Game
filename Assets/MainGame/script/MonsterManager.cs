@@ -103,6 +103,7 @@ public class MonsterManager : MonoBehaviour
 
     public void EnemySpawn() // instanciate ghost + bgm
     {
+        count.keepCountOnlyMovement = 0;
         Debug.Log("ghost is here! run bitch!");
 
         newInstance = Instantiate(prefabMonster, new Vector3(player.transform.position.x - distance, player.transform.position.y, 0), Quaternion.identity);

@@ -73,17 +73,58 @@ public class Monster : MonoBehaviour
         }
         else if(targetPos.y != transform.position.y)
         {
-            float dis1 = Vector3.Distance(doors[0].position, transform.position);
-            float dis2 = Vector3.Distance(doors[1].position, transform.position);
+            float dis1FirstFloor = Vector3.Distance(doors[0].position, transform.position);
+            float dis2FirstFloor = Vector3.Distance(doors[1].position, transform.position);
+            float dis1SecondFloorUp = Vector3.Distance(doors[2].position, transform.position);
+            float dis2SecondFloorUp = Vector3.Distance(doors[3].position, transform.position);
+            float dis1SecondFloorDown = Vector3.Distance(doors[4].position, transform.position);
+            float dis2SecondFloorDown = Vector3.Distance(doors[5].position, transform.position);
+            float dis1ThirdFloor = Vector3.Distance(doors[6].position, transform.position);
+            float dis2ThirdFloor = Vector3.Distance(doors[7].position, transform.position);
 
-            if(dis1 > dis2)
+            if (dis1FirstFloor > dis2FirstFloor)
             {
                 transform.position = Vector3.MoveTowards(transform.position, doors[1].transform.position, speed);// moving toward player
+                Debug.Log(doorObject);
             }
             else
             {
                 transform.position = Vector3.MoveTowards(transform.position, doors[0].transform.position, speed);// moving toward player
             }
+
+            //if(dis1ThirdFloor > dis2ThirdFloor)
+            //{
+            //    transform.position = Vector3.MoveTowards(transform.position, doors[7].transform.position, speed);// moving toward player
+
+            //}
+            //else
+            //{
+            //    transform.position = Vector3.MoveTowards(transform.position, doors[6].transform.position, speed);// moving toward player
+
+            //}
+            //if(targetPos.y > transform.position.y)
+            //{
+            //    if(dis1SecondFloorUp > dis2SecondFloorUp)
+            //    {
+            //        transform.position = Vector3.MoveTowards(transform.position, doors[3].transform.position, speed);// moving toward player
+            //    }
+            //    else
+            //    {
+            //        transform.position = Vector3.MoveTowards(transform.position, doors[2].transform.position, speed);// moving toward player
+            //    }
+            //}
+
+            //else if(targetPos.y < transform.position.y)
+            //{
+            //    if(dis1SecondFloorDown > dis2SecondFloorDown)
+            //    {
+            //        transform.position = Vector3.MoveTowards(transform.position, doors[5].transform.position, speed);// moving toward player
+            //    }
+            //    else
+            //    {
+            //        transform.position = Vector3.MoveTowards(transform.position, doors[4].transform.position, speed);// moving toward player
+            //    }
+            //}
         }
     }
 
