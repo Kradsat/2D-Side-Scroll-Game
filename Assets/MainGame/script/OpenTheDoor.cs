@@ -15,17 +15,19 @@ public class OpenTheDoor : MonoBehaviour
     public float xPos;
     public float yPos;
     public Count count;
-    SceneFader sceneFader;
    AudioSource audioSource;
-  
 
+
+    public LoadScene loadscene;
+    
+
+ 
 
 
 
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
-       
 
     }
     // Update is called once per frame
@@ -57,6 +59,7 @@ public class OpenTheDoor : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Z))
         {
+                    
 
             if (playerDetected == true && Input.GetKeyDown(KeyCode.Z))
             {
@@ -74,6 +77,8 @@ public class OpenTheDoor : MonoBehaviour
                         audioSource.Play();
                         
                     }
+                    loadscene.transitionDoor.SetTrigger("DoorOpen");
+                    
                     
                 }
                 else if (currentRoom.activeInHierarchy == false)
@@ -88,9 +93,11 @@ public class OpenTheDoor : MonoBehaviour
                     {
                         audioSource.Play();
                     }
+                    loadscene.transitionDoor.SetTrigger("DoorClose");
                 }
+                
 
-                if(currentRoom.tag == "Loft") // check tag
+                if (currentRoom.tag == "Loft") // check tag
                 {
                     count.canSpawnhere = false;
                     
@@ -99,12 +106,14 @@ public class OpenTheDoor : MonoBehaviour
                 else
                 {
                     count.canSpawnhere = true;
-                    
+                   
                 
                 }
             }
 
         }
+            
+        
        
     }
 

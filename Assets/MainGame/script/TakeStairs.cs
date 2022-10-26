@@ -19,7 +19,7 @@ public class TakeStairs : MonoBehaviour
 
 
     public AudioSource audioSource;
-
+    public LoadScene loadscene;
   
 
 
@@ -60,7 +60,7 @@ public class TakeStairs : MonoBehaviour
                 {
                     audioSource.Play();
                 }
-
+                loadscene.transitionDoor.SetTrigger("DoorOpen");
             }
 
         }

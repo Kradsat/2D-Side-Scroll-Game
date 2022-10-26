@@ -5,9 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class LoadScene : MonoBehaviour
 {
+    public Animator transitionScene;
+    public Animator transitionDoor;
+
+    public float transitionTime = 1f;
     public void Play()
     {
-        SceneManager.LoadScene(1);
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+        
 
     }
 
@@ -16,4 +21,15 @@ public class LoadScene : MonoBehaviour
         Application.Quit();
         Debug.Log("quit");
     }
+
+    IEnumerator LoadLevel(int levelIndex)
+    {
+        transitionScene.SetTrigger("Start");
+
+        yield return new WaitForSeconds(1);
+
+        SceneManager.LoadScene(levelIndex);
+    }
+
+    
 }
