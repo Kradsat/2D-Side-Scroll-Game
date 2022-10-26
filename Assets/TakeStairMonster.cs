@@ -15,6 +15,18 @@ public class TakeStairMonster : MonoBehaviour
     public LayerMask WhatIsMonster;
     public MonsterManager manager;
 
+    [SerializeField]
+    GameObject nextStair;
+    Vector3 NextStairPos;
+
+    [SerializeField]
+    GameObject playerGameObject;
+    public Vector2 playerPos;
+
+    private void Start() 
+    {
+        NextStairPos = nextStair.transform.position; 
+    }
 
     private void Update()
     {
@@ -24,6 +36,7 @@ public class TakeStairMonster : MonoBehaviour
     private void TakeStair()
     {
         monsterDetected = Physics2D.OverlapBox(stairPos.position, new Vector2(width, height), 0, WhatIsMonster);
+        playerPos = playerGameObject.transform.position;
 
         if(manager.canDisepear == true)
         {
@@ -31,7 +44,14 @@ public class TakeStairMonster : MonoBehaviour
         
             if (monsterDetected == true) // check the player 
             {
-                monster.position = new Vector2(xPos, yPos);// generate the new position of the player avec key pressed
+                if(this.tag == "StairUp" && playerPos.y > monster.position.y)
+                {
+                    monster.position = new Vector2(NextStairPos.x, NextStairPos.y);// generate the new position of the player avec key pressed
+                }
+                else if(this.tag == "StairDown" && playerPos.y < monster.position.y)
+                {
+                    monster.position = new Vector2(NextStairPos.x, NextStairPos.y);// generate the new position of the player avec key pressed
+                }
             }
         }
     }

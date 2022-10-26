@@ -22,9 +22,14 @@ public class TakeStairsDown : MonoBehaviour
     public AudioSource audioSource;
     public LoadScene loadscene;
 
-    
+    [SerializeField]
+    GameObject nextStair;
+    Vector2 nextStairPos;
 
-
+    private void Start() 
+    {
+        nextStairPos = nextStair.transform.position;
+    }
 
     private void Update()
     {
@@ -45,14 +50,10 @@ public class TakeStairsDown : MonoBehaviour
 
         if (playerDetected == true) // check the player 
         {
-            
-
-
-
             if (Input.GetKeyDown(KeyCode.Z))
             {
                 count.audioStop = true;
-                player.position = new Vector2(xPos, yPos);// generate the new position of the player avec key pressed
+                player.position = new Vector2(nextStairPos.x, nextStairPos.y);// generate the new position of the player avec key pressed
                 currentScene.SetActive(false);// desactivate current scene
                 newScene.SetActive(true); // activate new scene
                 count.doAction = true; // check the action

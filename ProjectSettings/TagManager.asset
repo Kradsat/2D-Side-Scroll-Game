@@ -9,6 +9,8 @@ TagManager:
   - Enemy
   - Loft
   - Item
+  - StairUp
+  - StairDown
   layers:
   - Default
   - TransparentFX
