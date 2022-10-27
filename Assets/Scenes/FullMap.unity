@@ -942,7 +942,7 @@ MonoBehaviour:
   nextRoom: {fileID: 1400889009}
   player: {fileID: 1700669383}
   xPos: 268.5
-  yPos: 43.3
+  yPos: 45
   count: {fileID: 772346580}
   loadscene: {fileID: 1736539513}
 --- !u!1 &80841431
@@ -2978,7 +2978,7 @@ MonoBehaviour:
   nextRoom: {fileID: 797039889}
   player: {fileID: 1700669383}
   xPos: 503.8758
-  yPos: 93.4
+  yPos: 95
   count: {fileID: 772346580}
   loadscene: {fileID: 1736539513}
 --- !u!1 &341333757
@@ -4102,7 +4102,7 @@ MonoBehaviour:
   nextRoom: {fileID: 517090719}
   player: {fileID: 1700669383}
   xPos: 504.8
-  yPos: 43.3
+  yPos: 45
   count: {fileID: 772346580}
   loadscene: {fileID: 1736539513}
 --- !u!1 &501113910
@@ -5585,7 +5585,7 @@ MonoBehaviour:
   nextRoom: {fileID: 1571364089}
   player: {fileID: 1700669383}
   xPos: 425.4633
-  yPos: 93.4
+  yPos: 95
   count: {fileID: 772346580}
   loadscene: {fileID: 1736539513}
 --- !u!1 &567001852
@@ -6309,7 +6309,7 @@ MonoBehaviour:
   nextRoom: {fileID: 1595787167}
   player: {fileID: 1700669383}
   xPos: 188.5354
-  yPos: 93.4
+  yPos: 95
   count: {fileID: 772346580}
   loadscene: {fileID: 1736539513}
 --- !u!1 &646078464
@@ -8423,7 +8423,7 @@ MonoBehaviour:
   nextRoom: {fileID: 551701356}
   player: {fileID: 1700669383}
   xPos: 267.6013
-  yPos: 93.4
+  yPos: 95
   count: {fileID: 772346580}
   loadscene: {fileID: 1736539513}
 --- !u!1 &823929891
@@ -9199,7 +9199,7 @@ MonoBehaviour:
   nextRoom: {fileID: 136323353}
   player: {fileID: 1700669383}
   xPos: 426
-  yPos: 43.3
+  yPos: 45
   count: {fileID: 772346580}
   loadscene: {fileID: 1736539513}
 --- !u!1 &996339617
@@ -9898,6 +9898,10 @@ PrefabInstance:
     - target: {fileID: 4041044085037309291, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: xPos
       value: 426
+      objectReference: {fileID: 0}
+    - target: {fileID: 4041044085037309291, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: yPos
+      value: -4.8
       objectReference: {fileID: 0}
     - target: {fileID: 4041044085037309291, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: count
@@ -10653,7 +10657,7 @@ MonoBehaviour:
   nextRoom: {fileID: 522353125}
   player: {fileID: 1700669383}
   xPos: 190.4
-  yPos: 43.3
+  yPos: 45
   count: {fileID: 772346580}
   loadscene: {fileID: 1736539513}
 --- !u!1 &1211887362
@@ -13328,7 +13332,7 @@ MonoBehaviour:
   nextRoom: {fileID: 1728369279}
   player: {fileID: 1700669383}
   xPos: 346.6
-  yPos: 43.3
+  yPos: 45
   count: {fileID: 772346580}
   loadscene: {fileID: 1736539513}
 --- !u!1 &1551926877
@@ -16625,7 +16629,7 @@ MonoBehaviour:
   nextRoom: {fileID: 1705596197}
   player: {fileID: 1700669383}
   xPos: 109.2377
-  yPos: 93.4
+  yPos: 95
   count: {fileID: 772346580}
   loadscene: {fileID: 1736539513}
 --- !u!1 &1806488705
@@ -19036,6 +19040,10 @@ PrefabInstance:
       value: 268.5
       objectReference: {fileID: 0}
     - target: {fileID: 4041044085037309291, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: yPos
+      value: -4.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4041044085037309291, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: count
       value: 
       objectReference: {fileID: 772346580}
@@ -19140,6 +19148,10 @@ PrefabInstance:
     - target: {fileID: 4041044085037309291, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: xPos
       value: 346.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4041044085037309291, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: yPos
+      value: -4.8
       objectReference: {fileID: 0}
     - target: {fileID: 4041044085037309291, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: count
@@ -19459,6 +19471,10 @@ PrefabInstance:
     - target: {fileID: 4041044085037309291, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: xPos
       value: 504.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4041044085037309291, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: yPos
+      value: -4.8
       objectReference: {fileID: 0}
     - target: {fileID: 4041044085037309291, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: count
@@ -19813,7 +19829,7 @@ MonoBehaviour:
   nextRoom: {fileID: 2133355487}
   player: {fileID: 1700669383}
   xPos: 346.0836
-  yPos: 93.4
+  yPos: 95
   count: {fileID: 772346580}
   loadscene: {fileID: 1736539513}
 --- !u!1 &2058161808
@@ -20428,7 +20444,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1311943314904209911, guid: efabd140693d6c04c9ba2a56b7846619, type: 3}
       propertyPath: yPos
-      value: -6.7
+      value: -4.8
       objectReference: {fileID: 0}
     - target: {fileID: 1311943314904209911, guid: efabd140693d6c04c9ba2a56b7846619, type: 3}
       propertyPath: count
@@ -20522,6 +20538,10 @@ PrefabInstance:
     - target: {fileID: 4041044085037309291, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: xPos
       value: 581.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4041044085037309291, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: yPos
+      value: -4.8
       objectReference: {fileID: 0}
     - target: {fileID: 4041044085037309291, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: count
@@ -20638,7 +20658,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4200335667963196783, guid: af4d97ca7bc4a754b97eb3f553501694, type: 3}
       propertyPath: yPos
-      value: -6.7
+      value: -4.8
       objectReference: {fileID: 0}
     - target: {fileID: 4200335667963196783, guid: af4d97ca7bc4a754b97eb3f553501694, type: 3}
       propertyPath: count
@@ -20720,6 +20740,10 @@ PrefabInstance:
     - target: {fileID: 7758268814014840070, guid: 6ac4cacebd0bf1d40b56e24b61abb2c7, type: 3}
       propertyPath: xPos
       value: 110.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7758268814014840070, guid: 6ac4cacebd0bf1d40b56e24b61abb2c7, type: 3}
+      propertyPath: yPos
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 7758268814014840070, guid: 6ac4cacebd0bf1d40b56e24b61abb2c7, type: 3}
       propertyPath: count
@@ -20882,7 +20906,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8805227160323537332, guid: 1c15c2f799746344bbf5143112884324, type: 3}
       propertyPath: yPos
-      value: 93.4
+      value: 95
       objectReference: {fileID: 0}
     - target: {fileID: 8805227160323537332, guid: 1c15c2f799746344bbf5143112884324, type: 3}
       propertyPath: count
@@ -20960,6 +20984,10 @@ PrefabInstance:
     - target: {fileID: 9080312098310336953, guid: 3d27d9c3986d85143b473067a1a8d22f, type: 3}
       propertyPath: xPos
       value: 581.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9080312098310336953, guid: 3d27d9c3986d85143b473067a1a8d22f, type: 3}
+      propertyPath: yPos
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 9080312098310336953, guid: 3d27d9c3986d85143b473067a1a8d22f, type: 3}
       propertyPath: count
