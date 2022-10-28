@@ -7396,6 +7396,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 832542752}
     - target: {fileID: 3859951093643442634, guid: 5559bf4db0187c04f80ea0bddad8f950, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1552599290}
+    - target: {fileID: 3859951093643442634, guid: 5559bf4db0187c04f80ea0bddad8f950, type: 3}
       propertyPath: WhatIsPlayer.m_Bits
       value: 64
       objectReference: {fileID: 0}
@@ -7407,6 +7411,10 @@ PrefabInstance:
       propertyPath: item
       value: 
       objectReference: {fileID: 11400000, guid: 814bdb5223588484e9cf096bf6fc99c1, type: 2}
+    - target: {fileID: 5618967345939791948, guid: 5559bf4db0187c04f80ea0bddad8f950, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1552599290}
     - target: {fileID: 5618967345939791948, guid: 5559bf4db0187c04f80ea0bddad8f950, type: 3}
       propertyPath: dialog.lines.Array.size
       value: 4
@@ -13754,6 +13762,8 @@ MonoBehaviour:
   dialogText: {fileID: 1253966787}
   lettersPerSeconds: 45
   isTyping: 0
+  lines: []
+  write: 0
 --- !u!1 &1554071401
 GameObject:
   m_ObjectHideFlags: 3
@@ -21016,6 +21026,7 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: 437206ef1c1cca34e801c4e775657a40, type: 2}
   dialog:
     lines: []
+  dialogueManager: {fileID: 0}
 --- !u!61 &5676379251760149791
 BoxCollider2D:
   m_ObjectHideFlags: 0

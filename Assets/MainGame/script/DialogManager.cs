@@ -14,7 +14,10 @@ public class DialogManager : MonoBehaviour
     public event Action OnshowDialog;
     public event Action OnCloseDialog;
 
-   public bool isTyping;
+    public bool isTyping;
+
+    public List<string> lines;
+    public bool write = false;
 
     public static DialogManager Instance
     {
@@ -28,26 +31,22 @@ public class DialogManager : MonoBehaviour
 
   
     int currentLine = 0;
-    public void ShowDialog(Dialog dialog)
+    public void ShowDialog()
     {
         dialogBox.SetActive(true);
-     // StartCoroutine(typeDialog(dialog.Lines[0]));
-
-
-        if (Input.GetKeyDown(KeyCode.Z) && !isTyping)
+        if (write == true && !isTyping)
         {
-                ++currentLine;
-            if (currentLine < dialog.Lines.Count)
+            if (currentLine < lines.Count)
             {
-                StartCoroutine(typeDialog(dialog.Lines[currentLine]));
+                StartCoroutine(typeDialog(lines[currentLine]));
+                ++currentLine;
             }
-        }
-        else
-        {
-
-            currentLine = 0;
-            dialogBox.SetActive(false);
-            //OnCloseDialog?.Invoke();
+            else
+            {
+                currentLine = 0;
+                dialogBox.SetActive(false);
+                //OnCloseDialog?.Invoke();
+            }
         }
     }
 
@@ -61,8 +60,7 @@ public class DialogManager : MonoBehaviour
             yield return new WaitForSeconds(1f / lettersPerSeconds);
         }
         isTyping = false;
-        
-    }
-   
-    
+        yield return new WaitUntil(()=>Input.GetKeyDown(KeyCode.Z));
+        ShowDialog();
+    }   
 }

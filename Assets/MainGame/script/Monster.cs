@@ -111,26 +111,26 @@ public class Monster : MonoBehaviour
             }
             else if(targetPos.y < transform.position.y)
             {
-                if(monsterWhichFloor == WhichFloor.First)
+                if(monsterWhichFloor == WhichFloor.Second)
                 {
                     if (disFloor[0] > disFloor[1])
                     {
-                        transform.position = Vector3.MoveTowards(transform.position, doors[1].transform.position, speed);// moving toward player
+                        transform.position = Vector3.MoveTowards(transform.position, doors[5].transform.position, speed);// moving toward player
                     }
                     else
                     {
-                        transform.position = Vector3.MoveTowards(transform.position, doors[0].transform.position, speed);// moving toward player
+                        transform.position = Vector3.MoveTowards(transform.position, doors[4].transform.position, speed);// moving toward player
                     }                
                 }      
-                else if(monsterWhichFloor == WhichFloor.Second)
+                else if(monsterWhichFloor == WhichFloor.Third)
                 {
                     if (disFloor[0] > disFloor[1])
                     {
-                        transform.position = Vector3.MoveTowards(transform.position, doors[3].transform.position, speed);// moving toward player
+                        transform.position = Vector3.MoveTowards(transform.position, doors[7].transform.position, speed);// moving toward player
                     }
                     else
                     {
-                        transform.position = Vector3.MoveTowards(transform.position, doors[2].transform.position, speed);// moving toward player
+                        transform.position = Vector3.MoveTowards(transform.position, doors[6].transform.position, speed);// moving toward player
                     }                
                 }                
             }

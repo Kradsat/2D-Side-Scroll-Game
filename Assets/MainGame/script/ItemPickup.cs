@@ -26,8 +26,8 @@ public class ItemPickup : MonoBehaviour
     private void Update()
     {
         DetectCollider();
-        
     }
+    
     private void DetectCollider()
     {
         playerDetectedItemRange = Physics2D.OverlapBox(itemPos.position, new Vector2(width, height), 0, WhatIsPlayer);
@@ -38,26 +38,22 @@ public class ItemPickup : MonoBehaviour
         if (playerDetectedItemRange == true || playerDetectedCheckRange == true)
         {
             PressedZ();
-        }
-      
-        
+        }        
     }
 
     private void PressedZ()
     {
         if (Input.GetKeyDown(KeyCode.Z))
         {
+            itemController.Interact();            
             Pickup();
-            itemController.Interact();
             Debug.Log("is colliding");
         }
     }
+
     private void OnDrawGizmosSelected()// draw the collider for the item
     {
         Gizmos.color = Color.blue;
         Gizmos.DrawCube(itemPos.position, new Vector3(width, height, 1));
-    }
-
-
-   
+    }   
 }
