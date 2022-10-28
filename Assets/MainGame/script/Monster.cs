@@ -2,8 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum WhichFloor
+{
+    First,
+    Second,
+    Third
+}
+
 public class Monster : MonoBehaviour
 {
+    [SerializeField]
+    WhichFloor whichFloor;
+
     private Collider2D playerCollider2D = null;
     public Transform player;
     public GameObject prefab;
@@ -26,7 +36,7 @@ public class Monster : MonoBehaviour
     public float width;
     public float height;
     public LayerMask WhatIsPlayer;
-     public SpriteRenderer sprite;
+    public SpriteRenderer sprite;
 
     float shortestDistance = Mathf.Infinity;
 
@@ -82,6 +92,10 @@ public class Monster : MonoBehaviour
             float dis1ThirdFloor = Vector3.Distance(doors[6].position, transform.position);
             float dis2ThirdFloor = Vector3.Distance(doors[7].position, transform.position);
 
+            // if(whichFloor.First)
+            // {
+
+            // }
             if (dis1FirstFloor > dis2FirstFloor)
             {
                 transform.position = Vector3.MoveTowards(transform.position, doors[1].transform.position, speed);// moving toward player
