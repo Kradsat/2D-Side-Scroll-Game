@@ -4,5 +4,13 @@ using UnityEngine;
 
 public class ItemController : MonoBehaviour
 {
+    
+
     public Item item;
+    [SerializeField] Dialog dialog;
+
+    public void Interact()
+    {
+        DialogManager.Instance.ShowDialog(dialog);
+    }
 }
