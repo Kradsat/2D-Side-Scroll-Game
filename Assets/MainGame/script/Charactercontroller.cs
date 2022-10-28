@@ -15,8 +15,8 @@ public class Charactercontroller : MonoBehaviour
 
     bool isWalking;
     bool stillWalking;
-    bool isFront;
-    bool isBack;
+    public bool isFront;
+    public bool isBack;
     private bool playerDetected;
 
     [SerializeField]

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TakeStairs : MonoBehaviour
 {
+    public  Charactercontroller characterController;
     private bool playerDetected;
     public Transform stairPos;
     public float width;
@@ -52,7 +53,7 @@ public class TakeStairs : MonoBehaviour
 
         if (playerDetected == true) // check the player 
         {
-            if (Input.GetKeyDown(KeyCode.Z))
+            if (Input.GetKeyDown(KeyCode.Z) && characterController.isFront )
             {
                 count.audioStop = true;
                 player.position = new Vector2(nextStairPos.x, nextStairPos.y);// generate the new position of the player avec key pressed

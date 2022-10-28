@@ -720,6 +720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6ae9b541d98b54f8bb274f58b7e44a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterController: {fileID: 1700669387}
   width: 12.1
   height: 27.1
   doorPos: {fileID: 1561652414}
@@ -932,6 +933,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6ae9b541d98b54f8bb274f58b7e44a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterController: {fileID: 1700669387}
   width: 12.1
   height: 27.1
   doorPos: {fileID: 77188758}
@@ -1476,6 +1478,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6ae9b541d98b54f8bb274f58b7e44a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterController: {fileID: 1700669387}
   width: 12.1
   height: 27.1
   doorPos: {fileID: 1232510281}
@@ -2378,6 +2381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2177f998f93746a41a14347cf5c860a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterController: {fileID: 1700669387}
   stairPos: {fileID: 1231979694}
   width: 18.76
   height: 32.9
@@ -2549,6 +2553,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6ae9b541d98b54f8bb274f58b7e44a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterController: {fileID: 1700669387}
   width: 12.1
   height: 27.1
   doorPos: {fileID: 376031542}
@@ -2892,6 +2897,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2177f998f93746a41a14347cf5c860a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterController: {fileID: 1700669387}
   stairPos: {fileID: 688627762}
   width: 18.76
   height: 32.9
@@ -3039,6 +3045,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6ae9b541d98b54f8bb274f58b7e44a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterController: {fileID: 1700669387}
   width: 12.1
   height: 27.1
   doorPos: {fileID: 337591052}
@@ -3631,6 +3638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6ae9b541d98b54f8bb274f58b7e44a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterController: {fileID: 1700669387}
   width: 12.1
   height: 27.1
   doorPos: {fileID: 918437144}
@@ -4164,6 +4172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6ae9b541d98b54f8bb274f58b7e44a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterController: {fileID: 1700669387}
   width: 12.1
   height: 27.1
   doorPos: {fileID: 487512447}
@@ -4432,6 +4441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6ae9b541d98b54f8bb274f58b7e44a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterController: {fileID: 1700669387}
   width: 12.1
   height: 27.1
   doorPos: {fileID: 80841432}
@@ -4822,6 +4832,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6ae9b541d98b54f8bb274f58b7e44a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterController: {fileID: 1700669387}
   width: 12.1
   height: 27.1
   doorPos: {fileID: 434558598}
@@ -5030,6 +5041,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2177f998f93746a41a14347cf5c860a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterController: {fileID: 1700669387}
   stairPos: {fileID: 1806583478}
   width: 18.2
   height: 32.9
@@ -5321,6 +5333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6ae9b541d98b54f8bb274f58b7e44a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterController: {fileID: 1700669387}
   width: 12.1
   height: 27.1
   doorPos: {fileID: 301093329}
@@ -5649,6 +5662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6ae9b541d98b54f8bb274f58b7e44a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterController: {fileID: 1700669387}
   width: 12.1
   height: 27.1
   doorPos: {fileID: 565849984}
@@ -5762,6 +5776,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6ae9b541d98b54f8bb274f58b7e44a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterController: {fileID: 1700669387}
   width: 12.1
   height: 27.1
   doorPos: {fileID: 157891072}
@@ -6373,6 +6388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6ae9b541d98b54f8bb274f58b7e44a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterController: {fileID: 1700669387}
   width: 12.1
   height: 27.1
   doorPos: {fileID: 634525765}
@@ -7247,6 +7263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6ae9b541d98b54f8bb274f58b7e44a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterController: {fileID: 1700669387}
   width: 12.1
   height: 27.1
   doorPos: {fileID: 1442278850}
@@ -7669,6 +7686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6ae9b541d98b54f8bb274f58b7e44a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterController: {fileID: 1700669387}
   width: 12.1
   height: 27.1
   doorPos: {fileID: 392974850}
@@ -8289,6 +8307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6ae9b541d98b54f8bb274f58b7e44a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterController: {fileID: 1700669387}
   width: 12.1
   height: 27.1
   doorPos: {fileID: 1939292082}
@@ -8545,6 +8564,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6ae9b541d98b54f8bb274f58b7e44a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterController: {fileID: 1700669387}
   width: 12.1
   height: 27.1
   doorPos: {fileID: 813053581}
@@ -9337,6 +9357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6ae9b541d98b54f8bb274f58b7e44a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterController: {fileID: 1700669387}
   width: 12.1
   height: 27.1
   doorPos: {fileID: 969473020}
@@ -9451,6 +9472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2177f998f93746a41a14347cf5c860a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterController: {fileID: 1700669387}
   stairPos: {fileID: 133438193}
   width: 18.76
   height: 32.9
@@ -9480,6 +9502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faada397df41b3542967b5097d06218a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterController: {fileID: 1700669387}
   stairPos: {fileID: 282107907}
   width: 18.2
   height: 27
@@ -10079,6 +10102,10 @@ PrefabInstance:
       propertyPath: currentRoom
       value: 
       objectReference: {fileID: 135694187}
+    - target: {fileID: 4041044085037309291, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: characterController
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 4379140179480387005, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: item
       value: 
@@ -10799,6 +10826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6ae9b541d98b54f8bb274f58b7e44a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterController: {fileID: 1700669387}
   width: 12.1
   height: 27.1
   doorPos: {fileID: 1209896955}
@@ -12641,6 +12669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6ae9b541d98b54f8bb274f58b7e44a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterController: {fileID: 1700669387}
   width: 12.1
   height: 27.1
   doorPos: {fileID: 1595828331}
@@ -13506,6 +13535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6ae9b541d98b54f8bb274f58b7e44a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterController: {fileID: 1700669387}
   width: 12.1
   height: 27.1
   doorPos: {fileID: 1541552565}
@@ -14028,6 +14058,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6ae9b541d98b54f8bb274f58b7e44a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterController: {fileID: 1700669387}
   width: 12.1
   height: 27.1
   doorPos: {fileID: 1642324481}
@@ -14431,6 +14462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6ae9b541d98b54f8bb274f58b7e44a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterController: {fileID: 1700669387}
   width: 12.1
   height: 27.1
   doorPos: {fileID: 1882366245}
@@ -15365,6 +15397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6ae9b541d98b54f8bb274f58b7e44a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterController: {fileID: 1700669387}
   width: 12.1
   height: 27.1
   doorPos: {fileID: 1337039595}
@@ -15693,6 +15726,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6ae9b541d98b54f8bb274f58b7e44a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterController: {fileID: 1700669387}
   width: 12.1
   height: 27.1
   doorPos: {fileID: 1956770984}
@@ -15902,6 +15936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6ae9b541d98b54f8bb274f58b7e44a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterController: {fileID: 1700669387}
   width: 12.1
   height: 27.1
   doorPos: {fileID: 1243812473}
@@ -16325,6 +16360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6ae9b541d98b54f8bb274f58b7e44a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterController: {fileID: 1700669387}
   width: 12.1
   height: 27.1
   doorPos: {fileID: 486781277}
@@ -16645,6 +16681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2177f998f93746a41a14347cf5c860a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterController: {fileID: 1700669387}
   stairPos: {fileID: 685636932}
   width: 18.76
   height: 32.9
@@ -16836,6 +16873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6ae9b541d98b54f8bb274f58b7e44a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterController: {fileID: 1700669387}
   width: 12.1
   height: 27.1
   doorPos: {fileID: 1802901150}
@@ -16949,6 +16987,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6ae9b541d98b54f8bb274f58b7e44a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterController: {fileID: 1700669387}
   width: 12.1
   height: 27.1
   doorPos: {fileID: 140820129}
@@ -18107,6 +18146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2177f998f93746a41a14347cf5c860a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterController: {fileID: 1700669387}
   stairPos: {fileID: 356152999}
   width: 18.76
   height: 32.9
@@ -18136,6 +18176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faada397df41b3542967b5097d06218a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterController: {fileID: 1700669387}
   stairPos: {fileID: 1785026831}
   width: 18.2
   height: 27
@@ -19324,6 +19365,10 @@ PrefabInstance:
       propertyPath: currentRoom
       value: 
       objectReference: {fileID: 762042884}
+    - target: {fileID: 4041044085037309291, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: characterController
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 4379140179480387005, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: item
       value: 
@@ -19434,6 +19479,10 @@ PrefabInstance:
       propertyPath: currentRoom
       value: 
       objectReference: {fileID: 1658419303}
+    - target: {fileID: 4041044085037309291, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: characterController
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 4379140179480387005, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: item
       value: 
@@ -19553,6 +19602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6ae9b541d98b54f8bb274f58b7e44a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterController: {fileID: 1700669387}
   width: 12.1
   height: 27.1
   doorPos: {fileID: 1629749029}
@@ -19757,6 +19807,10 @@ PrefabInstance:
       propertyPath: currentRoom
       value: 
       objectReference: {fileID: 1378616565}
+    - target: {fileID: 4041044085037309291, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: characterController
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 4379140179480387005, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: item
       value: 
@@ -20076,6 +20130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6ae9b541d98b54f8bb274f58b7e44a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterController: {fileID: 1700669387}
   width: 12.1
   height: 27.1
   doorPos: {fileID: 2049119314}
@@ -20386,6 +20441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6ae9b541d98b54f8bb274f58b7e44a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterController: {fileID: 1700669387}
   width: 12.1
   height: 27.1
   doorPos: {fileID: 1302591102}
@@ -20719,6 +20775,10 @@ PrefabInstance:
       propertyPath: loadscene
       value: 
       objectReference: {fileID: 1736539513}
+    - target: {fileID: 1311943314904209911, guid: efabd140693d6c04c9ba2a56b7846619, type: 3}
+      propertyPath: characterController
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 2226895804340755646, guid: efabd140693d6c04c9ba2a56b7846619, type: 3}
       propertyPath: m_SortingOrder
       value: 1
@@ -20860,6 +20920,10 @@ PrefabInstance:
       propertyPath: CircleAnimation
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4041044085037309291, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: characterController
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 8235841440431977050, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -20957,6 +21021,10 @@ PrefabInstance:
       propertyPath: loadscene
       value: 
       objectReference: {fileID: 1736539513}
+    - target: {fileID: 4200335667963196783, guid: af4d97ca7bc4a754b97eb3f553501694, type: 3}
+      propertyPath: characterController
+      value: 
+      objectReference: {fileID: 1700669387}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af4d97ca7bc4a754b97eb3f553501694, type: 3}
 --- !u!212 &4793555243864917396
@@ -21395,6 +21463,10 @@ PrefabInstance:
       propertyPath: loadscene
       value: 
       objectReference: {fileID: 1736539513}
+    - target: {fileID: 7758268814014840070, guid: 6ac4cacebd0bf1d40b56e24b61abb2c7, type: 3}
+      propertyPath: characterController
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 7758268814109073276, guid: 6ac4cacebd0bf1d40b56e24b61abb2c7, type: 3}
       propertyPath: m_BoundingShape2D
       value: 
@@ -21558,6 +21630,10 @@ PrefabInstance:
       propertyPath: loadscene
       value: 
       objectReference: {fileID: 1736539513}
+    - target: {fileID: 8805227160323537332, guid: 1c15c2f799746344bbf5143112884324, type: 3}
+      propertyPath: characterController
+      value: 
+      objectReference: {fileID: 1700669387}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c15c2f799746344bbf5143112884324, type: 3}
 --- !u!1 &8871827370130569442
@@ -21660,6 +21736,10 @@ PrefabInstance:
       propertyPath: loadscene
       value: 
       objectReference: {fileID: 1736539513}
+    - target: {fileID: 9080312098310336953, guid: 3d27d9c3986d85143b473067a1a8d22f, type: 3}
+      propertyPath: characterController
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 9080312098310336955, guid: 3d27d9c3986d85143b473067a1a8d22f, type: 3}
       propertyPath: m_Name
       value: RoomE

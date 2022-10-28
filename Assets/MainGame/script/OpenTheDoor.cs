@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class OpenTheDoor : MonoBehaviour
 {
+    public Charactercontroller characterController;
     private bool playerDetected;
     public float width;
     public float height;
@@ -57,11 +58,11 @@ public class OpenTheDoor : MonoBehaviour
             audioSource.Stop();
         }
 
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.Z) && characterController.isFront )
         {
                     
 
-            if (playerDetected == true && Input.GetKeyDown(KeyCode.Z))
+            if (playerDetected == true && Input.GetKeyDown(KeyCode.Z) )
             {
                 count.audioStop = true;
                 if(currentRoom.activeInHierarchy == true)
