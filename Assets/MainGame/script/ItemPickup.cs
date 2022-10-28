@@ -11,9 +11,9 @@ public class ItemPickup : MonoBehaviour
     public Transform itemPos;
 
     public bool playerDetectedItemRange;
-    public bool playerDetectedCheckRange;
+   
     public GameObject player;
-    public GameObject UI;
+   
     [SerializeField] ItemController itemController;
 
     int currentLine = 0;
@@ -31,11 +31,11 @@ public class ItemPickup : MonoBehaviour
     private void DetectCollider()
     {
         playerDetectedItemRange = Physics2D.OverlapBox(itemPos.position, new Vector2(width, height), 0, WhatIsPlayer);
-        playerDetectedCheckRange = Physics2D.OverlapBox(itemPos.position, new Vector2(width, height), 0, WhatIsPlayer);
+       
 
         Debug.Log(playerDetectedItemRange);
 
-        if (playerDetectedItemRange == true || playerDetectedCheckRange == true)
+        if (playerDetectedItemRange == true)
         {
             PressedZ();
         }        

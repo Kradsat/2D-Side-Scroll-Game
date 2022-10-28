@@ -64,7 +64,8 @@ public class TakeStairsDown : MonoBehaviour
                 count.doAction = true; // check the action
                 count.keepCount++; // add 1 action to the count
                 count.keepCountOnlyMovement++;
-                playerGameObject.GetComponent<Charactercontroller>().playerWhichFloor = (WhichFloor)floorNum;                if (!audioSource.isPlaying)
+                playerGameObject.GetComponent<Charactercontroller>().playerWhichFloor = (WhichFloor)floorNum;   
+                if (!audioSource.isPlaying)
                 {
                     audioSource.Play();
                 }
