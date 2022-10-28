@@ -7,7 +7,7 @@ public class MonsterManager : MonoBehaviour
 {
     public GameObject prefabMonster;
     public GameObject prefabMonster2;
-    public GameObject player;
+    public Charactercontroller player;
     public GameObject newInstance;
     public GameObject ghostBGM;
     private GameObject newBgm;
@@ -112,6 +112,7 @@ public class MonsterManager : MonoBehaviour
         {
             monsterScript.doorObject[i] = doorGameObject[i];
         }
+        monsterScript.GetMonsterFloorData((int)player.playerWhichFloor);
         monsterScript.GetDoorPosition(doorGameObject.Length);
 
         newBgm = Instantiate(ghostBGM, new Vector3(0, 0, 0), Quaternion.identity);

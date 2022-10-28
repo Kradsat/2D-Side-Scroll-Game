@@ -5,11 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class Charactercontroller : MonoBehaviour
 {
-
    // public Vector3 startingPosition;
     [SerializeField]
     Sprite[] characterSprite;
     SpriteRenderer _spriteRenderer;
+
+    [SerializeField]
+    public WhichFloor playerWhichFloor;
 
     bool isWalking;
     bool stillWalking;

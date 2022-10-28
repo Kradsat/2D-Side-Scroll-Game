@@ -8,9 +8,11 @@ public class TakeStairMonster : MonoBehaviour
     public Transform stairPos;
     public float width;
     public float height;
-    public Transform monster;
+    public Transform monsterTransform;
     public float xPos;
-    public float yPos;    
+    public float yPos;  
+
+    public int floorNum;  
 
     public LayerMask WhatIsMonster;
     public MonsterManager manager;
@@ -40,17 +42,20 @@ public class TakeStairMonster : MonoBehaviour
 
         if(manager.canDisepear == true)
         {
-            monster = manager.newInstance.transform;
+            monsterTransform = manager.newInstance.transform;
+            GameObject monster = manager.newInstance;
         
             if (monsterDetected == true) // check the player 
             {
-                if(this.tag == "StairUp" && playerPos.y > monster.position.y)
+                if(this.tag == "StairUp" && playerPos.y > monsterTransform.position.y)
                 {
-                    monster.position = new Vector2(NextStairPos.x, NextStairPos.y);// generate the new position of the player avec key pressed
+                    monsterTransform.position = new Vector2(NextStairPos.x, NextStairPos.y);// generate the new position of the player avec key pressed
+                    monster.GetComponent<Monster>().monsterWhichFloor = (WhichFloor)floorNum;                
                 }
-                else if(this.tag == "StairDown" && playerPos.y < monster.position.y)
+                else if(this.tag == "StairDown" && playerPos.y < monsterTransform.position.y)
                 {
-                    monster.position = new Vector2(NextStairPos.x, NextStairPos.y);// generate the new position of the player avec key pressed
+                    monsterTransform.position = new Vector2(NextStairPos.x, NextStairPos.y);// generate the new position of the player avec key pressed
+                    monster.GetComponent<Monster>().monsterWhichFloor = (WhichFloor)floorNum;                
                 }
             }
         }

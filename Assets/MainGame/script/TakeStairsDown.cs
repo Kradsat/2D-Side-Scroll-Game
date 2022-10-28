@@ -14,7 +14,11 @@ public class TakeStairsDown : MonoBehaviour
     public GameObject currentScene;
     public GameObject newScene;
     public Count count;
- 
+
+    [SerializeField]
+    GameObject playerGameObject;
+    
+    public int floorNum;  
 
     public LayerMask WhatIsPlayer;
    
@@ -59,7 +63,7 @@ public class TakeStairsDown : MonoBehaviour
                 count.doAction = true; // check the action
                 count.keepCount++; // add 1 action to the count
                 count.keepCountOnlyMovement++;
-                if (!audioSource.isPlaying)
+                playerGameObject.GetComponent<Charactercontroller>().playerWhichFloor = (WhichFloor)floorNum;                if (!audioSource.isPlaying)
                 {
                     audioSource.Play();
                 }

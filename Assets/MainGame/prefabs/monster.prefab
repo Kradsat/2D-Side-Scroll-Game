@@ -115,7 +115,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9883f793868cd84586b3bdfcf56df2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 3711365700126168580, guid: 92d2ef642f04eed4b9bbfbec11f3fad0, type: 3}
+  monsterWhichFloor: 0
+  player: {fileID: 0}
   prefab: {fileID: 2573284932148554492}
   doorObject:
   - {fileID: 0}

@@ -1355,9 +1355,10 @@ MonoBehaviour:
   stairPos: {fileID: 133438193}
   width: 18.76
   height: 32.9
-  monster: {fileID: 688776678397148015, guid: 2efce90f67dc02d44a3d2c027175346b, type: 3}
+  monsterTransform: {fileID: 0}
   xPos: 659.0746
   yPos: 93.4
+  floorNum: 2
   WhatIsMonster:
     serializedVersion: 2
     m_Bits: 128
@@ -2171,9 +2172,10 @@ MonoBehaviour:
   stairPos: {fileID: 282107907}
   width: 18.76
   height: 32.9
-  monster: {fileID: 688776678397148015, guid: 2efce90f67dc02d44a3d2c027175346b, type: 3}
+  monsterTransform: {fileID: 0}
   xPos: 641.4862
   yPos: -6.7
+  floorNum: 0
   WhatIsMonster:
     serializedVersion: 2
     m_Bits: 128
@@ -2320,12 +2322,14 @@ MonoBehaviour:
   currentScene: {fileID: 304925771}
   newScene: {fileID: 996339617}
   count: {fileID: 772346580}
+  playerGameObject: {fileID: 1700669382}
+  floorNum: 1
   WhatIsPlayer:
     serializedVersion: 2
     m_Bits: 64
   audioSource: {fileID: 688691968}
   loadscene: {fileID: 1736539513}
-  nextStair: {fileID: 282107906}
+  nextStair: {fileID: 133438192}
 --- !u!1 &316663480
 GameObject:
   m_ObjectHideFlags: 0
@@ -2832,6 +2836,8 @@ MonoBehaviour:
   currentScene: {fileID: 336537386}
   newScene: {fileID: 996339617}
   count: {fileID: 772346580}
+  playerGameObject: {fileID: 1700669382}
+  floorNum: 1
   WhatIsPlayer:
     serializedVersion: 2
     m_Bits: 64
@@ -3103,9 +3109,10 @@ MonoBehaviour:
   stairPos: {fileID: 356152999}
   width: 18.76
   height: 32.9
-  monster: {fileID: 688776678397148015, guid: 2efce90f67dc02d44a3d2c027175346b, type: 3}
+  monsterTransform: {fileID: 0}
   xPos: -30.29445
   yPos: 93.4
+  floorNum: 2
   WhatIsMonster:
     serializedVersion: 2
     m_Bits: 128
@@ -4967,12 +4974,14 @@ MonoBehaviour:
   currentScene: {fileID: 524762865}
   newScene: {fileID: 1858099934}
   count: {fileID: 772346580}
+  playerGameObject: {fileID: 1700669382}
+  floorNum: 1
   WhatIsPlayer:
     serializedVersion: 2
     m_Bits: 64
   audioSource: {fileID: 646078465}
   loadscene: {fileID: 1736539513}
-  nextStair: {fileID: 1785026830}
+  nextStair: {fileID: 356152998}
 --- !u!1 &525976797 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9080312098310336955, guid: 3d27d9c3986d85143b473067a1a8d22f, type: 3}
@@ -6809,9 +6818,10 @@ MonoBehaviour:
   stairPos: {fileID: 685636932}
   width: 18.76
   height: 32.9
-  monster: {fileID: 688776678397148015, guid: 2efce90f67dc02d44a3d2c027175346b, type: 3}
+  monsterTransform: {fileID: 0}
   xPos: 659.0746
   yPos: 43.3
+  floorNum: 1
   WhatIsMonster:
     serializedVersion: 2
     m_Bits: 128
@@ -6866,9 +6876,10 @@ MonoBehaviour:
   stairPos: {fileID: 688627762}
   width: 18.76
   height: 32.9
-  monster: {fileID: 688776678397148015, guid: 2efce90f67dc02d44a3d2c027175346b, type: 3}
+  monsterTransform: {fileID: 0}
   xPos: -30.29445
   yPos: 43.3
+  floorNum: 1
   WhatIsMonster:
     serializedVersion: 2
     m_Bits: 128
@@ -9312,6 +9323,8 @@ MonoBehaviour:
   currentScene: {fileID: 996339617}
   newScene: {fileID: 304925771}
   count: {fileID: 772346580}
+  playerGameObject: {fileID: 1700669382}
+  floorNum: 2
   WhatIsPlayer:
     serializedVersion: 2
     m_Bits: 64
@@ -9339,6 +9352,8 @@ MonoBehaviour:
   currentScene: {fileID: 996339617}
   newScene: {fileID: 336537386}
   count: {fileID: 772346580}
+  playerGameObject: {fileID: 1700669382}
+  floorNum: 0
   WhatIsPlayer:
     serializedVersion: 2
     m_Bits: 64
@@ -10871,9 +10886,10 @@ MonoBehaviour:
   stairPos: {fileID: 1231979694}
   width: 18.76
   height: 32.9
-  monster: {fileID: 688776678397148015, guid: 2efce90f67dc02d44a3d2c027175346b, type: 3}
+  monsterTransform: {fileID: 0}
   xPos: -7.757083
   yPos: 43.3
+  floorNum: 1
   WhatIsMonster:
     serializedVersion: 2
     m_Bits: 128
@@ -13532,7 +13548,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabMonster: {fileID: 2573284932148554492, guid: 2efce90f67dc02d44a3d2c027175346b, type: 3}
   prefabMonster2: {fileID: 2573284932148554492, guid: 2efce90f67dc02d44a3d2c027175346b, type: 3}
-  player: {fileID: 1700669382}
+  player: {fileID: 1700669387}
   newInstance: {fileID: 0}
   ghostBGM: {fileID: 5956970117756654392, guid: 29eaf7b11aad58d4d8f386467a5b593e, type: 3}
   distance: 85
@@ -15051,6 +15067,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1700669387 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3711365700126168639, guid: 92d2ef642f04eed4b9bbfbec11f3fad0, type: 3}
+  m_PrefabInstance: {fileID: 2112289937}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700669382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9097bf64266618f4da7f29acb03d96c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1705596197
 GameObject:
   m_ObjectHideFlags: 0
@@ -16311,9 +16338,10 @@ MonoBehaviour:
   stairPos: {fileID: 1785026831}
   width: 18.76
   height: 32.9
-  monster: {fileID: 688776678397148015, guid: 2efce90f67dc02d44a3d2c027175346b, type: 3}
+  monsterTransform: {fileID: 0}
   xPos: -7.757083
   yPos: -6.7
+  floorNum: 0
   WhatIsMonster:
     serializedVersion: 2
     m_Bits: 128
@@ -16439,6 +16467,8 @@ MonoBehaviour:
   currentScene: {fileID: 1797725504}
   newScene: {fileID: 1858099934}
   count: {fileID: 772346580}
+  playerGameObject: {fileID: 1700669382}
+  floorNum: 1
   WhatIsPlayer:
     serializedVersion: 2
     m_Bits: 64
@@ -16888,9 +16918,10 @@ MonoBehaviour:
   stairPos: {fileID: 1806583478}
   width: 18.76
   height: 32.9
-  monster: {fileID: 688776678397148015, guid: 2efce90f67dc02d44a3d2c027175346b, type: 3}
+  monsterTransform: {fileID: 0}
   xPos: 641.4862
   yPos: 43.3
+  floorNum: 1
   WhatIsMonster:
     serializedVersion: 2
     m_Bits: 128
@@ -17863,6 +17894,8 @@ MonoBehaviour:
   currentScene: {fileID: 1858099934}
   newScene: {fileID: 524762865}
   count: {fileID: 772346580}
+  playerGameObject: {fileID: 1700669382}
+  floorNum: 2
   WhatIsPlayer:
     serializedVersion: 2
     m_Bits: 64
@@ -17890,6 +17923,8 @@ MonoBehaviour:
   currentScene: {fileID: 1858099934}
   newScene: {fileID: 1797725504}
   count: {fileID: 772346580}
+  playerGameObject: {fileID: 1700669382}
+  floorNum: 0
   WhatIsPlayer:
     serializedVersion: 2
     m_Bits: 64
