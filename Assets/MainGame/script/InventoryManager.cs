@@ -12,6 +12,8 @@ public class InventoryManager : MonoBehaviour
     public Transform itemContent;
     public GameObject inventoryItem;
 
+    public int itemCount;
+
 
 
     private void Awake()
@@ -22,6 +24,7 @@ public class InventoryManager : MonoBehaviour
     public void Add(Item item)
     {
         Items.Add(item);
+        ++itemCount;
     }
 
     public void Remove(Item item)
@@ -31,6 +34,11 @@ public class InventoryManager : MonoBehaviour
 
     public void ListItems()
     {
+        foreach (Transform item in itemContent)
+        {
+            Destroy(item.gameObject);
+        }
+
         foreach (var item in Items)
         {
             GameObject obj = Instantiate(inventoryItem, itemContent);

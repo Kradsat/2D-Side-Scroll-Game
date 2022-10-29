@@ -403,6 +403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6ae9b541d98b54f8bb274f58b7e44a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterController: {fileID: 0}
   width: 12.1
   height: 27.1
   doorPos: {fileID: 4041044084121372717}
@@ -764,6 +765,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desk_Chair_3
       objectReference: {fileID: 0}
+    - target: {fileID: 6783873551825209024, guid: e8096895b26292944bb83a7fa9abedda, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164006031308173302, guid: e8096895b26292944bb83a7fa9abedda, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8096895b26292944bb83a7fa9abedda, type: 3}
 --- !u!4 &5189370017566843796 stripped
@@ -776,6 +785,32 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6912624938038506222, guid: e8096895b26292944bb83a7fa9abedda, type: 3}
   m_PrefabInstance: {fileID: 1000273244133732507}
   m_PrefabAsset: {fileID: 0}
+--- !u!61 &4031648816348773394
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5913011866973602421}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.01, y: 4.5}
+    newSize: {x: 3.01, y: 4.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.01, y: 4.5}
+  m_EdgeRadius: 0
 --- !u!114 &7248132895077479260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -807,32 +842,6 @@ MonoBehaviour:
     lines:
     - "\u673A\u306E\u4E2D\u306B\u306F\u4F55\u3082\u306A\u3044\u3002"
   dialogueManager: {fileID: 0}
---- !u!61 &4031648816348773394
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5913011866973602421}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.01, y: 4.5}
-    newSize: {x: 3.01, y: 4.5}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.01, y: 4.5}
-  m_EdgeRadius: 0
 --- !u!1001 &1787058109327899386
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -888,6 +897,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desk
       objectReference: {fileID: 0}
+    - target: {fileID: 7768755630358545768, guid: 78492bd2e1651504a974109a34355111, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78492bd2e1651504a974109a34355111, type: 3}
 --- !u!4 &3743523040450023121 stripped
@@ -900,6 +913,32 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7645864058077933894, guid: 78492bd2e1651504a974109a34355111, type: 3}
   m_PrefabInstance: {fileID: 1787058109327899386}
   m_PrefabAsset: {fileID: 0}
+--- !u!61 &5751673660910084935
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8275213923688451004}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.01, y: 4.5}
+    newSize: {x: 3.01, y: 4.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.01, y: 4.5}
+  m_EdgeRadius: 0
 --- !u!114 &3480956058988131430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -931,32 +970,6 @@ MonoBehaviour:
     lines:
     - "\u673A\u306E\u4E2D\u306B\u306F\u4F55\u3082\u306A\u3044\u3002"
   dialogueManager: {fileID: 0}
---- !u!61 &5751673660910084935
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8275213923688451004}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.01, y: 4.5}
-    newSize: {x: 3.01, y: 4.5}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.01, y: 4.5}
-  m_EdgeRadius: 0
 --- !u!1001 &4041044084261110903
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1030,6 +1043,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair
       objectReference: {fileID: 0}
+    - target: {fileID: 3555075304880503989, guid: d4a8452f2854adf4697376c83d1178cc, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8194666262455373302, guid: d4a8452f2854adf4697376c83d1178cc, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1088,6 +1105,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4041044085255801691}
     m_Modifications:
+    - target: {fileID: 803933277923614891, guid: 636dd42f812b61748a590675a0a959f9, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1633544586834801485, guid: 636dd42f812b61748a590675a0a959f9, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2154388034612033931, guid: 636dd42f812b61748a590675a0a959f9, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1148,6 +1173,32 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 784646418571695237, guid: 636dd42f812b61748a590675a0a959f9, type: 3}
   m_PrefabInstance: {fileID: 6407675815667085208}
   m_PrefabAsset: {fileID: 0}
+--- !u!61 &825943361676050327
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5913011866536065821}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.01, y: 4.5}
+    newSize: {x: 3.01, y: 4.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.01, y: 4.5}
+  m_EdgeRadius: 0
 --- !u!114 &1097234887597154554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1179,29 +1230,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemController: {fileID: 1097234887597154554}
   isInteractable: 0
---- !u!61 &825943361676050327
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5913011866536065821}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.01, y: 4.5}
-    newSize: {x: 3.01, y: 4.5}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.01, y: 4.5}
-  m_EdgeRadius: 0

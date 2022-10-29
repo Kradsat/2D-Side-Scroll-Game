@@ -298,6 +298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6ae9b541d98b54f8bb274f58b7e44a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterController: {fileID: 0}
   width: 12.1
   height: 27.1
   doorPos: {fileID: 1311943313590190520}
@@ -310,6 +311,7 @@ MonoBehaviour:
   xPos: 347
   yPos: 43.3
   count: {fileID: 0}
+  loadscene: {fileID: 0}
 --- !u!82 &1311943314904209673
 AudioSource:
   m_ObjectHideFlags: 0
@@ -581,6 +583,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7048565721709999214, guid: de07a3bcca6f6cf40a0c1c0d00778c9a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de07a3bcca6f6cf40a0c1c0d00778c9a, type: 3}
 --- !u!4 &4908023105072669248 stripped
@@ -705,6 +711,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Computer_Chair_FaceFront
       objectReference: {fileID: 0}
+    - target: {fileID: 3605820761281942452, guid: 4f59ebda4ba5c5448a325d32e7859685, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f59ebda4ba5c5448a325d32e7859685, type: 3}
 --- !u!4 &5102837280111594405 stripped
@@ -828,6 +838,10 @@ PrefabInstance:
     - target: {fileID: 6775520953924874735, guid: de07a3bcca6f6cf40a0c1c0d00778c9a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7048565721709999214, guid: de07a3bcca6f6cf40a0c1c0d00778c9a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de07a3bcca6f6cf40a0c1c0d00778c9a, type: 3}
