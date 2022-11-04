@@ -169,8 +169,6 @@ public class Charactercontroller : MonoBehaviour
                     }
                    
                 }
-
-
             }
         }
 

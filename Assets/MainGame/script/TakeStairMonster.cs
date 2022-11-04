@@ -25,6 +25,11 @@ public class TakeStairMonster : MonoBehaviour
     GameObject playerGameObject;
     public Vector2 playerPos;
 
+    [SerializeField]
+    Charactercontroller playerController;
+    [SerializeField]
+    Monster monsterController;
+
     private void Start() 
     {
         NextStairPos = nextStair.transform.position; 
@@ -44,17 +49,18 @@ public class TakeStairMonster : MonoBehaviour
         {
             monsterTransform = manager.newInstance.transform;
             GameObject monster = manager.newInstance;
+            monsterController = monster.GetComponent<Monster>();
         
             if (monsterDetected == true) // check the player 
             {
-                if(this.tag == "StairUp" && playerPos.y > monsterTransform.position.y)
+                if(this.tag == "StairUp" && (int)playerController.playerWhichFloor > (int)monsterController.monsterWhichFloor)
                 {
-                    monsterTransform.position = new Vector2(NextStairPos.x, NextStairPos.y);// generate the new position of the player avec key pressed
+                    monsterTransform.position = new Vector2(NextStairPos.x, NextStairPos.y - 10);// generate the new position of the player avec key pressed
                     monster.GetComponent<Monster>().monsterWhichFloor = (WhichFloor)floorNum;                
                 }
-                else if(this.tag == "StairDown" && playerPos.y < monsterTransform.position.y)
+                else if(this.tag == "StairDown" && (int)playerController.playerWhichFloor < (int)monsterController.monsterWhichFloor)
                 {
-                    monsterTransform.position = new Vector2(NextStairPos.x, NextStairPos.y);// generate the new position of the player avec key pressed
+                    monsterTransform.position = new Vector2(NextStairPos.x, NextStairPos.y - 10);// generate the new position of the player avec key pressed
                     monster.GetComponent<Monster>().monsterWhichFloor = (WhichFloor)floorNum;                
                 }
             }

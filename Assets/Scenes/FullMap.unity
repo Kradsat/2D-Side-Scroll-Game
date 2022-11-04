@@ -1380,6 +1380,7 @@ MonoBehaviour:
   nextStair: {fileID: 1231979693}
   playerGameObject: {fileID: 1700669382}
   playerPos: {x: 0, y: 0}
+  playerController: {fileID: 1700669387}
 --- !u!1 &135694187 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4041044085037309286, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
@@ -2204,6 +2205,7 @@ MonoBehaviour:
   nextStair: {fileID: 688627761}
   playerGameObject: {fileID: 1700669382}
   playerPos: {x: 0, y: 0}
+  playerController: {fileID: 1700669387}
 --- !u!1 &301093328
 GameObject:
   m_ObjectHideFlags: 0
@@ -3157,6 +3159,7 @@ MonoBehaviour:
   nextStair: {fileID: 1806583477}
   playerGameObject: {fileID: 1700669382}
   playerPos: {x: 0, y: 0}
+  playerController: {fileID: 1700669387}
 --- !u!1 &365272969
 GameObject:
   m_ObjectHideFlags: 0
@@ -7188,6 +7191,7 @@ MonoBehaviour:
   nextStair: {fileID: 1785026830}
   playerGameObject: {fileID: 1700669382}
   playerPos: {x: 0, y: 0}
+  playerController: {fileID: 1700669387}
 --- !u!1 &686384227
 GameObject:
   m_ObjectHideFlags: 0
@@ -7364,6 +7368,7 @@ MonoBehaviour:
   nextStair: {fileID: 282107906}
   playerGameObject: {fileID: 1700669382}
   playerPos: {x: 0, y: 0}
+  playerController: {fileID: 1700669387}
 --- !u!1 &688691967
 GameObject:
   m_ObjectHideFlags: 0
@@ -11425,6 +11430,7 @@ MonoBehaviour:
   nextStair: {fileID: 133438192}
   playerGameObject: {fileID: 1700669382}
   playerPos: {x: 0, y: 0}
+  playerController: {fileID: 1700669387}
 --- !u!1 &1232510280
 GameObject:
   m_ObjectHideFlags: 0
@@ -21900,6 +21906,7 @@ MonoBehaviour:
   nextStair: {fileID: 685636931}
   playerGameObject: {fileID: 1700669382}
   playerPos: {x: 0, y: 0}
+  playerController: {fileID: 1700669387}
 --- !u!1 &1788341109 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4041044085037309286, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
@@ -22495,6 +22502,7 @@ MonoBehaviour:
   nextStair: {fileID: 356152998}
   playerGameObject: {fileID: 1700669382}
   playerPos: {x: 0, y: 0}
+  playerController: {fileID: 1700669387}
 --- !u!1 &1806904873
 GameObject:
   m_ObjectHideFlags: 0

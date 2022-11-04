@@ -13,7 +13,8 @@ public class Monster : MonoBehaviour
     public GameObject[] doorObject;
     public Transform[] doors;
 
-    public GameObject player;
+    [SerializeField]
+    Charactercontroller playerController;
 
     public float horizontalSpeed;
     
@@ -42,6 +43,7 @@ public class Monster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<Charactercontroller>();
         MovementEnemy();
     }
 
@@ -71,9 +73,10 @@ public class Monster : MonoBehaviour
             sprite.flipX = true;
         }
 
-        if(targetPos.y == transform.position.y)
+        if((int)playerController.playerWhichFloor == (int)monsterWhichFloor)
         {
-            transform.position = Vector3.MoveTowards(transform.position, targetPos, speed);// moving toward player
+            Vector3 newXPos = new Vector3(targetPos.x, transform.position.y, transform.position.z);
+            transform.position = Vector3.MoveTowards(transform.position, newXPos, speed);// moving toward player
         }
         else if(targetPos.y != transform.position.y)
         {
@@ -84,53 +87,61 @@ public class Monster : MonoBehaviour
             }
 
             //going up
-            if(targetPos.y > transform.position.y)
+            if((int)playerController.playerWhichFloor > (int)monsterWhichFloor)
             {
                 if(monsterWhichFloor == WhichFloor.First)
                 {
                     if (disFloor[0] > disFloor[1])
                     {
-                        transform.position = Vector3.MoveTowards(transform.position, doors[1].transform.position, speed);// moving toward player
+                        Vector3 newXPos = new Vector3(doors[1].transform.position.x, transform.position.y, transform.position.z);
+                        transform.position = Vector3.MoveTowards(transform.position, newXPos, speed);// moving toward stair
                     }
                     else
                     {
-                        transform.position = Vector3.MoveTowards(transform.position, doors[0].transform.position, speed);// moving toward player
+                        Vector3 newXPos = new Vector3(doors[0].transform.position.x, transform.position.y, transform.position.z);
+                        transform.position = Vector3.MoveTowards(transform.position, newXPos, speed);// moving toward stair
                     }                
                 }      
                 else if(monsterWhichFloor == WhichFloor.Second)
                 {
                     if (disFloor[0] > disFloor[1])
                     {
-                        transform.position = Vector3.MoveTowards(transform.position, doors[3].transform.position, speed);// moving toward player
+                        Vector3 newXPos = new Vector3(doors[3].transform.position.x, transform.position.y, transform.position.z);
+                        transform.position = Vector3.MoveTowards(transform.position, newXPos, speed);// moving toward stair
                     }
                     else
                     {
-                        transform.position = Vector3.MoveTowards(transform.position, doors[2].transform.position, speed);// moving toward player
+                        Vector3 newXPos = new Vector3(doors[2].transform.position.x, transform.position.y, transform.position.z);
+                        transform.position = Vector3.MoveTowards(transform.position, newXPos, speed);// moving toward stair
                     }                
                 }                
             }
-            else if(targetPos.y < transform.position.y)
+            else if((int)playerController.playerWhichFloor < (int)monsterWhichFloor)
             {
                 if(monsterWhichFloor == WhichFloor.Second)
                 {
                     if (disFloor[0] > disFloor[1])
                     {
-                        transform.position = Vector3.MoveTowards(transform.position, doors[5].transform.position, speed);// moving toward player
+                        Vector3 newXPos = new Vector3(doors[5].transform.position.x, transform.position.y, transform.position.z);
+                        transform.position = Vector3.MoveTowards(transform.position, newXPos, speed);// moving toward stair
                     }
                     else
                     {
-                        transform.position = Vector3.MoveTowards(transform.position, doors[4].transform.position, speed);// moving toward player
+                        Vector3 newXPos = new Vector3(doors[4].transform.position.x, transform.position.y, transform.position.z);
+                        transform.position = Vector3.MoveTowards(transform.position, newXPos, speed);// moving toward stair
                     }                
                 }      
                 else if(monsterWhichFloor == WhichFloor.Third)
                 {
                     if (disFloor[0] > disFloor[1])
                     {
-                        transform.position = Vector3.MoveTowards(transform.position, doors[7].transform.position, speed);// moving toward player
+                        Vector3 newXPos = new Vector3(doors[7].transform.position.x, transform.position.y, transform.position.z);
+                        transform.position = Vector3.MoveTowards(transform.position, newXPos, speed);// moving toward stair
                     }
                     else
                     {
-                        transform.position = Vector3.MoveTowards(transform.position, doors[6].transform.position, speed);// moving toward player
+                        Vector3 newXPos = new Vector3(doors[6].transform.position.x, transform.position.y, transform.position.z);
+                        transform.position = Vector3.MoveTowards(transform.position, newXPos, speed);// moving toward stair
                     }                
                 }                
             }
