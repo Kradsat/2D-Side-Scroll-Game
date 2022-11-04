@@ -27,7 +27,6 @@ public class WriteDialogue : MonoBehaviour
         int charIndex = 0;
         sentenceComplete = false;
 
-
         while (charIndex < sentence.Length)
         {
 			t += Time.deltaTime * dialogueSpeed;
