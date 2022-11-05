@@ -10,11 +10,11 @@ public class ReadText : MonoBehaviour
     public TextMeshProUGUI dialogueText;
     public TextMeshProUGUI nameText;
 
-    public Button nextDialogueButton;
-
     private Queue<string> names;
     private Queue<string> sentences;
     private Queue<string> expression;
+    private Queue<string> soundEffect;
+    private Queue<string> screenEffect;
     private Queue<string> back;
 
     public TextAsset textAsset;
@@ -27,8 +27,12 @@ public class ReadText : MonoBehaviour
     [SerializeField]
     BackgroundChangeScript backgroundChange;
     [SerializeField]
+    SoundEffectScript soundEffectScript;
+    [SerializeField]
     WriteDialogue writeDialogue;
-
+    [SerializeField]
+    ScreenEffectScript screenEffectScript;
+    
     string[] data;
     string[] row;
     Dialogue d;
@@ -52,9 +56,10 @@ public class ReadText : MonoBehaviour
         sentences = new Queue<string>();
         names = new Queue<string>();
         expression = new Queue<string>();
+        soundEffect = new Queue<string>();
+        screenEffect = new Queue<string>();
         back = new Queue<string>();
         dialogue = new List<Dialogue>();
-        nextDialogueButton.onClick.AddListener(DisplayNextSentence);
 
         GetData();
         StartDialogue();
@@ -87,12 +92,16 @@ public class ReadText : MonoBehaviour
         sentences.Clear();
         names.Clear();
         expression.Clear();
+        soundEffect.Clear();
+        screenEffect.Clear();
         back.Clear();
         foreach (Dialogue d in dialogue.ToArray())
         {
             names.Enqueue(d.name);
             sentences.Enqueue(d.sentences);
             expression.Enqueue(d.ui);
+            soundEffect.Enqueue(d.se);
+            screenEffect.Enqueue(d.animation);
             back.Enqueue(d.background);
         }
         DisplayNextSentence();
@@ -100,6 +109,7 @@ public class ReadText : MonoBehaviour
 
     public void DisplayNextSentence()
     {
+        StopAllCoroutines();
         nameText.text = string.Empty;
         dialogueText.text = string.Empty;
         
@@ -111,15 +121,26 @@ public class ReadText : MonoBehaviour
         string name = names.Dequeue();
         string sentence = sentences.Dequeue();
         string express = expression.Dequeue();
+        string se = soundEffect.Dequeue();
+        string screen = screenEffect.Dequeue();
         string bg = back.Dequeue();
 
-        nameText.text = name;
-
-        StartCoroutine(writeDialogue.WriteText(sentence));
-
-        logButton.AddLog(sentence, lineCount, express);
-
         backgroundChange.BackgroundChange(bg);
+        soundEffectScript.PlaySoundEffect(se);
+
+        if(screenEffectScript.isFading == true)//fade animation
+        {
+            charaCount = 0;
+            StartCoroutine(FadeTextDelay(name, sentence, express));
+        }
+        else//usual text show
+        {
+            StartCoroutine(writeDialogue.WriteText(sentence));
+            nameText.text = name;
+            logButton.AddLog(sentence, lineCount, express);
+        }
+
+        screenEffectScript.ScreenEffect(screen);
 
         if(express != "")
         {
@@ -138,6 +159,14 @@ public class ReadText : MonoBehaviour
             }
         }
         lineCount++;
+    }
+
+    public IEnumerator FadeTextDelay(string name, string sentence, string express)
+    {
+        yield return new WaitForSeconds(1.5f);
+        StartCoroutine(writeDialogue.WriteText(sentence));
+        nameText.text = name;
+        logButton.AddLog(sentence, lineCount, express);
     }
 
     public void EndDialogue()
