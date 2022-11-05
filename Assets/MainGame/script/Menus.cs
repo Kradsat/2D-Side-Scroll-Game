@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Menus : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class Menus : MonoBehaviour
     public GameObject itemMenu;
     public GameObject systemMenu;
     public bool isPaused;
+
 
     // Start is called before the first frame update
     void Start()
@@ -53,5 +55,10 @@ public class Menus : MonoBehaviour
         itemMenu.gameObject.SetActive(true);
     }
 
-  
+    public void OpenSystemPanel()
+    {
+        inGameMenuPanel.gameObject.SetActive(false);
+        systemMenu.gameObject.SetActive(true);
+    }
+
 }
