@@ -127,7 +127,7 @@ public class MonsterManager : MonoBehaviour
 
     public void disapear() // destroy prefab ghost after 10 sec
     {
-        if(count.keepCountOnlyMovement >= 5 )
+        if(count.keepCountOnlyMovement >= 7 )
         {
             resetTime = 0;
             spawnRateReset = true;

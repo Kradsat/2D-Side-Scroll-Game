@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Menus : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class Menus : MonoBehaviour
             inGameMenu.gameObject.SetActive(!inGameMenu.gameObject.activeSelf);
             inGameMenuPanel.gameObject.SetActive(true);
             itemMenu.gameObject.SetActive(false);
+            systemMenu.gameObject.SetActive(false);
 
         }
     }
@@ -53,5 +55,9 @@ public class Menus : MonoBehaviour
         itemMenu.gameObject.SetActive(true);
     }
 
-  
+    public void OpenSystemPanel()
+    {
+        inGameMenuPanel.gameObject.SetActive(false);
+        systemMenu.gameObject.SetActive(true);
+    }
 }

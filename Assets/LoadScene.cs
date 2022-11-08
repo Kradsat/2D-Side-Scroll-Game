@@ -31,5 +31,10 @@ public class LoadScene : MonoBehaviour
         SceneManager.LoadScene(levelIndex);
     }
 
-    
+    public void BackToTitle()
+    {
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex - 2));
+    }
 }
+    
+
