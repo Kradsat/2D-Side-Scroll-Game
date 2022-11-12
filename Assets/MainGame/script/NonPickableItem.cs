@@ -22,6 +22,7 @@ public class NonPickableItem : MonoBehaviour
     {
         if(isInteractable==true && Input.GetKeyDown(KeyCode.Z) && dialogManager.dialogueShow == false )
         {
+            dialogManager.thereIsItem = false;
             itemController.Interact();
         }
     }

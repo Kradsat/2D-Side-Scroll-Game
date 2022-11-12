@@ -7,8 +7,16 @@ using System;
 
 public class DialogManager : MonoBehaviour
 {
-    [SerializeField] GameObject dialogBox;
-    [SerializeField] TMP_Text dialogText;
+    [SerializeField] GameObject noItemDialogBox;
+    [SerializeField] TMP_Text noItemDialogText;
+
+    [SerializeField]
+    GameObject getItemDialogue;
+    [SerializeField]
+    Image itemImage;
+    [SerializeField]
+    TMP_Text getItemText;
+
     [SerializeField] int lettersPerSeconds;
 
     [SerializeField]
@@ -23,6 +31,8 @@ public class DialogManager : MonoBehaviour
     public bool write = false;
 
     public bool dialogueShow = false;
+
+    public bool thereIsItem = false;
 
     public static DialogManager Instance
     {
@@ -39,7 +49,15 @@ public class DialogManager : MonoBehaviour
     public void ShowDialog()
     {
         nextArrow.SetActive(false);
-        dialogBox.SetActive(true);
+        if(thereIsItem == false)
+        {
+            noItemDialogBox.SetActive(true);
+        }
+        else if(thereIsItem == true)
+        {
+            getItemDialogue.SetActive(true);
+        }
+        
         if (write == true && !isTyping)
         {
             if (currentLine < lines.Count )
@@ -60,10 +78,11 @@ public class DialogManager : MonoBehaviour
     public IEnumerator typeDialog(string line)
     {
         isTyping = true;
-        dialogText.text = "";
+        noItemDialogText.text = "";
         foreach(var letter in line.ToCharArray())
         {
-            dialogText.text += letter;
+            noItemDialogText.text += letter;
+            getItemText.text += letter;
             yield return new WaitForSeconds(1f / lettersPerSeconds);
         }
         nextArrow.SetActive(true);
@@ -75,6 +94,7 @@ public class DialogManager : MonoBehaviour
     public void CloseDialogue()
     {
             currentLine = 0;
-            dialogBox.SetActive(false);
+            noItemDialogBox.SetActive(false);
+            getItemDialogue.SetActive(false);
     }   
 }

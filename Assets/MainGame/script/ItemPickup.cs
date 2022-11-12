@@ -15,6 +15,8 @@ public class ItemPickup : MonoBehaviour
     public GameObject player;
    
     [SerializeField] ItemController itemController;
+    [SerializeField]
+    DialogManager dialogManager;
 
     int currentLine = 0;
     public void Pickup()
@@ -45,6 +47,7 @@ public class ItemPickup : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Z))
         {
+            dialogManager.thereIsItem = true;
             itemController.Interact();            
             Pickup();
             Debug.Log("is colliding");
