@@ -11,6 +11,9 @@ public class DialogManager : MonoBehaviour
     [SerializeField] TMP_Text dialogText;
     [SerializeField] int lettersPerSeconds;
 
+    [SerializeField]
+    GameObject nextArrow;
+
     public event Action OnshowDialog;
     public event Action OnCloseDialog;
 
@@ -18,6 +21,8 @@ public class DialogManager : MonoBehaviour
 
     public List<string> lines;
     public bool write = false;
+
+    public bool dialogueShow = false;
 
     public static DialogManager Instance
     {
@@ -33,19 +38,21 @@ public class DialogManager : MonoBehaviour
     int currentLine = 0;
     public void ShowDialog()
     {
+        nextArrow.SetActive(false);
         dialogBox.SetActive(true);
         if (write == true && !isTyping)
         {
-            if (currentLine < lines.Count)
+            if (currentLine < lines.Count )
             {
                 StartCoroutine(typeDialog(lines[currentLine]));
+                dialogueShow = true;
                 ++currentLine;
             }
             else
             {
-                currentLine = 0;
-                dialogBox.SetActive(false);
                 //OnCloseDialog?.Invoke();
+                dialogueShow = false;
+                CloseDialogue();
             }
         }
     }
@@ -59,8 +66,15 @@ public class DialogManager : MonoBehaviour
             dialogText.text += letter;
             yield return new WaitForSeconds(1f / lettersPerSeconds);
         }
+        nextArrow.SetActive(true);
         isTyping = false;
         yield return new WaitUntil(()=>Input.GetKeyDown(KeyCode.Z));
         ShowDialog();
+    }
+
+    public void CloseDialogue()
+    {
+            currentLine = 0;
+            dialogBox.SetActive(false);
     }   
 }

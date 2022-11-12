@@ -5,8 +5,9 @@ using UnityEngine;
 public class NonPickableItem : MonoBehaviour
 {
     [SerializeField] ItemController itemController;
+    [SerializeField]
+    DialogManager dialogManager;
     public bool isInteractable = false;
-
 
     private void Start()
     {
@@ -19,13 +20,13 @@ public class NonPickableItem : MonoBehaviour
 
     private void Interraction()
     {
-        if(isInteractable==true && Input.GetKeyDown(KeyCode.Z))
+        if(isInteractable==true && Input.GetKeyDown(KeyCode.Z) && dialogManager.dialogueShow == false )
         {
             itemController.Interact();
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag.Equals("Player"))
         {
