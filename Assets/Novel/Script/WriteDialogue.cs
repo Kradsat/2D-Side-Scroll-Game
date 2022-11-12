@@ -15,6 +15,9 @@ public class WriteDialogue : MonoBehaviour
     [SerializeField]
     Button nextDialogueButton;
 
+    [SerializeField]
+    GameObject nextArrow;
+
     int dialogueSpeed;
 
     public bool sentenceComplete;
@@ -46,6 +49,7 @@ public class WriteDialogue : MonoBehaviour
         }
 
         readText.dialogueText.text = sentence;
+        nextArrow.SetActive(true);
 
         if(charIndex == sentence.Length)
         {
@@ -55,6 +59,7 @@ public class WriteDialogue : MonoBehaviour
         if(autoScript.autoOn == true && charIndex == sentence.Length)
         {
             yield return new WaitForSeconds(2);
+            nextArrow.SetActive(false);
             if(autoScript.autoOn == true && screenEffect.isFading == false)
             {
                 readText.DisplayNextSentence();
@@ -74,10 +79,12 @@ public class WriteDialogue : MonoBehaviour
         }
         else if(sentenceComplete == true && screenEffect.isFading == false)
         {
+            nextArrow.SetActive(false);
             readText.DisplayNextSentence();
         }
         else if(sentenceComplete == true && screenEffect.isFading == true)
         {
+            nextArrow.SetActive(false);
             StartCoroutine(screenEffect.StartFadeAnimation());
         }
     }
