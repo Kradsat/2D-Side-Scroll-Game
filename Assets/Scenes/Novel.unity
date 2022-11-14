@@ -1901,7 +1901,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 904940306}
   nameText: {fileID: 1495326097}
-  textAsset: {fileID: 4900000, guid: 6cd991cf400f28649964c4fdf498cba6, type: 3}
+  textAsset: {fileID: 4900000, guid: 3cb2007dbcf81f34aaca28d36dbf0491, type: 3}
   logButton: {fileID: 245387817}
   characterChange: {fileID: 1416579566}
   backgroundChange: {fileID: 408322}

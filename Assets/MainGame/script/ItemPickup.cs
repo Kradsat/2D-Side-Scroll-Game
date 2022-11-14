@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class ItemPickup : MonoBehaviour
 {
+    [SerializeField]
+    TextAsset csv;
+
     public Item item;
     public float width;
     public float height;

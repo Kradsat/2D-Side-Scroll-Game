@@ -31,7 +31,6 @@ public class DialogManager : MonoBehaviour
     public bool write = false;
 
     public bool dialogueShow = false;
-
     public bool thereIsItem = false;
 
     public static DialogManager Instance
