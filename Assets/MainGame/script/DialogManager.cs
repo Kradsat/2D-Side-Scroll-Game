@@ -78,6 +78,7 @@ public class DialogManager : MonoBehaviour
     {
         isTyping = true;
         noItemDialogText.text = "";
+        getItemText.text = "";
         foreach(var letter in line.ToCharArray())
         {
             noItemDialogText.text += letter;

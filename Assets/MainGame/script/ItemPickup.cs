@@ -21,6 +21,9 @@ public class ItemPickup : MonoBehaviour
     [SerializeField]
     DialogManager dialogManager;
 
+    [SerializeField]
+    GameNovel gameNovel;
+
     int currentLine = 0;
     public void Pickup()
     {
@@ -51,6 +54,7 @@ public class ItemPickup : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Z))
         {
             dialogManager.thereIsItem = true;
+            gameNovel.csv = csv;
             itemController.Interact();            
             Pickup();
             Debug.Log("is colliding");
