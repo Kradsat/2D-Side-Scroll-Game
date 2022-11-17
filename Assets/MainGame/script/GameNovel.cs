@@ -10,6 +10,8 @@ public class GameNovel : MonoBehaviour
 
     [SerializeField]
     DialogManager dialogueManager;
+    [SerializeField]
+    FlowScript flowScript;
 
     [SerializeField]
     GameObject novel;
@@ -171,6 +173,7 @@ public class GameNovel : MonoBehaviour
     {
         novel.SetActive(false);
         dialogueManager.thereIsNovel = false;
+        flowScript.flow++;
         dialogueManager.ShowDialog();
     }
 

@@ -6911,6 +6911,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 613646495}
   m_CullTransparentMesh: 1
+--- !u!1 &617924355 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8898978452461411507, guid: d9045ab07fb855741853bde7c372c624, type: 3}
+  m_PrefabInstance: {fileID: 2099524412}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &624491867 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 233118818417037693, guid: 3d27d9c3986d85143b473067a1a8d22f, type: 3}
@@ -14778,6 +14783,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 833462236}
   m_CullTransparentMesh: 1
+--- !u!1 &838708543
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 838708544}
+  - component: {fileID: 838708545}
+  m_Layer: 0
+  m_Name: FlowManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &838708544
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838708543}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1972788821}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &838708545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838708543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3f735c680427fc4bb3b8810452b4662, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemObject:
+  - {fileID: 617924355}
+  - {fileID: 21411524}
+  - {fileID: 8871827370130569442}
 --- !u!1 &839941052
 GameObject:
   m_ObjectHideFlags: 3
@@ -31097,6 +31150,7 @@ Transform:
   - {fileID: 145977527}
   - {fileID: 686384228}
   - {fileID: 885046589}
+  - {fileID: 838708544}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
