@@ -7,6 +7,9 @@ public class ItemPickup : MonoBehaviour
     [SerializeField]
     TextAsset csv;
 
+    [SerializeField]
+    Sprite itemSprite;
+
     public Item item;
     public float width;
     public float height;
@@ -24,6 +27,8 @@ public class ItemPickup : MonoBehaviour
     [SerializeField]
     GameNovel gameNovel;
 
+    public List<Dialogue> dialogue;
+
     int currentLine = 0;
     public void Pickup()
     {
@@ -40,7 +45,6 @@ public class ItemPickup : MonoBehaviour
     {
         playerDetectedItemRange = Physics2D.OverlapBox(itemPos.position, new Vector2(width, height), 0, WhatIsPlayer);
        
-
         Debug.Log(playerDetectedItemRange);
 
         if (playerDetectedItemRange == true)
@@ -54,7 +58,9 @@ public class ItemPickup : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Z))
         {
             dialogManager.thereIsItem = true;
+            dialogManager.thereIsNovel = true;
             gameNovel.csv = csv;
+            dialogManager.itemImage.sprite = itemSprite;
             itemController.Interact();            
             Pickup();
             Debug.Log("is colliding");

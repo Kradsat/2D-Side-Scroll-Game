@@ -8,6 +8,10 @@ public class ItemController : MonoBehaviour
     [SerializeField] Dialog dialog;
     [SerializeField]
     DialogManager dialogueManager;
+    [SerializeField]
+    GameNovel gameNovel;
+
+    public List<Dialogue> dialogue;
 
     public void Interact()
     {
@@ -17,6 +21,13 @@ public class ItemController : MonoBehaviour
             dialogueManager.lines.Add(dialogues);
             dialogueManager.write = true;
         }
-        DialogManager.Instance.ShowDialog();
+        if(dialogueManager.thereIsNovel == false)
+        {
+            DialogManager.Instance.ShowDialog();
+        }
+        else
+        {
+            gameNovel.StartReadDialogue();
+        }
     }
 }

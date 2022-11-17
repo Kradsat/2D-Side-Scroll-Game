@@ -13,7 +13,7 @@ public class DialogManager : MonoBehaviour
     [SerializeField]
     GameObject getItemDialogue;
     [SerializeField]
-    Image itemImage;
+    public Image itemImage;
     [SerializeField]
     TMP_Text getItemText;
 
@@ -32,6 +32,8 @@ public class DialogManager : MonoBehaviour
 
     public bool dialogueShow = false;
     public bool thereIsItem = false;
+
+    public bool thereIsNovel = false;
 
     public static DialogManager Instance
     {
@@ -67,7 +69,6 @@ public class DialogManager : MonoBehaviour
             }
             else
             {
-                //OnCloseDialog?.Invoke();
                 dialogueShow = false;
                 CloseDialogue();
             }
