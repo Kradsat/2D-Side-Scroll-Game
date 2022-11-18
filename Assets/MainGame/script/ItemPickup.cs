@@ -10,6 +10,7 @@ public class ItemPickup : MonoBehaviour
     [SerializeField]
     Sprite itemSprite;
 
+    public Charactercontroller characterController;
     public Item item;
     public float width;
     public float height;
@@ -55,7 +56,7 @@ public class ItemPickup : MonoBehaviour
 
     private void PressedZ()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.Z) && characterController.isBack)
         {
             dialogManager.thereIsItem = true;
             dialogManager.thereIsNovel = true;

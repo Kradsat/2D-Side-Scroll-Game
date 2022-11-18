@@ -33,6 +33,7 @@ public class TakeStairs : MonoBehaviour
     private void Start() 
     {
         nextStairPos = nextStair.transform.position;
+       
     }
 
     private void Update()

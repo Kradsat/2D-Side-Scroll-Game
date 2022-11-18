@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class NonPickableItem : MonoBehaviour
 {
+    public Charactercontroller charactercontroller;
     [SerializeField] ItemController itemController;
     [SerializeField]
     DialogManager dialogManager;
@@ -20,7 +21,7 @@ public class NonPickableItem : MonoBehaviour
 
     private void Interraction()
     {
-        if(isInteractable==true && Input.GetKeyDown(KeyCode.Z) && dialogManager.dialogueShow == false )
+        if(isInteractable==true && Input.GetKeyDown(KeyCode.Z) && charactercontroller.isBack && dialogManager.dialogueShow == false )
         {
             dialogManager.thereIsItem = false;
             dialogManager.thereIsNovel = false;

@@ -19,10 +19,8 @@ public class Charactercontroller : MonoBehaviour
     public bool isBack;
     private bool playerDetected;
 
-    [SerializeField]
-    Sprite faceCamera;
-    [SerializeField]
-    Sprite faceOtherSide;
+    public Sprite faceCamera;
+    public Sprite faceOtherSide;
 
     public Transform EdgePosLeft;
     public Transform EdgePosRight;

@@ -823,6 +823,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 3480956058988131430, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 4041044085037309284, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -915,6 +919,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 7248132895077479260, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 8235841440431977050, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: m_Name
       value: ClubMagazine
@@ -927,6 +935,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 8575667039408988366, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 8936272387512223223, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: dialogueManager
       value: 
@@ -2323,6 +2335,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   csv: {fileID: 4900000, guid: 74e00eda0444e6043a2d962d092cdf6c, type: 3}
   itemSprite: {fileID: 21300000, guid: 5c974d26ea1ee9d44b700ca3fa090506, type: 3}
+  characterController: {fileID: 1700669387}
   item: {fileID: 11400000, guid: 59fc4475e8e4b4440be54536a142e5d5, type: 2}
   width: 6
   height: 30
@@ -3286,6 +3299,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 3480956058988131430, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 4041044085037309284, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -3378,6 +3395,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 7248132895077479260, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 8235841440431977050, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: m_Name
       value: ClubMagazine
@@ -3390,6 +3411,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 8575667039408988366, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 8936272387512223223, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: dialogueManager
       value: 
@@ -4609,6 +4634,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 3480956058988131430, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 4041044085037309284, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -4701,6 +4730,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 7248132895077479260, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 8235841440431977050, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: m_Name
       value: ClubMagazine
@@ -4713,6 +4746,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 8575667039408988366, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 8936272387512223223, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: dialogueManager
       value: 
@@ -5126,7 +5163,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 0
+  m_Enabled: 1
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -6220,6 +6257,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 3480956058988131430, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 4041044085037309284, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -6312,6 +6353,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 7248132895077479260, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 8235841440431977050, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: m_Name
       value: ClubMagazine
@@ -6324,6 +6369,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 8575667039408988366, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 8936272387512223223, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: dialogueManager
       value: 
@@ -7260,6 +7309,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 3480956058988131430, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 4041044085037309284, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -7352,6 +7405,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 7248132895077479260, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 8235841440431977050, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: m_Name
       value: ClubMagazine
@@ -7360,6 +7417,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 8575667039408988366, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     m_RemovedComponents:
     - {fileID: 4041044085037309290, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
     - {fileID: 4041044085037309291, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
@@ -8012,6 +8073,10 @@ PrefabInstance:
       value: -43.92
       objectReference: {fileID: 0}
     - target: {fileID: 1297672054677941521, guid: 3d84a1e7e673adf49a2bd263ecdd07a6, type: 3}
+      propertyPath: gameNovel
+      value: 
+      objectReference: {fileID: 885046590}
+    - target: {fileID: 1297672054677941521, guid: 3d84a1e7e673adf49a2bd263ecdd07a6, type: 3}
       propertyPath: dialogueManager
       value: 
       objectReference: {fileID: 1552599290}
@@ -8032,9 +8097,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1700669382}
     - target: {fileID: 7667828950478492823, guid: 3d84a1e7e673adf49a2bd263ecdd07a6, type: 3}
+      propertyPath: gameNovel
+      value: 
+      objectReference: {fileID: 885046590}
+    - target: {fileID: 7667828950478492823, guid: 3d84a1e7e673adf49a2bd263ecdd07a6, type: 3}
+      propertyPath: itemSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: dfe2912f067a8cd428bf55139d1f1b66, type: 3}
+    - target: {fileID: 7667828950478492823, guid: 3d84a1e7e673adf49a2bd263ecdd07a6, type: 3}
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 7667828950478492823, guid: 3d84a1e7e673adf49a2bd263ecdd07a6, type: 3}
+      propertyPath: characterController
+      value: 
+      objectReference: {fileID: 1700669387}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d84a1e7e673adf49a2bd263ecdd07a6, type: 3}
 --- !u!1 &688627761
@@ -14025,6 +14102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd46cf4c4d151e349827e693e7afeb2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  charactercontroller: {fileID: 0}
   itemController: {fileID: 793132091}
   dialogManager: {fileID: 1552599290}
   isInteractable: 0
@@ -14459,6 +14537,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 3480956058988131430, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 4041044085037309284, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -14551,6 +14633,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 7248132895077479260, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 8235841440431977050, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: m_Name
       value: ClubMagazine
@@ -14563,6 +14649,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 8575667039408988366, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 8936272387512223223, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: dialogueManager
       value: 
@@ -14831,6 +14921,7 @@ MonoBehaviour:
   - {fileID: 617924355}
   - {fileID: 21411524}
   - {fileID: 8871827370130569442}
+  flow: 0
 --- !u!1 &839941052
 GameObject:
   m_ObjectHideFlags: 3
@@ -15151,6 +15242,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   csv: {fileID: 0}
   dialogueManager: {fileID: 1552599290}
+  flowScript: {fileID: 838708545}
   novel: {fileID: 1042893248}
   nextButton: {fileID: 1866166050}
   nameText: {fileID: 1756331644}
@@ -15499,6 +15591,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 3480956058988131430, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 4041044085037309284, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -15591,6 +15687,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 7248132895077479260, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 8235841440431977050, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: m_Name
       value: ClubMagazine
@@ -15603,6 +15703,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 8575667039408988366, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 8936272387512223223, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: dialogueManager
       value: 
@@ -16458,6 +16562,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 3480956058988131430, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 4041044085037309284, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -16562,6 +16670,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 7248132895077479260, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 8235841440431977050, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: m_Name
       value: BallpointPen
@@ -16574,6 +16686,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 8575667039408988366, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 8936272387512223223, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: dialogueManager
       value: 
@@ -17171,6 +17287,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 3480956058988131430, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 4041044085037309284, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -17263,6 +17383,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 7248132895077479260, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 8235841440431977050, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: m_Name
       value: ClubMagazine
@@ -17275,6 +17399,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 8575667039408988366, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 8936272387512223223, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: dialogueManager
       value: 
@@ -24671,13 +24799,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1700669382}
     - target: {fileID: 1447269857931170453, guid: 429e5fe4192c21547b12d989e4484acf, type: 3}
+      propertyPath: gameNovel
+      value: 
+      objectReference: {fileID: 885046590}
+    - target: {fileID: 1447269857931170453, guid: 429e5fe4192c21547b12d989e4484acf, type: 3}
+      propertyPath: itemSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: be2cf24794f7b554daf2e716fe17ff50, type: 3}
+    - target: {fileID: 1447269857931170453, guid: 429e5fe4192c21547b12d989e4484acf, type: 3}
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 1447269857931170453, guid: 429e5fe4192c21547b12d989e4484acf, type: 3}
+      propertyPath: characterController
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 6529092089440648562, guid: 429e5fe4192c21547b12d989e4484acf, type: 3}
       propertyPath: m_Name
       value: book
       objectReference: {fileID: 0}
+    - target: {fileID: 7817796310163237651, guid: 429e5fe4192c21547b12d989e4484acf, type: 3}
+      propertyPath: gameNovel
+      value: 
+      objectReference: {fileID: 885046590}
     - target: {fileID: 7817796310163237651, guid: 429e5fe4192c21547b12d989e4484acf, type: 3}
       propertyPath: dialogueManager
       value: 
@@ -24795,6 +24939,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 3480956058988131430, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 4041044085037309284, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -24887,6 +25035,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 7248132895077479260, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 8235841440431977050, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: m_Name
       value: ClubMagazine
@@ -24899,6 +25051,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 8575667039408988366, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 8936272387512223223, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: dialogueManager
       value: 
@@ -27555,6 +27711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd46cf4c4d151e349827e693e7afeb2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  charactercontroller: {fileID: 0}
   itemController: {fileID: 1743000465}
   dialogManager: {fileID: 1552599290}
   isInteractable: 0
@@ -28372,6 +28529,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 3480956058988131430, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 4041044085037309284, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -28464,6 +28625,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 7248132895077479260, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 8235841440431977050, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: m_Name
       value: ClubMagazine
@@ -28476,6 +28641,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 8575667039408988366, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 8936272387512223223, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: dialogueManager
       value: 
@@ -30522,6 +30691,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd46cf4c4d151e349827e693e7afeb2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  charactercontroller: {fileID: 0}
   itemController: {fileID: 1904444095}
   dialogManager: {fileID: 1552599290}
   isInteractable: 0
@@ -31523,6 +31693,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 3480956058988131430, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 4041044085037309284, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -31627,6 +31801,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 7248132895077479260, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 8235841440431977050, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: m_Name
       value: ClubMagazine
@@ -31639,6 +31817,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 8575667039408988366, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 8936272387512223223, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: dialogueManager
       value: 
@@ -31661,6 +31843,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 3480956058988131430, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 4041044085037309284, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -31765,6 +31951,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 7248132895077479260, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 8235841440431977050, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: m_Name
       value: Book
@@ -31777,6 +31967,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 8575667039408988366, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 8936272387512223223, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: dialogueManager
       value: 
@@ -32009,6 +32203,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 3480956058988131430, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 4041044085037309284, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -32117,6 +32315,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 7248132895077479260, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 8235841440431977050, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: m_Name
       value: 10yenCoin
@@ -32133,6 +32335,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 8575667039408988366, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 8936272387512223223, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: dialogueManager
       value: 
@@ -32321,6 +32527,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 3480956058988131430, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 4041044085037309284, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -32413,6 +32623,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 7248132895077479260, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 8235841440431977050, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: m_Name
       value: ClubMagazine
@@ -32425,6 +32639,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 8575667039408988366, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 8936272387512223223, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: dialogueManager
       value: 
@@ -32545,6 +32763,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 3887106952876225364, guid: d9045ab07fb855741853bde7c372c624, type: 3}
+      propertyPath: characterController
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 5591816227805645522, guid: d9045ab07fb855741853bde7c372c624, type: 3}
       propertyPath: gameNovel
       value: 
@@ -33242,6 +33464,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   csv: {fileID: 4900000, guid: d5cc6ed2114ead34eb08d7a69e5a9aba, type: 3}
   itemSprite: {fileID: 21300000, guid: 8ab416390b5fd1741b0e1b3ac5fc84b4, type: 3}
+  characterController: {fileID: 1700669387}
   item: {fileID: 11400000, guid: 437206ef1c1cca34e801c4e775657a40, type: 2}
   width: 2.9
   height: 17.81
@@ -33271,6 +33494,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 3480956058988131430, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 4041044084097738150, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: m_BoundingShape2D
       value: 
@@ -33383,6 +33610,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 7248132895077479260, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 8235841440431977050, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -33395,6 +33626,10 @@ PrefabInstance:
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 8575667039408988366, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: charactercontroller
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 8936272387512223223, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: dialogueManager
       value: 
@@ -34013,6 +34248,10 @@ PrefabInstance:
       value: -27.53
       objectReference: {fileID: 0}
     - target: {fileID: 3880324624818063132, guid: 3d27d9c3986d85143b473067a1a8d22f, type: 3}
+      propertyPath: gameNovel
+      value: 
+      objectReference: {fileID: 885046590}
+    - target: {fileID: 3880324624818063132, guid: 3d27d9c3986d85143b473067a1a8d22f, type: 3}
       propertyPath: dialogueManager
       value: 
       objectReference: {fileID: 1552599290}
@@ -34061,9 +34300,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1700669382}
     - target: {fileID: 5598667826715360922, guid: 3d27d9c3986d85143b473067a1a8d22f, type: 3}
+      propertyPath: gameNovel
+      value: 
+      objectReference: {fileID: 885046590}
+    - target: {fileID: 5598667826715360922, guid: 3d27d9c3986d85143b473067a1a8d22f, type: 3}
+      propertyPath: itemSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: caa10965cee3f594298b81674eb91262, type: 3}
+    - target: {fileID: 5598667826715360922, guid: 3d27d9c3986d85143b473067a1a8d22f, type: 3}
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1552599290}
+    - target: {fileID: 5598667826715360922, guid: 3d27d9c3986d85143b473067a1a8d22f, type: 3}
+      propertyPath: characterController
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 5631337682180703504, guid: 3d27d9c3986d85143b473067a1a8d22f, type: 3}
       propertyPath: m_SortingOrder
       value: 2
