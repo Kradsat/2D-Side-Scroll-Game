@@ -30,11 +30,14 @@ public class ItemPickup : MonoBehaviour
 
     public List<Dialogue> dialogue;
 
+    public GameObject popUpButtonPress;
+
     int currentLine = 0;
     public void Pickup()
     {
         InventoryManager.Instance.Add(item);
         Destroy(gameObject);
+       
     }
 
     private void Update()
@@ -51,7 +54,13 @@ public class ItemPickup : MonoBehaviour
         if (playerDetectedItemRange == true)
         {
             PressedZ();
-        }        
+            popUpButtonPress.SetActive(true);
+
+        }     
+        else 
+        {
+            popUpButtonPress.SetActive(false);
+        }
     }
 
     private void PressedZ()
