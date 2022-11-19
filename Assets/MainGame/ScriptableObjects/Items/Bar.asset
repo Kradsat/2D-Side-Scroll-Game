@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Bar
   m_EditorClassIdentifier: 
   ID: 3
-  itemName: Bar
-  itemDescription: try to beat the gost to death.... maybe
+  itemName: "\u30D0\u30FC\u30EB"
+  itemDescription: "\u540D\u72B6\u3057\u304C\u305F\u304D\u2026\u2026\u3067\u306F\u306A\u3044\u3001\u666E\u901A\u306E\u30D0\u30FC\u30EB"
   itemIcon: {fileID: 21300000, guid: 8ab416390b5fd1741b0e1b3ac5fc84b4, type: 3}
