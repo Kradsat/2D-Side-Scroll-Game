@@ -20,7 +20,7 @@ public class OpenTheDoor : MonoBehaviour
 
 
     public LoadScene loadscene;
-    
+    public GameObject popUpButtonPress;
 
  
 
@@ -29,6 +29,7 @@ public class OpenTheDoor : MonoBehaviour
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
+       
 
     }
     // Update is called once per frame
@@ -36,8 +37,8 @@ public class OpenTheDoor : MonoBehaviour
     {
         
         OpenTheDooor();
-        
 
+        PopUp();
 
     }
 
@@ -64,6 +65,7 @@ public class OpenTheDoor : MonoBehaviour
 
             if (playerDetected == true && Input.GetKeyDown(KeyCode.Z) )
             {
+               
                 count.audioStop = true;
                 if(currentRoom.activeInHierarchy == true)
                 {
@@ -116,6 +118,20 @@ public class OpenTheDoor : MonoBehaviour
             
         
        
+    }
+
+    public void PopUp()
+    {
+        playerDetected = Physics2D.OverlapBox(doorPos.position, new Vector2(width, height), 0, WhatIsPlayer);// check the player 
+
+        if(playerDetected == true)
+        {
+            popUpButtonPress.SetActive(true);
+        }
+        else
+        {
+            popUpButtonPress.SetActive(false);
+        }
     }
 
     public void NextRoom() // move to next room 
