@@ -106,7 +106,7 @@ public class MonsterManager : MonoBehaviour
         count.keepCountOnlyMovement = 0;
         Debug.Log("ghost is here! run bitch!");
 
-        newInstance = Instantiate(prefabMonster, new Vector3(player.transform.position.x - distance, player.transform.position.y - 10, 0), Quaternion.identity);
+        newInstance = Instantiate(prefabMonster, new Vector3(player.transform.position.x + (distance * (Random.Range(0,2)*2-1)), player.transform.position.y - 10, 0), Quaternion.identity);
         monsterScript = newInstance.GetComponentInChildren<Monster>();
         for( int i = 0; i < doorGameObject.Length; i++)
         {
