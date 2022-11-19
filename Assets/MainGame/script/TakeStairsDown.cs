@@ -31,6 +31,9 @@ public class TakeStairsDown : MonoBehaviour
     GameObject nextStair;
     Vector2 nextStairPos;
 
+    public GameObject popUpButtonPress;
+
+
     private void Start() 
     {
         nextStairPos = nextStair.transform.position;
@@ -55,6 +58,7 @@ public class TakeStairsDown : MonoBehaviour
 
         if (playerDetected == true) // check the player 
         {
+            popUpButtonPress.SetActive(true);
             if (Input.GetKeyDown(KeyCode.Z) && characterController.isFront )
             {
                 count.audioStop = true;
@@ -72,6 +76,10 @@ public class TakeStairsDown : MonoBehaviour
                 loadscene.transitionDoor.SetTrigger("DoorClose");
             }
 
+        }
+        else
+        {
+            popUpButtonPress.SetActive(false);
         }
        
     }

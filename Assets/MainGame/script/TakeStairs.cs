@@ -29,7 +29,7 @@ public class TakeStairs : MonoBehaviour
     [SerializeField]
     GameObject nextStair;
     Vector2 nextStairPos;
-
+    public GameObject popUpButtonPress;
     private void Start() 
     {
         nextStairPos = nextStair.transform.position;
@@ -54,6 +54,7 @@ public class TakeStairs : MonoBehaviour
 
         if (playerDetected == true) // check the player 
         {
+            popUpButtonPress.SetActive(true);
             if (Input.GetKeyDown(KeyCode.Z) && characterController.isFront )
             {
                 count.audioStop = true;
@@ -71,6 +72,10 @@ public class TakeStairs : MonoBehaviour
                 loadscene.transitionDoor.SetTrigger("DoorOpen");
             }
 
+        }
+        else
+        {
+            popUpButtonPress.SetActive(false);
         }
        
     }

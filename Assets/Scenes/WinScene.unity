@@ -323,7 +323,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7566773366998270236, guid: c252118b2d3fa1a47aaadc03bdd73dd2, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7566773366998270238, guid: c252118b2d3fa1a47aaadc03bdd73dd2, type: 3}
       propertyPath: m_RootOrder
@@ -518,15 +518,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'You have collected all the items
-
-    Well Done!!!!
-
-    You have Cleared
-    the First Stage'
+  m_text: "\u7D9A\u304F\uFF0E\uFF0E\uFF0E"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e03e2771ad79d0f4a90a8719ca9786ab, type: 2}
+  m_sharedMaterial: {fileID: 4570015235971610759, guid: e03e2771ad79d0f4a90a8719ca9786ab, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

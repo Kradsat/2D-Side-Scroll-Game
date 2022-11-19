@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: BallpointPen
   m_EditorClassIdentifier: 
   ID: 2
-  itemName: Ballpoint Pen
-  itemDescription: This is a ballpoint pen
+  itemName: "\u30DC\u30FC\u30EB\u30DA\u30F3"
+  itemDescription: "\u7F8E\u8853\u5BA4\u304B\u3089\u62DD\u501F\u3057\u305F\u30DA\u30F3\u3002\u90E8\u54E1\u306E\u3082\u306E\u3060\u308D\u3046\u304B"
   itemIcon: {fileID: 21300000, guid: dfe2912f067a8cd428bf55139d1f1b66, type: 3}

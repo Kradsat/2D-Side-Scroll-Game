@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Newspaper
   m_EditorClassIdentifier: 
   ID: 8
-  itemName: Newspaper
-  itemDescription: This is a Newspaper
+  itemName: "\u65B0\u805E"
+  itemDescription: 
   itemIcon: {fileID: 21300000, guid: 5c974d26ea1ee9d44b700ca3fa090506, type: 3}
