@@ -7,44 +7,43 @@ public class FrameSwitch : MonoBehaviour
     public GameObject frame1;
     public GameObject frame2;
     public MonsterManager monsterManager;
+    public float distance;
+    public GameObject player;
 
     [SerializeField]protected Count count;
 
-    private void Start()
+
+    private void Update()
     {
-       
+        DesactiveBackground();
     }
-
-
-    private void OnTriggerEnter2D(Collider2D collision)// function to change beetween frame/map
+    private void DesactiveBackground()
     {
-        if(frame1.activeInHierarchy == true )
+        distance = Vector3.Distance(player.transform.position, gameObject.transform.position);
+        Debug.Log(distance);
+
+        if (distance > 100)
         {
-            //exit = false;
             frame1.SetActive(false);
+            frame2.SetActive(false);
+        }
+        else
+        {
+            frame1.SetActive(true);
             frame2.SetActive(true);
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D other)// function to change beetween frame/map
+    {
+        if(other.tag == "Player")
+        {
             count.doAction = true;
             count.keepCount++;
             count.audioStop = false;
-           if(monsterManager.canDisepear == true)
+            if (monsterManager.canDisepear == true)
             {
-            count.keepCountOnlyMovement++;
-            }
-            
-        }
-        else if(frame1.activeInHierarchy == false)
-        {
-            //exit = false;
-            frame1.SetActive(true);
-            frame2.SetActive(false);
-            count.doAction = true;
-            count.keepCount++; // add one action
-            count.audioStop = false;
-            if(monsterManager.canDisepear == true)
-            {
-            count.keepCountOnlyMovement++;
+                count.keepCountOnlyMovement++;
             }
         }
     }
-
 }
