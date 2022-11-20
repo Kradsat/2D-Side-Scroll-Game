@@ -9,6 +9,8 @@ public class NonPickableItem : MonoBehaviour
     [SerializeField]
     DialogManager dialogManager;
     public bool isInteractable = false;
+    [SerializeField]
+    Direction direction;
 
     private void Start()
     {
@@ -21,7 +23,7 @@ public class NonPickableItem : MonoBehaviour
 
     private void Interraction()
     {
-        if(isInteractable==true && Input.GetKeyDown(KeyCode.Z) && charactercontroller.isBack && dialogManager.dialogueShow == false )
+        if(isInteractable==true && Input.GetKeyDown(KeyCode.Z) && charactercontroller.direction == direction && dialogManager.dialogueShow == false )
         {
             dialogManager.thereIsItem = false;
             dialogManager.thereIsNovel = false;

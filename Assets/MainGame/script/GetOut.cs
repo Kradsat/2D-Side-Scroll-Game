@@ -17,6 +17,8 @@ public class GetOut : MonoBehaviour
     public float yPos;
     public Count count;
     AudioSource audioSource;
+    [SerializeField]
+    Direction direction;
 
 
     public LoadScene loadscene;
@@ -61,7 +63,7 @@ public class GetOut : MonoBehaviour
         
       
 
-            if (playerDetected == true && Input.GetKeyDown(KeyCode.Z))
+            if (playerDetected == true && Input.GetKeyDown(KeyCode.Z) && characterController.direction == direction)
             {
                 count.audioStop = true;
                 if (currentRoom.activeInHierarchy == true)

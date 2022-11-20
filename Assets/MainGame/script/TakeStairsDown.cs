@@ -18,6 +18,8 @@ public class TakeStairsDown : MonoBehaviour
 
     [SerializeField]
     GameObject playerGameObject;
+    [SerializeField]
+    Direction direction;
     
     public int floorNum;  
 
@@ -59,7 +61,7 @@ public class TakeStairsDown : MonoBehaviour
         if (playerDetected == true) // check the player 
         {
             popUpButtonPress.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.Z) && characterController.isFront )
+            if (Input.GetKeyDown(KeyCode.Z) && characterController.direction == direction )
             {
                 count.audioStop = true;
                 player.position = new Vector2(nextStairPos.x, nextStairPos.y);// generate the new position of the player avec key pressed

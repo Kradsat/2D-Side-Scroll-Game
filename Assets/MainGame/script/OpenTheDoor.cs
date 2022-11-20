@@ -17,14 +17,12 @@ public class OpenTheDoor : MonoBehaviour
     public float yPos;
     public Count count;
    AudioSource audioSource;
+   [SerializeField]
+   Direction direction;
 
 
     public LoadScene loadscene;
     public GameObject popUpButtonPress;
-
- 
-
-
 
     private void Start()
     {
@@ -59,7 +57,7 @@ public class OpenTheDoor : MonoBehaviour
             audioSource.Stop();
         }
 
-        if (Input.GetKeyDown(KeyCode.Z) && characterController.isFront )
+        if (Input.GetKeyDown(KeyCode.Z) && characterController.direction == direction )
         {
                     
 

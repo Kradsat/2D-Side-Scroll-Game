@@ -12,6 +12,8 @@ public class Charactercontroller : MonoBehaviour
 
     [SerializeField]
     public WhichFloor playerWhichFloor;
+    [SerializeField]
+    public Direction direction;
 
     bool isWalking;
     bool stillWalking;
@@ -128,10 +130,10 @@ public class Charactercontroller : MonoBehaviour
     }
     public void Movement()
     {
-
         //move right
         if (Input.GetKey(KeyCode.RightArrow) && !Input.GetKey(KeyCode.LeftArrow))
         {
+            direction = Direction.Right;
             transform.eulerAngles = new Vector2(0, 180);//rotate to the right
             transform.Translate(new Vector2(Input.GetAxis("Horizontal") * -moveSpeed * Time.deltaTime, 0f));
 
@@ -148,14 +150,8 @@ public class Charactercontroller : MonoBehaviour
                 if(!audioSource.isPlaying)
                 {
                     audioSource.Play();
-                }
-               
+                }               
             }
-          
-               
-               
-            
-            
         }
 
         //move left
@@ -164,6 +160,7 @@ public class Charactercontroller : MonoBehaviour
             transform.eulerAngles = new Vector2(0, 0);//rotate to the left
 
             {
+                direction = Direction.Left;
                 transform.Translate(new Vector2(Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime, 0f));
 
                 //animation
@@ -188,12 +185,14 @@ public class Charactercontroller : MonoBehaviour
         else
         {
             if( Input.GetKey( KeyCode.UpArrow ) ) {
+                direction = Direction.Back;
                 _spriteRenderer.sprite = faceOtherSide;
                 isFront = true;
                 isBack = false;
                 isWalking = false;
 
             } else if( Input.GetKey( KeyCode.DownArrow ) ) {
+                direction = Direction.Front;
                 _spriteRenderer.sprite = faceCamera;
                 isBack = true;
                 isFront = false;

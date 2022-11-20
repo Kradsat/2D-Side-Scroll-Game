@@ -24,6 +24,8 @@ public class ItemPickup : MonoBehaviour
     [SerializeField] ItemController itemController;
     [SerializeField]
     DialogManager dialogManager;
+    [SerializeField]
+    Direction direction;
 
     [SerializeField]
     GameNovel gameNovel;
@@ -67,7 +69,7 @@ public class ItemPickup : MonoBehaviour
 
     private void PressedZ()
     {
-        if (Input.GetKeyDown(KeyCode.Z) && characterController.isBack)
+        if (Input.GetKeyDown(KeyCode.Z) && characterController.direction == direction)
         {
             dialogManager.thereIsItem = true;
             dialogManager.thereIsNovel = true;
