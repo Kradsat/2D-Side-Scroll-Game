@@ -16,6 +16,8 @@ public class DialogManager : MonoBehaviour
     public Image itemImage;
     [SerializeField]
     TMP_Text getItemText;
+    [SerializeField]
+    public Item item;
 
     [SerializeField] int lettersPerSeconds;
 
@@ -94,8 +96,13 @@ public class DialogManager : MonoBehaviour
 
     public void CloseDialogue()
     {
-            currentLine = 0;
-            noItemDialogBox.SetActive(false);
-            getItemDialogue.SetActive(false);
+        currentLine = 0;
+        noItemDialogBox.SetActive(false);
+        getItemDialogue.SetActive(false);
+        if(thereIsItem == true)
+        {
+            InventoryManager.Instance.Add(item);
+            InventoryManager.Instance.ListOfItems();        
+        }
     }   
 }
