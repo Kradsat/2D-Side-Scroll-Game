@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Room : MonoBehaviour
+public class RoomC : MonoBehaviour
 {
     public Transform EdgePosLeft;
     public Transform EdgePosRight;
@@ -10,7 +10,7 @@ public class Room : MonoBehaviour
     public float height;
     public float xPosLeft;
     public float xposRight;
-    
+    public float yposRight;
     private bool playerDetected;
 
    
@@ -32,7 +32,7 @@ public class Room : MonoBehaviour
         playerDetected = Physics2D.OverlapBox(EdgePosRight.position, new Vector2(width, height), 0, WhatIsPlayer);
         if (playerDetected == true)
         {
-            player.position = new Vector2(xposRight, player.transform.position.y);
+            player.position = new Vector2(xposRight, yposRight);
         }
     }
 
