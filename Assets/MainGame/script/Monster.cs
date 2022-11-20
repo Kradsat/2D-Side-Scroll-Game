@@ -38,6 +38,7 @@ public class Monster : MonoBehaviour
     void Start()
     { 
         startingPosition = transform.position;
+        InvokeRepeating("ChangeSpeed", 0.0f, 3.0f);
     }
 
     // Update is called once per frame
@@ -45,6 +46,11 @@ public class Monster : MonoBehaviour
     {
         playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<Charactercontroller>();
         MovementEnemy();
+    }
+
+    void ChangeSpeed()
+    {
+        horizontalSpeed = Random.Range(15,25);
     }
 
 
@@ -67,16 +73,20 @@ public class Monster : MonoBehaviour
         var speed = horizontalSpeed * Time.deltaTime; // monster speed
         var targetPos = new Vector3(playerPosition.position.x, playerPosition.position.y, transform.position.z);// player transform target
     
-       
-        if(targetPos.x < transform.position.x) // flip the monster sprite
-        {
-            sprite.flipX = true;
-        }
 
         if((int)playerController.playerWhichFloor == (int)monsterWhichFloor)
         {
             Vector3 newXPos = new Vector3(targetPos.x, transform.position.y, transform.position.z);
             transform.position = Vector3.MoveTowards(transform.position, newXPos, speed);// moving toward player
+            
+            if(targetPos.x < transform.position.x) // flip the monster sprite
+            {
+                sprite.flipX = true;
+            }
+            else
+            {
+                sprite.flipX = false;
+            }
         }
         else if(targetPos.y != transform.position.y)
         {
