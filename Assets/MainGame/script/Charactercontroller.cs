@@ -94,9 +94,10 @@ public class Charactercontroller : MonoBehaviour
         Movement();
         StopMovementOnEdgeLeft();
         StopMovementOnEdgeRight();
-        DebugMovementRight();
-        DebugMovementLeft();
+        // DebugMovementRight();
+        // DebugMovementLeft();
         CorridorTextShow();
+        WalkingBGM();
     }
 
     public void StopMovementOnEdgeLeft()// block the character by reseting is transform position
@@ -152,17 +153,6 @@ public class Charactercontroller : MonoBehaviour
             isWalking = true;
             isFront = false;
             isBack = false;
-
-
-            //BGM
-
-            if(isWalking)
-            {
-                if(!audioSource.isPlaying)
-                {
-                    audioSource.Play();
-                }               
-            }
         }
 
         //move left
@@ -180,15 +170,6 @@ public class Charactercontroller : MonoBehaviour
                 isBack = false;
 
                 //BGM
-
-                if (isWalking)
-                {
-                    if (!audioSource.isPlaying)
-                    {
-                        audioSource.Play();
-                    }
-                   
-                }
             }
         }
 
@@ -216,13 +197,7 @@ public class Charactercontroller : MonoBehaviour
                 isBack = false;
                 //StopCoroutine(Animate());
                 _spriteRenderer.sprite = characterSprite[ 0];
-
-                if(isWalking == false)
-                {
-                    audioSource.Stop();
-                }
             }
-
         }
     }
 
@@ -248,4 +223,20 @@ public class Charactercontroller : MonoBehaviour
             }
         }
    }
+
+   void WalkingBGM()
+   {
+        if (isWalking)
+        {
+            if (!audioSource.isPlaying)
+            {
+                audioSource.Play();
+            }
+
+        }
+        else
+        {
+            audioSource.Stop();
+        }   
+    }
 }
