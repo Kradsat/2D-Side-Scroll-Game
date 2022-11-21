@@ -46,13 +46,15 @@ public class Charactercontroller : MonoBehaviour
     int animationCount = 0;
     int animationSpeed = 9;
 
-   
+    [SerializeField]
+    GameObject[] corridorUI;   
 
     int frame = 0;
 
     AudioSource audioSource;
     
- 
+    [SerializeField]
+    Count count;
 
     private void Awake()
     {
@@ -69,9 +71,6 @@ public class Charactercontroller : MonoBehaviour
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _spriteRenderer.sprite = characterSprite[0];
         audioSource = GetComponent<AudioSource>();
-       
-      
-        
     }
 
     private void FixedUpdate() // animation fixed Update
@@ -97,6 +96,7 @@ public class Charactercontroller : MonoBehaviour
         StopMovementOnEdgeRight();
         DebugMovementRight();
         DebugMovementLeft();
+        CorridorTextShow();
     }
 
     public void StopMovementOnEdgeLeft()// block the character by reseting is transform position
@@ -234,6 +234,18 @@ public class Charactercontroller : MonoBehaviour
         Gizmos.DrawCube(EdgePosRight.position, new Vector3(width, height, 1));
     }
 
-   
-
+   void CorridorTextShow()
+   {
+        for(int i = 0; i < corridorUI.Length; i++)
+        {
+            if(count.canSpawnhere == true && (int)playerWhichFloor == i)
+            {
+                corridorUI[i].SetActive(true);
+            }
+            else
+            {
+                corridorUI[i].SetActive(false);
+            }
+        }
+   }
 }

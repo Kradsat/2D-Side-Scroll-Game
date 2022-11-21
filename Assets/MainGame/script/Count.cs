@@ -17,10 +17,9 @@ public class Count : MonoBehaviour
 
 
     private void Start()
-    {
-        
+    {        
         audioStop = false;
-        canSpawnhere = true;
+        canSpawnhere = false;
         keepCount = 0;
         keepCountOnlyMovement = 0;
     }

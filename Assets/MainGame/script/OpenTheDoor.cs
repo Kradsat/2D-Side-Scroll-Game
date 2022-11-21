@@ -59,8 +59,6 @@ public class OpenTheDoor : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Z) && characterController.direction == direction )
         {
-                    
-
             if (playerDetected == true && Input.GetKeyDown(KeyCode.Z) )
             {
                
@@ -101,14 +99,10 @@ public class OpenTheDoor : MonoBehaviour
                 if (currentRoom.tag == "Loft") // check tag
                 {
                     count.canSpawnhere = false;
-                    
-
                 }
                 else
                 {
-                    count.canSpawnhere = true;
-                   
-                
+                    count.canSpawnhere = true;                
                 }
             }
 
