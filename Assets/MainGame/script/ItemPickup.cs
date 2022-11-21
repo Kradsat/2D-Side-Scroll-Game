@@ -40,8 +40,7 @@ public class ItemPickup : MonoBehaviour
         //InventoryManager.Instance.Add(item);
         //InventoryManager.Instance.ListOfItems();
         dialogManager.item = item;
-        Destroy(gameObject);
-       
+        Destroy(gameObject);       
     }
 
     private void Update()
