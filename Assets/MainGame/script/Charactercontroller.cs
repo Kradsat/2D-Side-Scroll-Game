@@ -126,20 +126,20 @@ public class Charactercontroller : MonoBehaviour
         
     }
 
-    public void DebugMovementRight()
-    {
-        if(Input.GetKey(KeyCode.A))
-        {
-            player.position = new Vector3(player.position.x - 2, player.position.y,0);
-        }
-    }
-    public void DebugMovementLeft()
-    {
-        if (Input.GetKey(KeyCode.S))
-        {
-            player.position = new Vector3(player.position.x + 2, player.position.y, 0);
-        }
-    }
+    // public void DebugMovementRight()
+    // {
+    //     if(Input.GetKey(KeyCode.A))
+    //     {
+    //         player.position = new Vector3(player.position.x - 2, player.position.y,0);
+    //     }
+    // }
+    // public void DebugMovementLeft()
+    // {
+    //     if (Input.GetKey(KeyCode.S))
+    //     {
+    //         player.position = new Vector3(player.position.x + 2, player.position.y, 0);
+    //     }
+    // }
     public void Movement()
     {
         //move right

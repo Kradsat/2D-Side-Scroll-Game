@@ -14260,6 +14260,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: boolpen
       objectReference: {fileID: 0}
+    - target: {fileID: 2659335038948621168, guid: 3d84a1e7e673adf49a2bd263ecdd07a6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7667828950478492823, guid: 3d84a1e7e673adf49a2bd263ecdd07a6, type: 3}
       propertyPath: player
       value: 
@@ -20609,10 +20613,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -40161,7 +40165,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7566773366998270236, guid: c252118b2d3fa1a47aaadc03bdd73dd2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7566773366998270238, guid: c252118b2d3fa1a47aaadc03bdd73dd2, type: 3}
       propertyPath: m_RootOrder
@@ -46773,7 +46777,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 99
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 8ab416390b5fd1741b0e1b3ac5fc84b4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -47279,6 +47283,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 471441495}
     m_Modifications:
+    - target: {fileID: 233118818417037693, guid: 3d27d9c3986d85143b473067a1a8d22f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 699044495717211253, guid: 3d27d9c3986d85143b473067a1a8d22f, type: 3}
       propertyPath: m_SortingOrder
       value: 2

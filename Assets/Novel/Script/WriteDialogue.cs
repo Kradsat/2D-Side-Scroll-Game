@@ -31,6 +31,14 @@ public class WriteDialogue : MonoBehaviour
         nextDialogueButton.onClick.AddListener(NextSentence);
     }
 
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Z))
+        {
+            NextSentence();
+        }
+    }
+
     // Update is called once per frame
     public IEnumerator WriteText(string sentence)
     {
