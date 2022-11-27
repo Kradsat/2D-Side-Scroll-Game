@@ -1523,6 +1523,10 @@ PrefabInstance:
       propertyPath: xposRight
       value: 1924
       objectReference: {fileID: 0}
+    - target: {fileID: 4041044085037309290, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: characterController
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 4041044085037309291, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: xPos
       value: 268.5
@@ -6512,6 +6516,10 @@ PrefabInstance:
       propertyPath: EdgePosRight
       value: 
       objectReference: {fileID: 718863176}
+    - target: {fileID: 4041044085037309290, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: characterController
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 4041044085037309291, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: xPos
       value: 268.5
@@ -9268,6 +9276,10 @@ PrefabInstance:
       propertyPath: xposRight
       value: 1924
       objectReference: {fileID: 0}
+    - target: {fileID: 4041044085037309290, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: characterController
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 4041044085037309291, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: xPos
       value: 268.5
@@ -11852,6 +11864,10 @@ PrefabInstance:
       propertyPath: EdgePosRight
       value: 
       objectReference: {fileID: 718863176}
+    - target: {fileID: 4041044085037309290, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: characterController
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 4041044085037309291, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: xPos
       value: 268.5
@@ -13233,6 +13249,10 @@ PrefabInstance:
       propertyPath: EdgePosRight
       value: 
       objectReference: {fileID: 718863176}
+    - target: {fileID: 4041044085037309290, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: characterController
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 4041044085037309291, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: xPos
       value: 268.5
@@ -16648,6 +16668,10 @@ PrefabInstance:
       propertyPath: EdgePosRight
       value: 
       objectReference: {fileID: 718863176}
+    - target: {fileID: 4041044085037309290, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: characterController
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 4041044085037309291, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: xPos
       value: 268.5
@@ -18618,6 +18642,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   player: {fileID: 1700669383}
+  characterController: {fileID: 1700669387}
 --- !u!1 &935316519
 GameObject:
   m_ObjectHideFlags: 0
@@ -19094,6 +19119,10 @@ PrefabInstance:
       propertyPath: xposRight
       value: 1924
       objectReference: {fileID: 0}
+    - target: {fileID: 4041044085037309290, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: characterController
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 4041044085037309291, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: xPos
       value: 268.5
@@ -21134,6 +21163,10 @@ PrefabInstance:
       propertyPath: xposRight
       value: 1744
       objectReference: {fileID: 0}
+    - target: {fileID: 4041044085037309290, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: characterController
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 4041044085037309291, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: xPos
       value: 426
@@ -22229,6 +22262,10 @@ PrefabInstance:
       propertyPath: xposRight
       value: 1924
       objectReference: {fileID: 0}
+    - target: {fileID: 4041044085037309290, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: characterController
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 4041044085037309291, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: xPos
       value: 268.5
@@ -32639,6 +32676,10 @@ PrefabInstance:
       propertyPath: xposRight
       value: 1924
       objectReference: {fileID: 0}
+    - target: {fileID: 4041044085037309290, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: characterController
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 4041044085037309291, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: xPos
       value: 268.5
@@ -39082,6 +39123,10 @@ PrefabInstance:
       propertyPath: EdgePosRight
       value: 
       objectReference: {fileID: 718863176}
+    - target: {fileID: 4041044085037309290, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: characterController
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 4041044085037309291, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: xPos
       value: 268.5
@@ -43888,6 +43933,10 @@ PrefabInstance:
       propertyPath: xposRight
       value: 1924
       objectReference: {fileID: 0}
+    - target: {fileID: 4041044085037309290, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: characterController
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 4041044085037309291, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: xPos
       value: 268.5
@@ -44174,6 +44223,10 @@ PrefabInstance:
       propertyPath: xposRight
       value: 1833
       objectReference: {fileID: 0}
+    - target: {fileID: 4041044085037309290, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: characterController
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 4041044085037309291, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: xPos
       value: 346.6
@@ -44581,6 +44634,10 @@ PrefabInstance:
       propertyPath: xposRight
       value: 1652
       objectReference: {fileID: 0}
+    - target: {fileID: 4041044085037309290, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: characterController
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 4041044085037309291, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: xPos
       value: 504.8
@@ -45039,6 +45096,10 @@ PrefabInstance:
       propertyPath: EdgePosRight
       value: 
       objectReference: {fileID: 718863176}
+    - target: {fileID: 4041044085037309290, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: characterController
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 4041044085037309291, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: xPos
       value: 268.5
@@ -46303,6 +46364,10 @@ PrefabInstance:
       propertyPath: xposRight
       value: 2115
       objectReference: {fileID: 0}
+    - target: {fileID: 1687671738274452494, guid: efabd140693d6c04c9ba2a56b7846619, type: 3}
+      propertyPath: characterController
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 2226895804340755646, guid: efabd140693d6c04c9ba2a56b7846619, type: 3}
       propertyPath: m_SortingOrder
       value: 3
@@ -46452,6 +46517,10 @@ PrefabInstance:
       propertyPath: xposRight
       value: 1562
       objectReference: {fileID: 0}
+    - target: {fileID: 4041044085037309290, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
+      propertyPath: characterController
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 4041044085037309291, guid: 2c2b1b8f01e0d774aa189cc14c70c96a, type: 3}
       propertyPath: xPos
       value: 581.8
@@ -46883,6 +46952,10 @@ PrefabInstance:
       propertyPath: xposRight
       value: 2395
       objectReference: {fileID: 0}
+    - target: {fileID: 4816473003778833530, guid: 6ac4cacebd0bf1d40b56e24b61abb2c7, type: 3}
+      propertyPath: characterController
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 5977977178876447172, guid: 6ac4cacebd0bf1d40b56e24b61abb2c7, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -47095,6 +47168,10 @@ PrefabInstance:
       propertyPath: xposRight
       value: 2304
       objectReference: {fileID: 0}
+    - target: {fileID: 2677493165564416320, guid: 1c15c2f799746344bbf5143112884324, type: 3}
+      propertyPath: characterController
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 2982190107783996504, guid: 1c15c2f799746344bbf5143112884324, type: 3}
       propertyPath: m_SortingOrder
       value: 1
@@ -47427,6 +47504,10 @@ PrefabInstance:
       propertyPath: xposRight
       value: 2211
       objectReference: {fileID: 0}
+    - target: {fileID: 6672062875070624246, guid: 3d27d9c3986d85143b473067a1a8d22f, type: 3}
+      propertyPath: characterController
+      value: 
+      objectReference: {fileID: 1700669387}
     - target: {fileID: 8455013043512910125, guid: 3d27d9c3986d85143b473067a1a8d22f, type: 3}
       propertyPath: m_SortingOrder
       value: 3

@@ -13,12 +13,11 @@ public class Room : MonoBehaviour
     
     private bool playerDetected;
 
-   
-
-
-
     public LayerMask WhatIsPlayer;
     public Transform player;
+
+    [SerializeField]
+    Charactercontroller characterController;   
 
    
     private void Update()
@@ -32,7 +31,7 @@ public class Room : MonoBehaviour
         playerDetected = Physics2D.OverlapBox(EdgePosRight.position, new Vector2(width, height), 0, WhatIsPlayer);
         if (playerDetected == true)
         {
-            player.position = new Vector2(xposRight, player.transform.position.y);
+            player.position = new Vector2(player.position.x + characterController.moveSpeed * Time.deltaTime, player.transform.position.y);
         }
     }
 
@@ -41,7 +40,7 @@ public class Room : MonoBehaviour
         playerDetected = Physics2D.OverlapBox(EdgePosLeft.position, new Vector2(width, height), 0, WhatIsPlayer);
         if (playerDetected == true)
         {
-            player.position = new Vector2(xPosLeft, player.transform.position.y);
+            player.position = new Vector2(player.position.x - characterController.moveSpeed * Time.deltaTime, player.transform.position.y);
         }
     }
     private void OnDrawGizmosSelected() // draw the edge of the map

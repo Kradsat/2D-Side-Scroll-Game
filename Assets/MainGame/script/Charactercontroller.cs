@@ -37,11 +37,10 @@ public class Charactercontroller : MonoBehaviour
     public float heightSecondFloor;
     public float xPosLeftSecondFloor;
 
-
     public LayerMask WhatIsPlayer;
     public Transform player;
 
-    float moveSpeed = 20f;
+    public float moveSpeed = 20f;
 
     int animationCount = 0;
     int animationSpeed = 9;
@@ -147,7 +146,7 @@ public class Charactercontroller : MonoBehaviour
         {
             direction = Direction.Right;
             transform.eulerAngles = new Vector2(0, 180);//rotate to the right
-            transform.Translate(new Vector2(Input.GetAxis("Horizontal") * -moveSpeed * Time.deltaTime, 0f));
+            transform.Translate(new Vector2(Input.GetAxis("Horizontal") * - moveSpeed * Time.deltaTime, 0f));
 
             //animation
             isWalking = true;
