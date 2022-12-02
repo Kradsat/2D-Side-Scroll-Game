@@ -33285,6 +33285,8 @@ MonoBehaviour:
   item: {fileID: 0}
   lettersPerSeconds: 45
   nextArrow: {fileID: 1936905075}
+  gameObject: {fileID: 0}
+  characterController: {fileID: 1700669387}
   isTyping: 0
   lines: []
   write: 0
@@ -35360,7 +35362,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 171.00555, y: -25}
+  m_AnchoredPosition: {x: 171.00537, y: -25}
   m_SizeDelta: {x: 342.011, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1680833995
@@ -35495,7 +35497,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 171.00555, y: -25}
+  m_AnchoredPosition: {x: 171.00537, y: -25}
   m_SizeDelta: {x: 342.011, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1685910379
@@ -42311,7 +42313,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 171.00555, y: -25}
+  m_AnchoredPosition: {x: 171.00537, y: -25}
   m_SizeDelta: {x: 342.011, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1922126624

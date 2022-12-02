@@ -54,7 +54,7 @@ public class GameNovel : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Z) && dialogueManager.thereIsNovel == true)
+        if((Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Return)) && dialogueManager.thereIsNovel == true)
         {
             NextDialogueSentence();
         }

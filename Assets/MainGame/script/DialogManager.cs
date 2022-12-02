@@ -23,6 +23,10 @@ public class DialogManager : MonoBehaviour
 
     [SerializeField]
     GameObject nextArrow;
+    [SerializeField]
+    GameObject gameObject;
+    [SerializeField]
+    Charactercontroller characterController;
 
     public event Action OnshowDialog;
     public event Action OnCloseDialog;
@@ -104,5 +108,6 @@ public class DialogManager : MonoBehaviour
             InventoryManager.Instance.Add(item);
             InventoryManager.Instance.ListOfItems();        
         }
+        characterController.stillWalking = true;
     }   
 }

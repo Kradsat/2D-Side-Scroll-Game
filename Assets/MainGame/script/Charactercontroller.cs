@@ -16,7 +16,7 @@ public class Charactercontroller : MonoBehaviour
     public Direction direction;
 
     bool isWalking;
-    bool stillWalking;
+    public bool stillWalking;
     public bool isFront;
     public bool isBack;
     private bool playerDetected;
@@ -59,7 +59,7 @@ public class Charactercontroller : MonoBehaviour
     {
         transform.eulerAngles = new Vector2(0, 180);
         isWalking = false;
-        stillWalking = false;
+        stillWalking = true;
         isFront = false;
         isBack = false;
     }
@@ -82,21 +82,23 @@ public class Charactercontroller : MonoBehaviour
         if (isWalking)
         {
             _spriteRenderer.sprite = characterSprite[frame % 8];
-        }
-
-      
+        }     
     }
 
     // Update is called once per frame
     void Update()
     {
-        Movement();
+        if(stillWalking == true)
+        {
+            Movement();
+            WalkingBGM();
+        }
+
         StopMovementOnEdgeLeft();
         StopMovementOnEdgeRight();
         // DebugMovementRight();
         // DebugMovementLeft();
         CorridorTextShow();
-        WalkingBGM();
     }
 
     public void StopMovementOnEdgeLeft()// block the character by reseting is transform position
@@ -142,47 +144,62 @@ public class Charactercontroller : MonoBehaviour
     public void Movement()
     {
         //move right
-        if (Input.GetKey(KeyCode.RightArrow) && !Input.GetKey(KeyCode.LeftArrow))
+        if ((Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)))
         {
-            direction = Direction.Right;
-            transform.eulerAngles = new Vector2(0, 180);//rotate to the right
-            transform.Translate(new Vector2(Input.GetAxis("Horizontal") * - moveSpeed * Time.deltaTime, 0f));
-
-            //animation
-            isWalking = true;
-            isFront = false;
-            isBack = false;
-        }
-
-        //move left
-        else if (Input.GetKey(KeyCode.LeftArrow) && !Input.GetKey(KeyCode.RightArrow))
-        {
-            transform.eulerAngles = new Vector2(0, 0);//rotate to the left
-
+            if(!Input.GetKey(KeyCode.LeftArrow) && !Input.GetKey(KeyCode.A))
             {
-                direction = Direction.Left;
-                transform.Translate(new Vector2(Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime, 0f));
+                direction = Direction.Right;
+                transform.eulerAngles = new Vector2(0, 180);//rotate to the right
+                transform.Translate(new Vector2(Input.GetAxis("Horizontal") * - moveSpeed * Time.deltaTime, 0f));
 
                 //animation
                 isWalking = true;
                 isFront = false;
                 isBack = false;
+            }
+            else
+            {
+                isWalking = false;
+                isFront = false;
+                isBack = false;
+                _spriteRenderer.sprite = characterSprite[ 0];
+            }
+        }
 
-                //BGM
+        //move left
+        else if ((Input.GetKey(KeyCode.LeftArrow)) || Input.GetKey(KeyCode.A))
+        {
+            if(!Input.GetKey(KeyCode.RightArrow) && !Input.GetKey(KeyCode.D))
+            {
+                transform.eulerAngles = new Vector2(0, 0);//rotate to the left
+
+                direction = Direction.Left;
+                transform.Translate(new Vector2(Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime, 0f));
+                //animation
+                isWalking = true;
+                isFront = false;
+                isBack = false;
+            }
+            else
+            {
+                isWalking = false;
+                isFront = false;
+                isBack = false;
+                _spriteRenderer.sprite = characterSprite[ 0];
             }
         }
 
         //stop animation
         else
         {
-            if( Input.GetKey( KeyCode.UpArrow ) ) {
+            if( Input.GetKey( KeyCode.UpArrow ) || Input.GetKey(KeyCode.W) ) {
                 direction = Direction.Back;
                 _spriteRenderer.sprite = faceOtherSide;
                 isFront = true;
                 isBack = false;
                 isWalking = false;
 
-            } else if( Input.GetKey( KeyCode.DownArrow ) ) {
+            } else if( Input.GetKey( KeyCode.DownArrow ) || Input.GetKey(KeyCode.S) ) {
                 direction = Direction.Front;
                 _spriteRenderer.sprite = faceCamera;
                 isBack = true;

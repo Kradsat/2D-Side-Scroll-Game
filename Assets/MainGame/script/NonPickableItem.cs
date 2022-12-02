@@ -27,6 +27,7 @@ public class NonPickableItem : MonoBehaviour
         {
             dialogManager.thereIsItem = false;
             dialogManager.thereIsNovel = false;
+            charactercontroller.stillWalking = false;
             itemController.Interact();
         }
     }

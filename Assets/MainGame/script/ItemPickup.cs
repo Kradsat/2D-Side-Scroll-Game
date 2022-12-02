@@ -26,6 +26,7 @@ public class ItemPickup : MonoBehaviour
     DialogManager dialogManager;
     [SerializeField]
     Direction direction;
+    bool isInteractable = true;
 
     [SerializeField]
     GameNovel gameNovel;
@@ -37,10 +38,8 @@ public class ItemPickup : MonoBehaviour
     int currentLine = 0;
     public void Pickup()
     {
-        //InventoryManager.Instance.Add(item);
-        //InventoryManager.Instance.ListOfItems();
         dialogManager.item = item;
-        Destroy(gameObject);       
+        //Destroy(gameObject);       
     }
 
     private void Update()
@@ -68,10 +67,12 @@ public class ItemPickup : MonoBehaviour
 
     private void PressedZ()
     {
-        if (Input.GetKeyDown(KeyCode.Z) && characterController.direction == direction)
+        if (Input.GetKeyDown(KeyCode.Z) && characterController.direction == direction && isInteractable == true)
         {
+            isInteractable = false;
             dialogManager.thereIsItem = true;
             dialogManager.thereIsNovel = true;
+            characterController.stillWalking = false;
             gameNovel.csv = csv;
             dialogManager.itemImage.sprite = itemSprite;
             itemController.Interact();            

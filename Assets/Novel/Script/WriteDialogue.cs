@@ -33,7 +33,7 @@ public class WriteDialogue : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Z))
+        if((Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Return)))
         {
             NextSentence();
         }
