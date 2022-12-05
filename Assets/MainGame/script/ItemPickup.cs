@@ -67,7 +67,7 @@ public class ItemPickup : MonoBehaviour
 
     private void PressedZ()
     {
-        if (Input.GetKeyDown(KeyCode.Z) && characterController.direction == direction && isInteractable == true)
+        if (Input.GetKeyDown(KeyCode.Z) /*&& characterController.direction == direction*/ && isInteractable == true)
         {
             isInteractable = false;
             dialogManager.thereIsItem = true;
