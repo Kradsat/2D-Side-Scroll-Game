@@ -59,7 +59,7 @@ public class Charactercontroller : MonoBehaviour
     {
         transform.eulerAngles = new Vector2(0, 180);
         isWalking = false;
-        stillWalking = true;
+        stillWalking = false;
         isFront = false;
         isBack = false;
     }
