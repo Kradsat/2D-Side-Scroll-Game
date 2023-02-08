@@ -67,23 +67,47 @@ public class ReadText : MonoBehaviour
 
     void GetData()
     {
+        Scene sceneName = SceneManager.GetActiveScene();
         data = textAsset.text.Split(new char[]{'\n'});
-        for(int i = 1; i < data.Length; i++)
+        if(sceneName.name == "Novel")
         {
-            d = new Dialogue();
-            row = data[i].Split(new char[] { ',' });
-            int.TryParse(row[0], out d.number);
-            d.name = row[1];
-            d.sentences = row[2];
-            d.ui = row[3];
-            d.se = row[4];
-            d.bgm = row[5];
-            d.item = row[6]; 
-            d.animation = row[7];
-            d.effect = row[8];
-            d.background = row[9];
+            for(int i = 1; i < data.Length; i++)
+            {
+                d = new Dialogue();
+                row = data[i].Split(new char[] { ',' });
+                int.TryParse(row[0], out d.number);
+                d.name = row[1];
+                d.sentences = row[2];
+                d.ui = row[3];
+                d.se = row[4];
+                d.bgm = row[5];
+                d.item = row[6]; 
+                d.animation = row[7];
+                d.effect = row[8];
+                d.background = row[9];
 
-            dialogue.Add(d);
+                dialogue.Add(d);
+            }
+        }
+        else if(sceneName.name == "Last")
+        {
+            for(int i = 1; i < data.Length - 1; i++)
+            {
+                d = new Dialogue();
+                row = data[i].Split(new char[] { ',' });
+                int.TryParse(row[0], out d.number);
+                d.name = row[1];
+                d.sentences = row[2];
+                d.ui = row[3];
+                d.se = row[4];
+                d.bgm = row[5];
+                d.item = row[6]; 
+                d.animation = row[7];
+                d.effect = row[8];
+                d.background = row[9];
+
+                dialogue.Add(d);
+            }
         }
     }
     
@@ -171,6 +195,14 @@ public class ReadText : MonoBehaviour
 
     public void EndDialogue()
     {
-        SceneManager.LoadScene(2);
+        Scene sceneName = SceneManager.GetActiveScene();
+        if(sceneName.name == "Novel")
+        {
+            SceneManager.LoadScene(2);
+        }
+        else if(sceneName.name == "Last")
+        {
+            SceneManager.LoadScene("Title");
+        }
     }
 }

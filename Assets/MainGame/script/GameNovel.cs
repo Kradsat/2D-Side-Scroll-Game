@@ -84,7 +84,7 @@ public class GameNovel : MonoBehaviour
     void GetData()
     {
         data = csv.text.Split(new char[]{'\n'});
-        for(int i = 1; i < data.Length -1; i++)
+        for(int i = 1; i < data.Length - 1; i++)
         {
             d = new Dialogue();
             row = data[i].Split(new char[] { ',' });
@@ -173,7 +173,7 @@ public class GameNovel : MonoBehaviour
     {
         novel.SetActive(false);
         dialogueManager.thereIsNovel = false;
-        flowScript.flow++;
+        // flowScript.flow++;
         dialogueManager.ShowDialog();
     }
 

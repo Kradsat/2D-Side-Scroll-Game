@@ -19,14 +19,14 @@ public class FlowScript : MonoBehaviour
     {
         for( int i = 0; i < itemObject.Length; i++)
         {
-            if(i != flow && itemObject[i] != null)
-            {
-                itemObject[i].SetActive(false);
-            }
-            else if(i == flow && itemObject[i] != null)
+            if(i == flow && itemObject[i] != null)
             {
                 itemObject[i].SetActive(true);
             }
+            else if(i != flow && itemObject[i] != null)
+            {
+                itemObject[i].SetActive(false);
+            }        
         }
     }
 }

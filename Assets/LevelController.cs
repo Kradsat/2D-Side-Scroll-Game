@@ -8,6 +8,7 @@ public class LevelController : MonoBehaviour
     public static LevelController instance;
     [SerializeField] private int itemCount;
     public DialogManager dialogManager;
+    public FlowScript flowScript;
 
     private void Awake()
     {
@@ -19,9 +20,9 @@ public class LevelController : MonoBehaviour
 
     private void Update()
     {
-        if (InventoryManager.Instance.itemCount == itemCount && dialogManager.isTyping !=true)
+        if (flowScript.flow == itemCount && dialogManager.isTyping !=true)
         {
-            SceneManager.LoadScene("WinScene");
+            SceneManager.LoadScene("Last");
         }
     }
 }

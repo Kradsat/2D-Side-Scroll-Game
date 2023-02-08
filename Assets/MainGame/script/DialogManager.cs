@@ -27,6 +27,8 @@ public class DialogManager : MonoBehaviour
     GameObject gameObject;
     [SerializeField]
     Charactercontroller characterController;
+    [SerializeField]
+    FlowScript flowScript;
 
     public event Action OnshowDialog;
     public event Action OnCloseDialog;
@@ -60,9 +62,15 @@ public class DialogManager : MonoBehaviour
         {
             noItemDialogBox.SetActive(true);
         }
-        else if(thereIsItem == true)
+        else if(thereIsItem == true && item != null)
         {
             getItemDialogue.SetActive(true);
+        }
+        else if(thereIsItem == true && item == null)
+        {
+            currentLine = 0;
+            characterController.stillWalking = true;
+            flowScript.flow++;
         }
         
         if (write == true && !isTyping)
@@ -103,10 +111,16 @@ public class DialogManager : MonoBehaviour
         currentLine = 0;
         noItemDialogBox.SetActive(false);
         getItemDialogue.SetActive(false);
-        if(thereIsItem == true)
+        if(thereIsItem == true && item != null)
         {
             InventoryManager.Instance.Add(item);
-            InventoryManager.Instance.ListOfItems();        
+            InventoryManager.Instance.ListOfItems();       
+            flowScript.flow++;
+ 
+        }
+        else if(thereIsItem == true && item == null)
+        {
+            flowScript.flow++;
         }
         characterController.stillWalking = true;
     }   
