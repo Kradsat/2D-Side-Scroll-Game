@@ -13,6 +13,7 @@ public class ReadText : MonoBehaviour
     private Queue<string> names;
     private Queue<string> sentences;
     private Queue<string> expression;
+    private Queue<string> itemEffect;
     private Queue<string> soundEffect;
     private Queue<string> screenEffect;
     private Queue<string> back;
@@ -45,6 +46,8 @@ public class ReadText : MonoBehaviour
 
     public List<Dialogue> dialogue;
 
+    public bool itemEffectScreen = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -56,6 +59,7 @@ public class ReadText : MonoBehaviour
         sentences = new Queue<string>();
         names = new Queue<string>();
         expression = new Queue<string>();
+        itemEffect = new Queue<string>();
         soundEffect = new Queue<string>();
         screenEffect = new Queue<string>();
         back = new Queue<string>();
@@ -71,7 +75,7 @@ public class ReadText : MonoBehaviour
         data = textAsset.text.Split(new char[]{'\n'});
         if(sceneName.name == "Novel")
         {
-            for(int i = 1; i < data.Length; i++)
+            for(int i = 1; i < data.Length - 1; i++)
             {
                 d = new Dialogue();
                 row = data[i].Split(new char[] { ',' });
@@ -116,6 +120,7 @@ public class ReadText : MonoBehaviour
         sentences.Clear();
         names.Clear();
         expression.Clear();
+        itemEffect.Clear();
         soundEffect.Clear();
         screenEffect.Clear();
         back.Clear();
@@ -124,6 +129,7 @@ public class ReadText : MonoBehaviour
             names.Enqueue(d.name);
             sentences.Enqueue(d.sentences);
             expression.Enqueue(d.ui);
+            itemEffect.Enqueue(d.item);
             soundEffect.Enqueue(d.se);
             screenEffect.Enqueue(d.animation);
             back.Enqueue(d.background);
@@ -145,12 +151,18 @@ public class ReadText : MonoBehaviour
         string name = names.Dequeue();
         string sentence = sentences.Dequeue();
         string express = expression.Dequeue();
+        string item = itemEffect.Dequeue();
         string se = soundEffect.Dequeue();
         string screen = screenEffect.Dequeue();
         string bg = back.Dequeue();
 
         backgroundChange.BackgroundChange(bg);
         soundEffectScript.PlaySoundEffect(se);
+
+        if(item == "S-01")
+        {
+            itemEffectScreen = true;
+        }
 
         if(screenEffectScript.isFading == true)//fade animation
         {

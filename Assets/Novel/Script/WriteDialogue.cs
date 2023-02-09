@@ -17,6 +17,8 @@ public class WriteDialogue : MonoBehaviour
 
     [SerializeField]
     GameObject nextArrow;
+    [SerializeField]
+    GameObject itemEffectObject;
 
     int dialogueSpeed;
 
@@ -85,15 +87,20 @@ public class WriteDialogue : MonoBehaviour
         {
             sentenceComplete = true;
         }
-        else if(sentenceComplete == true && screenEffect.isFading == false)
+        else if(sentenceComplete == true && screenEffect.isFading == false && readText.itemEffectScreen == false)
         {
             nextArrow.SetActive(false);
             readText.DisplayNextSentence();
         }
-        else if(sentenceComplete == true && screenEffect.isFading == true)
+        else if(sentenceComplete == true && screenEffect.isFading == true && readText.itemEffectScreen == false)
         {
             nextArrow.SetActive(false);
             StartCoroutine(screenEffect.StartFadeAnimation());
         }
+        else if(sentenceComplete == true && screenEffect.isFading == false && readText.itemEffectScreen == true)
+        {
+            nextArrow.SetActive(false);
+            itemEffectObject.SetActive(true);
+        }    
     }
 }
