@@ -41,6 +41,6 @@
 階段+ドアー開ける・閉める　キャラクター　幽霊
     
   build=>
-  https://drive.google.com/drive/folders/1HksMKmXGM5SdU2V6Ko-kNwPi6MHTKhlu?usp=sharing
+  https://drive.google.com/drive/u/0/folders/1S-HGFDCJnyuX-hExQY5XzbimZjms4LJe
   
 
